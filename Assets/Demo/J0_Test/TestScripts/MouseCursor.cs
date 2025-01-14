@@ -1,7 +1,7 @@
-/* 
- * ÀÛ¼ºÀÚ: ÀÌÀç¿µ
- * ¼öÁ¤ ³¯Â¥: 25/01/13
- * ¼öÁ¤ ¹× Ãß°¡ ³»¿ë: 
+ï»¿/* 
+ * ì‘ì„±ì: ì´ì¬ì˜
+ * ìˆ˜ì • ë‚ ì§œ: 25/01/13
+ * ìˆ˜ì • ë° ì¶”ê°€ ë‚´ìš©: 
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -11,21 +11,30 @@ public class MouseCursor : MonoBehaviour
 {
     Vector3 mousePos;
 
-    Vector3 center;
+    Vector3 center = new Vector3(Screen.width / 2, Screen.height / 2, 0);
 
-    // ¹æÇâº¤ÅÍ ½ºÅÂÆ½ ¼±¾ğ
-    public static Vector3 directionVec;
-
-    void Start()
-    {
-        center = new Vector3(Screen.width / 2, Screen.height / 2, 0);
-        mousePos = Input.mousePosition;
-        directionVec = mousePos - center;
-    }
+    // ë©”ì¸ ë°©í–¥ë²¡í„° ìŠ¤íƒœí‹± ì„ ì–¸
+    public static Vector3 mainDirectionVec;
+    public static Vector3 sideDirectionVec;
 
     void Update()
     {
         mousePos = Input.mousePosition;
-        directionVec = mousePos - center;
+
+        MainDirectionVec();
+        SideDirectionVec();
     }
+
+    public Vector3 MainDirectionVec()
+    {
+        mainDirectionVec = mousePos - center;
+        return mainDirectionVec;
+    }
+
+    public Vector3 SideDirectionVec()
+    {
+        sideDirectionVec = mousePos - transform.position;
+        return sideDirectionVec;
+    }
+
 }

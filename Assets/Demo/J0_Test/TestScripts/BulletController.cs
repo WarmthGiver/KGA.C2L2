@@ -1,28 +1,28 @@
-/* 
- * ÀÛ¼ºÀÚ: ÀÌÀç¿µ
- * ¼öÁ¤ ³¯Â¥: 25/01/13
- * ¼öÁ¤ ¹× Ãß°¡ ³»¿ë: 
+ï»¿/* 
+ * ì‘ì„±ì: ì´ì¬ì˜
+ * ìˆ˜ì • ë‚ ì§œ: 25/01/13
+ * ìˆ˜ì • ë° ì¶”ê°€ ë‚´ìš©: 
  */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// WeaponÅ¬·¡½º¿¡¼­ ³Ñ¾î¿Â ÃÑ¾Ë Á¤º¸¸¦ ¹Ş¾Æ¼­ ¹ß»çÇÏ´Â °Í ¸¸ ÇÔ.
+// Weaponí´ë˜ìŠ¤ì—ì„œ ë„˜ì–´ì˜¨ ì´ì•Œ ì •ë³´ë¥¼ ë°›ì•„ì„œ ë°œì‚¬í•˜ëŠ” ê²ƒ ë§Œ í•¨.
 public class BulletController : MonoBehaviour
 {
     public ObjectPooligTest bulletPool;
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        // Range(°æ°è ¹üÀ§)¿¡ ´êÀ¸¸é
+        // Range(ê²½ê³„ ë²”ìœ„)ì— ë‹¿ìœ¼ë©´
         if (collision.gameObject.tag == "Range")
         {
-            // ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­
+            // ì˜¤ë¸Œì íŠ¸ ë¹„í™œì„±í™”
             gameObject.SetActive(false);
         }
     }
 
-    // ¿ÀºêÁ§Æ® ºñÈ°¼ºÈ­ ½Ã pool¿¡ ´ã±â
+    // ì˜¤ë¸Œì íŠ¸ ë¹„í™œì„±í™” ì‹œ poolì— ë‹´ê¸°
     private void OnDisable()
     {
         bulletPool.EnqueueBullet(this);

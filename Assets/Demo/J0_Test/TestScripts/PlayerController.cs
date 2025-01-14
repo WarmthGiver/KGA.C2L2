@@ -1,9 +1,9 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{// ±â´É: ÇÃ·¹ÀÌ¾î Ã¼·Â°ü¸®, »ç¸Á¿©ºÎ
+{// ê¸°ëŠ¥: í”Œë ˆì´ì–´ ì²´ë ¥ê´€ë¦¬, ì‚¬ë§ì—¬ë¶€
 
     private int _healthPoint;
 
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        // ÃÊ±â Ã¼·Â ¼³Á¤
+        // ì´ˆê¸° ì²´ë ¥ ì„¤ì •
         HealthPoint = 40;
     }
 
@@ -25,12 +25,12 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // Ã¼·Â Â÷°¨
+    // ì²´ë ¥ ì°¨ê°
     public void DecreaseHealth(int damage)
     {
         HealthPoint -= damage;
 
-        // ÇÃ·¹ÀÌ¾î Ã¼·ÂÀÌ 0 ¶Ç´Â À½¼ö°¡ µÇ¸é »ç¸Á
+        // í”Œë ˆì´ì–´ ì²´ë ¥ì´ 0 ë˜ëŠ” ìŒìˆ˜ê°€ ë˜ë©´ ì‚¬ë§
         if(HealthPoint <= 0)
         {
             PlayerDie();
@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
 
     void PlayerDie()
     {
-        // GameManager.ÀÎ½ºÅÏ½ºÀÇ.»ç¸Á¿©ºÎ(true)
-        // Æø¹ß ÀÌÆåÆ®
+        // GameManager.ì¸ìŠ¤í„´ìŠ¤ì˜.ì‚¬ë§ì—¬ë¶€(true)
+        // í­ë°œ ì´í™íŠ¸
         Destroy(gameObject);
     }
 }

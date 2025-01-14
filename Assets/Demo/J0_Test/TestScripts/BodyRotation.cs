@@ -1,7 +1,7 @@
-/* 
- * ÀÛ¼ºÀÚ: ÀÌÀç¿µ
- * ¼öÁ¤ ³¯Â¥: 25/01/13
- * ¼öÁ¤ ¹× Ãß°¡ ³»¿ë: 
+ï»¿/* 
+ * ì‘ì„±ì: ì´ì¬ì˜
+ * ìˆ˜ì • ë‚ ì§œ: 25/01/13
+ * ìˆ˜ì • ë° ì¶”ê°€ ë‚´ìš©: 
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -24,15 +24,15 @@ public class BodyRotation : MonoBehaviour
     void Start()
     {
         rotateAngle = transform.rotation;
-        RotateSpeed = 0.1f; // ±âº» º»Ã¼ È¸Àü¼Óµµ Á¶Àı
+        RotateSpeed = 0.1f; // ê¸°ë³¸ ë³¸ì²´ íšŒì „ì†ë„ ì¡°ì ˆ
     }
 
     void Update()
     {
-        RotateAngle(RotateSpeed); // ÀÓ½Ã ¼Óµµ ¼³Á¤
+        RotateAngle(RotateSpeed); // ì„ì‹œ ì†ë„ ì„¤ì •
     }
 
-    // º»Ã¼ È¸Àü
+    // ë³¸ì²´ íšŒì „
     void RotateAngle(float rotateSpeed)
     {
         transform.rotation = rotateAngle;
