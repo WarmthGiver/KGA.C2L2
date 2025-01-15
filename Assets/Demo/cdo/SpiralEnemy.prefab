@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9134179419373331943}
   m_Layer: 0
   m_Name: ScifiFighterWeaponsAtlas_5 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b787094cc6a60fb4f9584897f627318e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetMazzle: {fileID: 8539140691037196724, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
+  enemyHp: 5
+  damage: 0
+  playerObj: {fileID: 8539140691037196724, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
+  enemyPrefab: {fileID: 0}
   eulerEuler: 20
   gap: 0.00001
   spiralEnemyHp: 5
@@ -191,13 +194,37 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.52
       objectReference: {fileID: 0}
+    - target: {fileID: 1678257519923416626, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: prefab1
+      value: 
+      objectReference: {fileID: 8108442279223828270}
+    - target: {fileID: 1678257519923416626, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: prefab2
+      value: 
+      objectReference: {fileID: 6491428530360896256}
     - target: {fileID: 3641653896449224864, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: gap
       value: 0.00001
       objectReference: {fileID: 0}
+    - target: {fileID: 3641653896449224864, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: enemyHp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641653896449224864, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5586514168153645719, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: gap
       value: 0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586514168153645719, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: enemyHp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586514168153645719, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: enemyPrefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5795520831064862822, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,6 +278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpiralEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 8482822070891848769, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -262,5 +293,15 @@ PrefabInstance:
 --- !u!4 &5637579593563395859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7954428294170906552, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+  m_PrefabInstance: {fileID: 2332717988774009003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6491428530360896256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8811668138047738795, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+  m_PrefabInstance: {fileID: 2332717988774009003}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8108442279223828270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5825832643369682821, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
   m_PrefabInstance: {fileID: 2332717988774009003}
   m_PrefabAsset: {fileID: 0}

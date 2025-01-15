@@ -8,14 +8,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace cdo
+namespace KGA
 {
 
 
-    public class SpiralEnemy : MonoBehaviour
+    public class SpiralEnemy : Enemy
     {
-        //player오브젝트 넣는곳
-        [SerializeField] private GameObject targetMazzle;
+        
 
         //원 속도
         [SerializeField] private float eulerEuler = 90f;
@@ -32,28 +31,28 @@ namespace cdo
 
 
         //삼각함수용 (안쓰임)
-        private float randomEnemyPosition = 0;
-        private float R = 5;
+        //private float randomEnemyPosition = 0;
+        //private float R = 5;
 
         private void Start()
         {
-            distance = Vector2.Distance(targetMazzle.transform.position, transform.position);
+            distance = Vector2.Distance(playerObj.transform.position, transform.position);
         }
 
         //임의 충돌 발생시 
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.tag == "Player")
-            {
-                Destroy(gameObject);
-            }
-            if(collision.gameObject.tag == "Bullet")
-            {
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-            }
-
-        }
+        //private void OnTriggerEnter2D(Collider2D collision)
+        //{
+        //    if (collision.gameObject.tag == "Player")
+        //    {
+        //        Destroy(gameObject);
+        //    }
+        //    if(collision.gameObject.tag == "Bullet")
+        //    {
+        //        Destroy(collision.gameObject);
+        //        Destroy(gameObject);
+        //    }
+        //
+        //}
 
 
 
@@ -61,11 +60,11 @@ namespace cdo
         private void Update()
         {
             //양의 z축 기준으로 오브젝트 주위를 eulerEuler(각도)로 돌고, player쪽으로 들어와 나선형으로 보임
-            transform.RotateAround(targetMazzle.transform.position, Vector3.forward, eulerEuler * Time.deltaTime);
+            transform.RotateAround(playerObj.transform.position, Vector3.forward, eulerEuler * Time.deltaTime);
 
-            var direction = (transform.position - targetMazzle.transform.position).normalized;
+            var direction = (transform.position - playerObj.transform.position).normalized;
             distance -= gap;
-            transform.position = targetMazzle.transform.position + direction * distance;
+            transform.position = playerObj.transform.position + direction * distance;
 
             //삼각함수
             //R = R - speed;

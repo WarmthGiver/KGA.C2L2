@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523ee4c058efc6b4f9430a408b9580b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1088210680031413917, guid: 1de08d5381b315b4d8827390e6b2a49f, type: 3}
+  enemyHp: 3
   speed: 0.5
-  straightEnemyHP: 0
+  damage: 0
+  playerObj: {fileID: 8539140691037196724, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}

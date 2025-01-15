@@ -6,34 +6,17 @@
 
 using UnityEngine;
 
-namespace CHM
+namespace KGA
 {
-    public class StraightEnemyCorntrol : MonoBehaviour
+    public class StraightEnemyCorntrol : Enemy
     {
-        [SerializeField]
-        private GameObject player;//목표물설정을 위해 받음
-        [SerializeField]
-        private float speed;//직진 속도
-        [SerializeField]
-        private int straightEnemyHP;//일단 HP생성
        
-        void OnTriggerEnter2D(Collider2D collifer)//터렛 만나면 파괴
-        {
-            if (collifer.CompareTag("Player"))
-            {
-                Destroy(gameObject);//플레이어에 닿으면 사라짐
-            }
-            if (collifer.CompareTag("Bullet"))
-            {
-                Destroy(gameObject);//총알 닿으면 사라짐
-            }
-        }
 
         void Update()
         {
-            Vector3 direction = player.transform.position - transform.position;//타겟포지션 - 적포지션 값
+            Vector3 direction = playerObj.transform.position - transform.position;//타겟포지션 - 적포지션 값
             direction.Normalize();
-            transform.position += direction * speed * Time.deltaTime;
+            transform.position += direction * 0.5f * Time.deltaTime;
         }
     }
 }

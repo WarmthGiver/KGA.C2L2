@@ -8,19 +8,17 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-namespace cdo
+namespace KGA
 {
 
-    public class SpiralEnemySpawner : MonoBehaviour
+    public class SpiralEnemySpawner : Enemy
     {
         //적 프리팹
         [SerializeField] private GameObject prefab;
         [SerializeField] private GameObject prefab2;
+        
         //나올 위치
         [SerializeField] private Transform spawnPoint;
-
-        //임시 축
-        public GameObject axis;
 
         //쿨타임
         [SerializeField] private float coolTime = 0;
@@ -52,7 +50,7 @@ namespace cdo
         {
 
             //임시 나올자리 원으로 돔
-            transform.RotateAround(axis.transform.position, Vector3.forward, 50 * Time.deltaTime);
+            transform.RotateAround(playerObj.transform.position, Vector3.forward, 50 * Time.deltaTime);
 
             //마우스 클릭시 미사일 활성화
             if (Input.GetMouseButtonDown(0))

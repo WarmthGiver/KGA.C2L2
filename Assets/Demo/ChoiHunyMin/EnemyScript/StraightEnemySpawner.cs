@@ -9,14 +9,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-namespace CHM
+namespace KGA
 {
-    public class StraightEnemySpawner : MonoBehaviour
+    public class StraightEnemySpawner : Enemy
     {
         [SerializeField]
-        private GameObject player;//일단 목표물 설정용
-        [SerializeField]
-        private GameObject enemyPrefab;//적 프리팹
+        protected GameObject enemyPrefab;
         [SerializeField]
         public bool isRight = true;//반대로 돌게함
         [SerializeField]
@@ -46,13 +44,13 @@ namespace CHM
         {
             if (isRight == true)
             {
-                transform.RotateAround(player.transform.position, Vector3.forward, spawnerspeed * Time.deltaTime);
+                transform.RotateAround(playerObj.transform.position, Vector3.forward, spawnerspeed * Time.deltaTime);
 
             }
             //Vector3.back 넣으면 반대방향으로 돔
             else
             {
-                transform.RotateAround(player.transform.position, Vector3.back, spawnerspeed * Time.deltaTime);
+                transform.RotateAround(playerObj.transform.position, Vector3.back, spawnerspeed * Time.deltaTime);
 
             }
         }

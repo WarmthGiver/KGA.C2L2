@@ -7,9 +7,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace cdo
+namespace KGA
 {
-
 
     public class SquardEnemy : MonoBehaviour
     {
