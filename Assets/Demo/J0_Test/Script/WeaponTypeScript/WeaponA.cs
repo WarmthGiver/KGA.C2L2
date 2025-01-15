@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponA : MonoBehaviour
+public sealed class WeaponA : Weapon
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // 임시 값(정해진게 없음)
+        damage = 2;
+        speed = 0.3f;
     }
 }

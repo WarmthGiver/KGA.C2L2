@@ -4,28 +4,10 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private int _damage;
-    private float _speed;
+    [SerializeField]
+    protected int damage;
 
-    public int Damage
-    {
-        get { return _damage; }
-        set { _damage = value; }
-    }
+    [SerializeField]
+    protected float speed;
 
-    public float Speed
-    {
-        get { return _speed; }
-        set { _speed = value; }
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

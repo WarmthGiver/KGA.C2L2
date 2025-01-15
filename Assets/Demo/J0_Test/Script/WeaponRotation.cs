@@ -21,11 +21,6 @@ public sealed class WeaponRotation : MonoBehaviour
         {
             FacingParallel();
         }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Debug.Log(mousePos);
-        }
     }
 
     // 마우스 커서 위치
