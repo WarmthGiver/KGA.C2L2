@@ -174,9 +174,8 @@ MonoBehaviour:
   enemyHp: 5
   damage: 0
   playerObj: {fileID: 8539140691037196724, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
-  enemyPrefab: {fileID: 0}
   eulerEuler: 20
-  gap: 0.00001
+  gap: 0.0005
   spiralEnemyHp: 5
 --- !u!1001 &2332717988774009003
 PrefabInstance:
@@ -204,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 6491428530360896256}
     - target: {fileID: 3641653896449224864, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: gap
-      value: 0.00001
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 3641653896449224864, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: enemyHp
@@ -216,7 +215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5586514168153645719, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: gap
-      value: 0.00001
+      value: 0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 5586514168153645719, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
       propertyPath: enemyHp

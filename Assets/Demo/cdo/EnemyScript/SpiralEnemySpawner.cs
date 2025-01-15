@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-namespace KGA
+namespace CHM
 {
 
     public class SpiralEnemySpawner : Enemy

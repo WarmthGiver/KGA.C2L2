@@ -9,8 +9,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-namespace KGA
+namespace CHM
 {
+
     public class StraightEnemySpawner : Enemy
     {
         [SerializeField]
@@ -58,11 +59,11 @@ namespace KGA
         {
             Vector3 vector = new Vector3(transform.position.x, transform.position.y);
             Vector3 vector1 = new Vector3(vector.x -1,vector.y);
-            Vector3 vector2 = new Vector3(vector.x + 1, vector.y);
+            //Vector3 vector2 = new Vector3(vector.x + 1, vector.y);
 
             Instantiate(enemyPrefab, vector, transform.rotation);
             Instantiate(enemyPrefab, vector1, transform.rotation);
-            Instantiate(enemyPrefab, vector2, transform.rotation);
+            //Instantiate(enemyPrefab, vector2, transform.rotation);
 
         }
         

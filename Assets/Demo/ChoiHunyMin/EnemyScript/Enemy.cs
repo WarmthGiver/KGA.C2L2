@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace KGA
+namespace CHM
 {
     public abstract class Enemy : MonoBehaviour
     {
@@ -27,7 +27,7 @@ namespace KGA
                 if (enemyHp <= 0)
                 { 
                 enemyHp = 0;
-                //Destroy(collision.gameObject);
+                //Destroy(collision.gameObject);//총알을 지우는 코드
                 Destroy(gameObject);
                 
                 }

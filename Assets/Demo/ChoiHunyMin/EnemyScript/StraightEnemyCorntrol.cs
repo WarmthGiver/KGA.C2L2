@@ -6,12 +6,11 @@
 
 using UnityEngine;
 
-namespace KGA
+namespace CHM
 {
     public class StraightEnemyCorntrol : Enemy
     {
        
-
         void Update()
         {
             Vector3 direction = playerObj.transform.position - transform.position;//타겟포지션 - 적포지션 값
