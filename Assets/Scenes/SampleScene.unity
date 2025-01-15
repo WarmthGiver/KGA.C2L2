@@ -246,10 +246,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8482822070891848769, guid: fdaed1b41ce20984e89706ce0adeafca, type: 3}
+  prefab2: {fileID: 6189761302203989226, guid: c938596220c13104fb0665279e71869a, type: 3}
   spawnPoint: {fileID: 609116391}
   axis: {fileID: 982313464}
   coolTime: 0
-  timeDley: 1
+  timeDley: 3
 --- !u!212 &609116390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -397,9 +398,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 68403688506152280, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222621222306865029, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691513029823334603, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8539140691037196724, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
       propertyPath: m_Name
       value: MainBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539140691037196724, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8844431936901129359, guid: 682f0e753cbb96a4689ba8f6792ee8e5, type: 3}
       propertyPath: m_LocalPosition.x

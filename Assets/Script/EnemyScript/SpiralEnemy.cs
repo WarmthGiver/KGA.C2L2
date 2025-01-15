@@ -14,11 +14,11 @@ namespace cdo
 
     public class SpiralEnemy : MonoBehaviour
     {
-        //원 속도
-        [SerializeField] private float eulerEuler = 90f;
-
         //player오브젝트 넣는곳
         [SerializeField] private GameObject targetMazzle;
+
+        //원 속도
+        [SerializeField] private float eulerEuler = 90f;
 
         //들어오는 간격 = 속도
         [SerializeField] private float gap = 0.0005f;
@@ -32,8 +32,8 @@ namespace cdo
 
 
         //삼각함수용 (안쓰임)
-        float randomEnemyPosition = 0;
-        float R = 5;
+        private float randomEnemyPosition = 0;
+        private float R = 5;
 
         private void Start()
         {
@@ -58,7 +58,7 @@ namespace cdo
 
 
 
-        void Update()
+        private void Update()
         {
             //양의 z축 기준으로 오브젝트 주위를 eulerEuler(각도)로 돌고, player쪽으로 들어와 나선형으로 보임
             transform.RotateAround(targetMazzle.transform.position, Vector3.forward, eulerEuler * Time.deltaTime);
@@ -75,6 +75,7 @@ namespace cdo
             //transform.position = new Vector2(x, y);
 
             //transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+
 
         }
     }
