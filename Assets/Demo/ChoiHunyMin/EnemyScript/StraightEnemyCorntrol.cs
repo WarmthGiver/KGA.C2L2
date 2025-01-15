@@ -4,10 +4,7 @@
  * 수정 및 추가 내용: 직진하는 적 컨트롤
 */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 namespace CHM
 {
@@ -19,10 +16,7 @@ namespace CHM
         private float speed;//직진 속도
         [SerializeField]
         private int straightEnemyHP;//일단 HP생성
-        void Start()
-        {
-
-        }
+       
         void OnTriggerEnter2D(Collider2D collifer)//터렛 만나면 파괴
         {
             if (collifer.CompareTag("Player"))

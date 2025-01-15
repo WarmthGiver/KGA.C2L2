@@ -26,17 +26,10 @@ namespace CHM
         [SerializeField]
         private float coolTime;//ÄðÅ¸ÀÓ
 
-        void Start()
-        {
-
-
-        }
-
-
-        void Update()
+        private void Update()
         {
             coolTime += Time.deltaTime;
-
+            
             if (coolTime > prefabSpeed)
             {
 
@@ -66,8 +59,8 @@ namespace CHM
         void squadEnemy()//
         {
             Vector3 vector = new Vector3(transform.position.x, transform.position.y);
-            Vector3 vector1 = new Vector3(vector.x -1,vector.y+1);
-            Vector3 vector2 = new Vector3(vector.x + 1, vector.y-1);
+            Vector3 vector1 = new Vector3(vector.x -1,vector.y);
+            Vector3 vector2 = new Vector3(vector.x + 1, vector.y);
 
             Instantiate(enemyPrefab, vector, transform.rotation);
             Instantiate(enemyPrefab, vector1, transform.rotation);
