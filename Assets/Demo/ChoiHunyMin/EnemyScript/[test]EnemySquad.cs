@@ -11,27 +11,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemySquad : MonoBehaviour
-{    
-    [SerializeField]
-    private GameObject[] prefab1;
-    
-
-    void Update()
+namespace CHM
+{
+    public class EnemySquad : MonoBehaviour
     {
-        //문제점 : prefab1의 0번쨰 프리팹이 사라지면 다같이 사라지게 됨
-        //for (int i = 0; i < prefab1.Length; i++)
-        //{
-        //    if (prefab1[i] != null) 
-        //        {
-        //        return;
-        //        }
-        //
-        //    if (prefab1[i] == null)
-        //    {
-        //        Destroy(gameObject);
-        //    }
-        //}
+        [SerializeField]
+        private GameObject[] prefab1;
+
+
+        void Update()
+        {
+            //문제점 : prefab1의 0번쨰 프리팹이 사라지면 다같이 사라지게 됨
+            //for (int i = 0; i < prefab1.Length; i++)
+            //{
+            //    if (prefab1[i] != null) 
+            //        {
+            //        return;
+            //        }
+            //
+            //    if (prefab1[i] == null)
+            //    {
+            //        Destroy(gameObject);
+            //    }
+            //}
+        }
     }
 }

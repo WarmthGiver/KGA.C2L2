@@ -1,3 +1,9 @@
+/*보스 움직임 테스트용
+ * 
+ * 
+*/
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
