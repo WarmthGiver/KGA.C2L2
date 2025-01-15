@@ -2,30 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponRotation : MonoBehaviour
+public sealed class WeaponRotation : MonoBehaviour
 {
     // 마우스 좌표
     Vector3 mousePos;
 
+    Rigidbody2D rigidBD;
     // 중심 좌표
-    Vector3 center = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+    Vector3 center = new Vector3(0, 0, 0);
 
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            //FacingCursur();
+            FacingCursur();
         }
         else
         {
             FacingParallel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log(mousePos);
         }
     }
 
     // 마우스 커서 위치
     Vector3 UpdateMousePosition()
     {
-        mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return mousePos;
     }
 
@@ -48,13 +54,13 @@ public class WeaponRotation : MonoBehaviour
         return Mathf.Atan2(facingTo.y, facingTo.x) * Mathf.Rad2Deg + 90;
     }
 
-    // 메인 방향벡터 바라보기
+    // 메인 방향벡터 바라보기(평행 공격)
     public void FacingParallel()
     {
         gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(MainDirectionVector()));
     }
 
-    // 마우스 커서 바라보기
+    // 마우스 커서 바라보기(집중 공격)
     public void FacingCursur()
     {
         gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(SideDirectionVector()));

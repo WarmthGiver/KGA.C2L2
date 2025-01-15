@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BodyRotation : MonoBehaviour
+public sealed class BodyRotation : MonoBehaviour
 {
     private Quaternion rotateAngle;
 
