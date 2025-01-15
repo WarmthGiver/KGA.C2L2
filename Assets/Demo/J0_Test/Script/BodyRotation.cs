@@ -24,7 +24,7 @@ public class BodyRotation : MonoBehaviour
     void Start()
     {
         rotateAngle = transform.rotation;
-        RotateSpeed = 0.1f; // 기본 본체 회전속도 조절
+        RotateSpeed = 0.05f; // 기본 본체 회전속도 조절
     }
 
     void Update()

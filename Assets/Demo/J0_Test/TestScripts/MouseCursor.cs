@@ -15,14 +15,14 @@ public class MouseCursor : MonoBehaviour
 
     // 메인 방향벡터 스태틱 선언
     public static Vector3 mainDirectionVec;
-    public static Vector3 sideDirectionVec;
+    //public static Vector3 sideDirectionVec;
 
     void Update()
     {
         mousePos = Input.mousePosition;
 
         MainDirectionVec();
-        SideDirectionVec();
+        //SideDirectionVec();
     }
 
     public Vector3 MainDirectionVec()
@@ -31,10 +31,9 @@ public class MouseCursor : MonoBehaviour
         return mainDirectionVec;
     }
 
-    public Vector3 SideDirectionVec()
-    {
-        sideDirectionVec = mousePos - transform.position;
-        return sideDirectionVec;
-    }
-
+    //public Vector3 SideDirectionVec()
+    //{
+    //    sideDirectionVec = mousePos - gameObject.transform.position;
+    //    return sideDirectionVec;
+    //}
 }
