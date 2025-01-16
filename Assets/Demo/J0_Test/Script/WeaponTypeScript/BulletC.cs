@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponC : Weapon
+public class BulletC : Bullet
 {
-    void Start()
-    {
-        
-    }
+
 }

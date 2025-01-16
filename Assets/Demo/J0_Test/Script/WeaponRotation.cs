@@ -1,16 +1,20 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public sealed class WeaponRotation : MonoBehaviour
 {
-    // ¸¶¿ì½º ÁÂÇ¥
+    // ë§ˆìš°ìŠ¤ ì¢Œí‘œ
     Vector3 mousePos;
 
     Rigidbody2D rigidBD;
-    // Áß½É ÁÂÇ¥
+    // ì¤‘ì‹¬ ì¢Œí‘œ
     Vector3 center = new Vector3(0, 0, 0);
 
+    private void Start()
+    {
+        FacingParallel();
+    }
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftShift))
@@ -23,39 +27,39 @@ public sealed class WeaponRotation : MonoBehaviour
         }
     }
 
-    // ¸¶¿ì½º Ä¿¼­ À§Ä¡
+    // ë§ˆìš°ìŠ¤ ì»¤ì„œ ìœ„ì¹˜
     Vector3 UpdateMousePosition()
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return mousePos;
     }
 
-    // ÇÔ¼± ±âÁØ ¹æÇâº¤ÅÍ
+    // í•¨ì„  ê¸°ì¤€ ë°©í–¥ë²¡í„°
     Vector3 MainDirectionVector()
     {
         return center - UpdateMousePosition();
     }
 
-    // ¹«±â ±âÁØ ¹æÇâº¤ÅÍ
+    // ë¬´ê¸° ê¸°ì¤€ ë°©í–¥ë²¡í„°
     Vector3 SideDirectionVector()
     {
         return gameObject.transform.position - UpdateMousePosition();
     }
 
-    // ¸¶¿ì½º Ä¿¼­ ÇâÇÏµµ·Ï
+    // ë§ˆìš°ìŠ¤ ì»¤ì„œ í–¥í•˜ë„ë¡
     public float AngleCalculator(Vector3 facingTo)
     {
-        // (¼³¸í)¹æÇâº¤ÅÍ¿Í ¾ÆÅ©ÅºÁ¨Æ®¸¦ »ç¿ëÇØ¼­ º¯È­ °¢À» ¾Ë¾Æ³½ ´ÙÀ½ ¶óµğ¾È°ªÀ¸·Î º¯È¯½ÃÅ´.
+        // (ì„¤ëª…)ë°©í–¥ë²¡í„°ì™€ ì•„í¬íƒ„ì  íŠ¸ë¥¼ ì‚¬ìš©í•´ì„œ ë³€í™” ê°ì„ ì•Œì•„ë‚¸ ë‹¤ìŒ ë¼ë””ì•ˆê°’ìœ¼ë¡œ ë³€í™˜ì‹œí‚´.
         return Mathf.Atan2(facingTo.y, facingTo.x) * Mathf.Rad2Deg + 90;
     }
 
-    // ¸ŞÀÎ ¹æÇâº¤ÅÍ ¹Ù¶óº¸±â(ÆòÇà °ø°İ)
+    // ë©”ì¸ ë°©í–¥ë²¡í„° ë°”ë¼ë³´ê¸°(í‰í–‰ ê³µê²©)
     public void FacingParallel()
     {
         gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(MainDirectionVector()));
     }
 
-    // ¸¶¿ì½º Ä¿¼­ ¹Ù¶óº¸±â(ÁıÁß °ø°İ)
+    // ë§ˆìš°ìŠ¤ ì»¤ì„œ ë°”ë¼ë³´ê¸°(ì§‘ì¤‘ ê³µê²©)
     public void FacingCursur()
     {
         gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(SideDirectionVector()));
