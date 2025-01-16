@@ -7,14 +7,10 @@ namespace CHM
 {
     public class bulletScript : MonoBehaviour
     {
-        [SerializeField] protected GameObject Tagetplayer;//목표
-       
+        Vector3 target = new Vector3(0,0,0);
+        [SerializeField] private float bulletSpeed;        
         
-
-        void Start()
-        {
-
-        }
+       
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Player"))
@@ -24,19 +20,41 @@ namespace CHM
         }
         void Update()
         {
-            //타겟 바라보게 하려고함
-            Vector3 direction = Tagetplayer.transform.position - transform.position;//타겟포지션 - 적포지션 값
-            direction.Normalize();
-            transform.position += direction * 2f * Time.deltaTime;
-            
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-            //Vector3 vec = Tagetplayer.transform.position - transform.position;
-            //transform.rotation = Quaternion.LookRotation(vec).normalized;
+            //Vector3 direction = targetplayer.transform.position - transform.position;//타겟포지션 - 적포지션 값
+            //direction.Normalize();
+            //float xy= GetAngle(targetplayer.transform.position, direction);
+            //
             
+
+            Vector3 newPos = target - transform.position;//시작점과 끝점의 거리            
+                                                         //float rotZ = Mathf.Atan2(newPos.y, newPos.x) * Mathf.Deg2Rad;//구한 거리의 높이와 밑변을 넣어 각도구함
+                                                         //각도를 구해서
+
+            float rotZ = GetAngle(transform.position, target);
+            newPos.Normalize();
+            transform.position += newPos * bulletSpeed* Time.deltaTime;
+            transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            
+
+
+
 
 
         }
+        float GetAngle(Vector2 start, Vector2 end)//시작점과 끝점에 각도를 구함
+        {
+            Vector2 ver2 = end - start;
+
+            Debug.Log(start);
+            Debug.Log(end);
+
+            //Vector2.Angle(start, end);
+
+
+            return Mathf.Atan2(ver2.y, ver2.x) * Mathf.Deg2Rad;
+            
+        }
+
     }
 }

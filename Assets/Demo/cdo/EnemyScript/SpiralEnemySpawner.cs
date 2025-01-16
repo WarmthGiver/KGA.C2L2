@@ -50,7 +50,7 @@ namespace CHM
         {
 
             //임시 나올자리 원으로 돔
-            transform.RotateAround(playerObj.transform.position, Vector3.forward, 50 * Time.deltaTime);
+            transform.RotateAround(target, Vector3.forward, 50 * Time.deltaTime);
 
             //마우스 클릭시 미사일 활성화
             if (Input.GetMouseButtonDown(0))

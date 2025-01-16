@@ -36,7 +36,7 @@ namespace CHM
 
         private void Start()
         {
-            distance = Vector2.Distance(playerObj.transform.position, transform.position);
+            distance = Vector2.Distance(target, transform.position);
         }
 
         //임의 충돌 발생시 
@@ -60,11 +60,11 @@ namespace CHM
         private void Update()
         {
             //양의 z축 기준으로 오브젝트 주위를 eulerEuler(각도)로 돌고, player쪽으로 들어와 나선형으로 보임
-            transform.RotateAround(playerObj.transform.position, Vector3.forward, eulerEuler * Time.deltaTime);
+            transform.RotateAround(target, Vector3.forward, eulerEuler * Time.deltaTime);
 
-            var direction = (transform.position - playerObj.transform.position).normalized;
+            var direction = (transform.position - target).normalized;
             distance -= gap;
-            transform.position = playerObj.transform.position + direction * distance;
+            transform.position = target + direction * distance;
 
             //삼각함수
             //R = R - speed;

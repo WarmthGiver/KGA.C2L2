@@ -9,7 +9,7 @@ namespace CHM
         [SerializeField] protected float enemyHp;//적 체력
         //[SerializeField] protected float speed;
         [SerializeField] protected float damage;
-        [SerializeField] protected GameObject playerObj;//일단 중심점
+        [SerializeField] protected Vector3 target = new Vector3(0,0,0);//일단 중심점
 
         
 

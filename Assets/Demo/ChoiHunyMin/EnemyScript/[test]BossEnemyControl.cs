@@ -39,7 +39,7 @@ namespace CHM
 
         public float speed = 0.0001f;
         [SerializeField]
-        float randomEnemyPosition = 0;
+        float bossSpeed = 0;
         float R = 5;//반지름
 
         [SerializeField]
@@ -85,13 +85,13 @@ namespace CHM
         {
             
             R = R - speed;//반지름이 스피드 만큼 줄어듬
-            randomEnemyPosition += 0.002f;//Time.deltaTime;//보스 본체 이동속도
+            bossSpeed += 0.002f;//Time.deltaTime;//보스 본체 이동속도
             
-            float x = R * Mathf.Cos(randomEnemyPosition);
-            float y = R * Mathf.Sin(randomEnemyPosition);
+            float x = R * Mathf.Cos(bossSpeed);//원의 반지름 *  Mathf.Cos (증가식)
+            float y = R * Mathf.Sin(bossSpeed);
             transform.position = new Vector2(x, y);
             Vector2 dir = transform.position;
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y,dir.x)*Mathf.Rad2Deg);
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg);
 
             coolTime += Time.deltaTime;
 

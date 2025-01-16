@@ -13,7 +13,7 @@ namespace CHM
        
         void Update()
         {
-            Vector3 direction = playerObj.transform.position - transform.position;//타겟포지션 - 적포지션 값
+            Vector3 direction = target - transform.position;//타겟포지션 - 적포지션 값
             direction.Normalize();
             transform.position += direction * 0.5f * Time.deltaTime;
         }
