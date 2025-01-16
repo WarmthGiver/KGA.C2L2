@@ -25,11 +25,11 @@ namespace KGA
             {
                 enemyHp--;
                 if (enemyHp <= 0)
-                { 
-                enemyHp = 0;
-                //Destroy(collision.gameObject);
-                Destroy(gameObject);
-                
+                {
+                    enemyHp = 0;
+                    //Destroy(collision.gameObject);
+                    Destroy(gameObject);
+
                 }
 
             }

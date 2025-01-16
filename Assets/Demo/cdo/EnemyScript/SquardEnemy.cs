@@ -15,11 +15,13 @@ namespace KGA
         //enemyÇÁ¸®ÆÕ
         [SerializeField] private GameObject prefab1;
         [SerializeField] private GameObject prefab2;
+        [SerializeField] private GameObject prefab3;
 
-        private void FixedUpdate()
+        private void Update()
         {
+
             //ÇÁ¸®ÆÕ ´Ù ÆÄ±«µÇ¸é ¿ÀºêÁ§Æ® ÆÄ±«
-            if (prefab1 == null && prefab2 == null)
+            if (prefab1 == null && prefab2 == null && prefab3 == null)
             {
                 Destroy(gameObject);
 

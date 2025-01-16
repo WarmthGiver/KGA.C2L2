@@ -65,6 +65,6 @@ namespace KGA
             Instantiate(enemyPrefab, vector2, transform.rotation);
 
         }
-        
+
     }
 }
