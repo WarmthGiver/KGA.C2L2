@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4903879174404368966}
   - component: {fileID: 4358847702624107457}
   - component: {fileID: 4143696907550804125}
-  - component: {fileID: 1275070915104483929}
+  - component: {fileID: 3091666138809798353}
   m_Layer: 0
   m_Name: Wing
   m_TagString: Enemy
@@ -149,7 +149,7 @@ CircleCollider2D:
   m_Offset: {x: -0.80154675, y: -0.01849671}
   serializedVersion: 2
   m_Radius: 1.0200002
---- !u!114 &1275070915104483929
+--- !u!114 &3091666138809798353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,13 +158,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 996391636950831366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b978b7b80f6bc4e9af5eddf5d0a52f, type: 3}
+  m_Script: {fileID: 11500000, guid: b787094cc6a60fb4f9584897f627318e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHp: 0
+  enemyHp: 5
   damage: 0
   playerObj: {fileID: 0}
-  parentScript: {fileID: 3961381498788722471}
+  spiralEnemyHp: 5
+  gap: 0.0005
+  eulerEuler: 90
 --- !u!1 &1268730616988533923
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +179,7 @@ GameObject:
   - component: {fileID: 5357485206436478748}
   - component: {fileID: 7733079428886034575}
   - component: {fileID: 6637608139017680751}
-  - component: {fileID: 3784343570726798322}
+  - component: {fileID: 6465683089513623245}
   m_Layer: 0
   m_Name: Wing (1)
   m_TagString: Enemy
@@ -314,7 +316,7 @@ CircleCollider2D:
   m_Offset: {x: -0.80154675, y: -0.01849671}
   serializedVersion: 2
   m_Radius: 1.0200002
---- !u!114 &3784343570726798322
+--- !u!114 &6465683089513623245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,13 +325,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1268730616988533923}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b978b7b80f6bc4e9af5eddf5d0a52f, type: 3}
+  m_Script: {fileID: 11500000, guid: b787094cc6a60fb4f9584897f627318e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHp: 0
+  enemyHp: 5
   damage: 0
   playerObj: {fileID: 0}
-  parentScript: {fileID: 3961381498788722471}
+  spiralEnemyHp: 5
+  gap: 0.0005
+  eulerEuler: 90
 --- !u!1 &3336782425267334306
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +502,7 @@ MonoBehaviour:
   damage: 0
   playerObj: {fileID: 0}
   spiralEnemyHp: 5
-  gap: 0.001
+  gap: 0.0005
   eulerEuler: 90
 --- !u!1 &8652369299838493885
 GameObject:
