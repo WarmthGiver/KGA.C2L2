@@ -30,11 +30,6 @@ namespace ZL.Unity.ObjectPooling
             }
         }
 
-        public override T Generate()
-        {
-            return base.Generate().SetActive(true);
-        }
-
         public override T Clone()
         {
             return Pooler.Clone(this);
