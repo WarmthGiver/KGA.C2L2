@@ -4,7 +4,7 @@ using System.IO;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class Bullet : MonoBehaviour
+public class BulletControl : MonoBehaviour
 {
     //테스트용
     [SerializeField] float speed;    

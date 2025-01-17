@@ -10,7 +10,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 namespace CHM
 {
-    public class BossEnemyControl : Enemy
+    public class TTTBossEnemyControl : Enemy
     {
 
         //public float radius = 4;

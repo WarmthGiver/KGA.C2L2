@@ -10,16 +10,13 @@ namespace CHM
         //[SerializeField] protected float speed;
         [SerializeField] protected float damage;
         [SerializeField] protected Vector3 target = new Vector3(0,0,0);//일단 중심점
-
         
-
-
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Player"))
             {
                 Destroy(gameObject);
+                //gameObject.SetActive(false);
             }
             if (collision.gameObject.tag == "Bullet")
             {
