@@ -11,7 +11,7 @@ using UnityEngine.SocialPlatforms.Impl;
 using static UnityEngine.GraphicsBuffer;
 //using Transform = UnityEngine.Transform;
 
-namespace KGA
+namespace CHM
 {
 
     public class SpiralEnemySpawner : Enemy
