@@ -14,15 +14,15 @@ public class Weapon : MonoBehaviour
     protected float bulletSpeed;
 
     [SerializeField]
-    Transform muzzle;
+    protected Transform muzzle;
 
     [SerializeField]
-    Bullet bullet;
+    protected Bullet bullet;
 
-    private float tempElapsedTime;
+    protected float tempElapsedTime = 0;
 
 
-    void Update()
+    protected virtual void Update()
     {
         tempElapsedTime -= Time.deltaTime;
 
@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void FireBullet()
+    protected virtual void FireBullet()
     {
         var bullet = Instantiate(this.bullet, muzzle.position, muzzle.rotation);
         bullet.Initialize(bulletDamage, bulletSpeed);

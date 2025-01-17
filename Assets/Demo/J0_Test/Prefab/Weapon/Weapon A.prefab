@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 279167539
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.6037736, g: 0.2306871, b: 0.2306871, a: 1}
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 1
-  coolTime: 0.5
-  bulletSpeed: 1
+  coolTime: 0.2
+  bulletSpeed: 0.2
   muzzle: {fileID: 1631322021041409603}
   bullet: {fileID: 247505299264106121, guid: 8205a3eb1d0b6d049839809073f75581, type: 3}
 --- !u!1001 &6217756014443492538
@@ -134,7 +134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4677681570105129721, guid: 76e87d17a62e3ec40858756c01ac01ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.55
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4677681570105129721, guid: 76e87d17a62e3ec40858756c01ac01ff, type: 3}
       propertyPath: m_LocalPosition.z

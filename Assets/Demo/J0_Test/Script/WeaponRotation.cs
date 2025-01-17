@@ -4,9 +4,6 @@ using UnityEngine;
 
 public sealed class WeaponRotation : MonoBehaviour
 {
-    // 마우스 좌표
-    Vector3 mousePos;
-
     Rigidbody2D rigidBD;
     // 중심 좌표
     Vector3 center = new Vector3(0, 0, 0);
@@ -27,23 +24,18 @@ public sealed class WeaponRotation : MonoBehaviour
         }
     }
 
-    // 마우스 커서 위치
-    Vector3 UpdateMousePosition()
-    {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return mousePos;
-    }
+    
 
     // 함선 기준 방향벡터
     Vector3 MainDirectionVector()
     {
-        return center - UpdateMousePosition();
+        return center - MouseCursur.UpdateMousePosition();
     }
 
     // 무기 기준 방향벡터
     Vector3 SideDirectionVector()
     {
-        return gameObject.transform.position - UpdateMousePosition();
+        return gameObject.transform.position - MouseCursur.UpdateMousePosition();
     }
 
     // 마우스 커서 향하도록
