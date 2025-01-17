@@ -18,18 +18,7 @@ namespace CHM
                 Destroy(gameObject);
                 //gameObject.SetActive(false);
             }
-            if (collision.gameObject.tag == "Bullet")
-            {
-                enemyHp--;
-                if (enemyHp <= 0)
-                { 
-                enemyHp = 0;
-                //Destroy(collision.gameObject);//총알을 지우는 코드
-                Destroy(gameObject);
-                
-                }
-
-            }
+           
         }
     }
 }
