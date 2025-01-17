@@ -25,7 +25,6 @@ public class WeaponTypeActive : Weapon
                 isSkillOn = true;
                 FireBullet();
                 StartCoroutine(CoolTime());
-                
             }
         }
     }
