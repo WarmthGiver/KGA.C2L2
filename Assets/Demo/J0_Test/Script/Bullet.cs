@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ZL.Unity;
 
 public class Bullet : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Bullet : MonoBehaviour
 
     protected virtual void BulletMovement()
     {
-        bulletRigid.AddForce(transform.up.normalized * speed, ForceMode2D.Impulse);
+        bulletRigid.AddForce(transform.up.normalized * speed * 5, ForceMode2D.Impulse);
     }
 
     public void Initialize(int damage, float speed)
@@ -31,7 +32,7 @@ public class Bullet : MonoBehaviour
     {
         if (transform.position.x < -10f || transform.position.x > 10f || transform.position.y < -10f || transform.position.y > 10f)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

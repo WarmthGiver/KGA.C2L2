@@ -359,7 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletDamage: 0
   coolTime: 3
-  bulletSpeed: 0.5
+  bulletSpeed: 0.1
   muzzle: {fileID: 2135440041}
   bullet: {fileID: 1388088154842053208, guid: 7fb642d8eed44a249b5314e88cf57905, type: 3}
 --- !u!4 &830818562 stripped

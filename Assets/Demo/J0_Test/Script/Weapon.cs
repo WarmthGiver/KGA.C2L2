@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ZL.Unity.ObjectPooling;
 
 public class Weapon : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Weapon : MonoBehaviour
     protected Transform muzzle;
 
     [SerializeField]
-    protected Bullet bullet;
+    protected GameObjectPool<Bullet> bulletPool;
 
     protected float tempElapsedTime = 0;
 
@@ -36,7 +37,10 @@ public class Weapon : MonoBehaviour
 
     protected virtual void FireBullet()
     {
-        var bullet = Instantiate(this.bullet, muzzle.position, muzzle.rotation);
+        var bullet = bulletPool.Generate();
+        gameObject.SetActive(true);
+        bullet.transform.rotation = muzzle.rotation;
+        bullet.transform.position = muzzle.position;
         bullet.Initialize(bulletDamage, bulletSpeed);
     }
 }

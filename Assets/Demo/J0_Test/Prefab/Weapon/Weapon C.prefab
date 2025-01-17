@@ -32,6 +32,10 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 0.003
       objectReference: {fileID: 0}
+    - target: {fileID: 1709835401756397508, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
+      propertyPath: bulletPool.original
+      value: 
+      objectReference: {fileID: 764248780093213114, guid: ca11ff355e8122140a855fd31c1c6708, type: 3}
     - target: {fileID: 3547606101026580560, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
       propertyPath: m_LocalPosition.y
       value: -3.27

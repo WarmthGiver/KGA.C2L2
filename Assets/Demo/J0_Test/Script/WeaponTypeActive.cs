@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using ZL.Unity.ObjectPooling;
 
 public class WeaponTypeActive : Weapon
 {
@@ -42,8 +43,12 @@ public class WeaponTypeActive : Weapon
     {
         for (int i = 8; i > 0; i--)
         {
-            var bullet = Instantiate(this.bullet, shootDirection, shootAngle);
+            var bullet = bulletPool.Generate();
+            bullet.transform.rotation = shootAngle;
+            bullet.transform.position = shootDirection;
             bullet.Initialize(bulletDamage, bulletSpeed);
+            //var bullet = Instantiate(this.bullet, shootDirection, shootAngle);
+            //bullet.Initialize(bulletDamage, bulletSpeed);
             yield return new WaitForSeconds(0.25f);
         }
     }

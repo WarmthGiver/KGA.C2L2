@@ -101,14 +101,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 0
-  coolTime: 0.5
+  coolTime: 0.2
   bulletSpeed: 0.5
   muzzle: {fileID: 0}
-  bullet: {fileID: 2591112629536905623, guid: 1417f9364c6a2fb4ca79cf969b290ac5, type: 3}
+  bulletPool:
+    original: {fileID: 2591112629536905623, guid: 1417f9364c6a2fb4ca79cf969b290ac5, type: 3}
+    parent: {fileID: 0}
   muzzleTypeB:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1716071335143180170}
+  - {fileID: 4219187589096672175}
+  - {fileID: 1045739950183427671}
+--- !u!4 &1716071335143180170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1631322021041409603, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
+  m_PrefabInstance: {fileID: 104475000790223305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6353180828876373580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6437934390969235333, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
