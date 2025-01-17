@@ -6,9 +6,9 @@ using UnityEngine;
 public class WeaponTypeB : Weapon
 {
     [SerializeField]
-    protected Transform[] muzzleTypeB = new Transform[3];
+    private Transform[] muzzleTypeB = new Transform[3];
 
-    public override void FireBullet()
+    protected override void FireBullet()
     {
         for(int i = 0; i < muzzleTypeB.Length; i++)
         {

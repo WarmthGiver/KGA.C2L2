@@ -5,22 +5,21 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
-    Rigidbody2D bulletRigid;
+    protected Rigidbody2D bulletRigid;
 
-    private int damage;
-    private float speed;
+    protected int damage;
+    protected float speed;
 
-    void Start()
+    protected virtual void Update()
     {
-        
-    }
-
-    void Update()
-    {
-        bulletRigid.AddForce(transform.up.normalized * speed, ForceMode2D.Impulse);
-
+        BulletMovement();
         // 범위 밖 나가면 지우기
         DestroyBullet();
+    }
+
+    protected virtual void BulletMovement()
+    {
+        bulletRigid.AddForce(transform.up.normalized * speed, ForceMode2D.Impulse);
     }
 
     public void Initialize(int damage, float speed)
