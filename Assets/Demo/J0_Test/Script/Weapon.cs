@@ -20,27 +20,53 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     protected GameObjectPool<Bullet> bulletPool;
 
-    protected float tempElapsedTime = 0;
+    [SerializeField]
+    protected float term;
 
+    protected bool isFireOn = false;
+
+    [SerializeField]
+    protected int pullTriggerCount;
+
+    protected float tempElapsedTime = 0;
 
     protected virtual void Update()
     {
         tempElapsedTime -= Time.deltaTime;
 
-        if (tempElapsedTime < 0f)
+        if (tempElapsedTime < 0f && isFireOn == false)
         {
+            isFireOn = true;
             FireBullet();
-
+            StartCoroutine(CoolTime());
             tempElapsedTime = coolTime;
         }
     }
 
     protected virtual void FireBullet()
     {
-        var bullet = bulletPool.Generate();
-        gameObject.SetActive(true);
-        bullet.transform.rotation = muzzle.rotation;
-        bullet.transform.position = muzzle.position;
-        bullet.Initialize(bulletDamage, bulletSpeed);
+        StartCoroutine(FirePattern());
+    }
+
+    protected virtual IEnumerator FirePattern()
+    {
+        for (int i = pullTriggerCount; i > 0; i--)
+        {
+            var bullet = bulletPool.Generate();
+            gameObject.SetActive(true);
+            bullet.transform.rotation = muzzle.rotation;
+            bullet.transform.position = muzzle.position;
+            bullet.Initialize(bulletDamage, bulletSpeed);
+            yield return new WaitForSeconds(term);
+        }
+    }
+    IEnumerator CoolTime()
+    {
+        for (float i = coolTime; i > 0; i--)
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        tempElapsedTime = coolTime;
+        isFireOn = false;
     }
 }

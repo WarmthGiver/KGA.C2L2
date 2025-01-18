@@ -36,20 +36,18 @@ public class WeaponTypeActive : Weapon
 
         tempAngle = muzzle.rotation;
 
-        StartCoroutine(ActiveSkill(tempVector, tempAngle));
+        StartCoroutine(ActiveSkillPattern(tempVector, tempAngle));
     }
 
-    IEnumerator ActiveSkill(Vector3 shootDirection, Quaternion shootAngle)
+    IEnumerator ActiveSkillPattern(Vector3 shootDirection, Quaternion shootAngle)
     {
-        for (int i = 8; i > 0; i--)
+        for (int i = pullTriggerCount; i > 0; i--)
         {
             var bullet = bulletPool.Generate();
             bullet.transform.rotation = shootAngle;
             bullet.transform.position = shootDirection;
             bullet.Initialize(bulletDamage, bulletSpeed);
-            //var bullet = Instantiate(this.bullet, shootDirection, shootAngle);
-            //bullet.Initialize(bulletDamage, bulletSpeed);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(term);
         }
     }
 

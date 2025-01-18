@@ -6,25 +6,20 @@ using UnityEngine;
 public class WeaponTypeB : Weapon
 {
     [SerializeField]
-    private Transform[] muzzleTypeB = new Transform[3];
+    private Transform[] muzzleTypeB = new Transform[2];
 
-    protected override void FireBullet()
+    protected override IEnumerator FirePattern()
     {
-        for(int i = 0; i < muzzleTypeB.Length; i++)
+        for (int i = pullTriggerCount; i > 0; i--)
         {
-            //var bullet = Instantiate(this.bullet, muzzleTypeB[i].position, muzzleTypeB[i].rotation);
-            var bullet = bulletPool.Generate();
-            bullet.transform.rotation = muzzleTypeB[i].rotation;
-            bullet.transform.position = muzzleTypeB[i].position;
-            bullet.Initialize(bulletDamage, bulletSpeed);
-            
-            //bullet.Initialize(bulletDamage, bulletSpeed);
-
-            /*
-            var bullet = bulletPool.Generate();
-            bullet.transform.position = muzzle.position;
-            bullet.Initialize(bulletDamage, bulletSpeed);
-            */
+            for (int j = 0; j < muzzleTypeB.Length; j++)
+            {
+                var bullet = bulletPool.Generate();
+                bullet.transform.rotation = muzzleTypeB[j].rotation;
+                bullet.transform.position = muzzleTypeB[j].position;
+                bullet.Initialize(bulletDamage, bulletSpeed);
+            }
+                yield return new WaitForSeconds(term);
         }
     }
 }
