@@ -26,7 +26,7 @@ namespace ZL.Unity.Audio
 
         [Button(nameof(LoadAudioMixerParameters), "Load Parameters")]
 
-        private AudioMixer audioMixer;
+        private AudioMixer audioMixer = null;
 
         [SerializeField]
 
@@ -35,6 +35,24 @@ namespace ZL.Unity.Audio
         [Button(nameof(SaveVolumes))]
 
         private SerializableDictionary<string, float, FloatPref> parameters;
+
+        private void Reset()
+        {
+            LoadAudioMixerParameters();
+        }
+
+        private void OnValidate()
+        {
+            foreach (var parameter in parameters)
+            {
+                parameter.Value = Mathf.Clamp01(parameter.Value);
+
+                if (Application.isPlaying == true)
+                {
+                    SetVolume(parameter.Key, parameter.Value);
+                }
+            }
+        }
 
 #if UNITY_EDITOR
 
@@ -59,19 +77,6 @@ namespace ZL.Unity.Audio
             }
 
             EditorUtility.SetDirty(this);
-        }
-
-        private void OnValidate()
-        {
-            foreach (var parameter in parameters)
-            {
-                parameter.Value = Mathf.Clamp01(parameter.Value);
-
-                if (Application.isPlaying == true)
-                {
-                    SetVolume(parameter.Key, parameter.Value);
-                }
-            }
         }
 
 #endif

@@ -1,18 +1,16 @@
 using UnityEngine;
 
+using UnityEngine.UI;
+
 namespace ZL.Unity.Audio
 {
-    using UnityEngine.UI;
-
     [DisallowMultipleComponent]
-
-    [RequireComponent(typeof(Slider))]
 
     public sealed class AudioMixerVolumeSlider : MonoBehaviour
     {
         [Space]
 
-        [SerializeField, GetComponent, ReadOnly]
+        [SerializeField, GetComponentInChildren, ReadOnly]
 
         private Slider slider;
 
@@ -22,19 +20,14 @@ namespace ZL.Unity.Audio
 
         private string key;
 
-        private void Start()
-        {
-            Refresh();
-        }
-
         public void Refresh()
         {
-            slider.value = AudioMixerManager.Instance.GetVolume(key);
+            slider.value = AudioMixerManager.Instance.GetVolume(key) * 100f;
         }
 
-        public void SetVolume()
+        public void OnValueChanged()
         {
-            AudioMixerManager.Instance.SetVolume(key, slider.value);
+            AudioMixerManager.Instance.SetVolume(key, slider.value * 0.01f);
         }
     }
 }

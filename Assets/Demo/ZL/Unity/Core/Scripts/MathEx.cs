@@ -24,6 +24,16 @@ namespace ZL.Unity
         /// </summary>
         public const float normal255 = 0.003921569f;
 
+        public static int DecibelToPercent(float value)
+        {
+            return (int)DecibelToLinear(value) * 100;
+        }
+
+        public static float PercentToDecibel(int value)
+        {
+            return LinearToDecibel(value * 0.01f);
+        }
+
         public static float DecibelToLinear(float value)
         {
             if (value <= -80f)

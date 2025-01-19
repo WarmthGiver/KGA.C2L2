@@ -13,7 +13,7 @@ namespace ZL.Unity
         {
             instance.GetFloat(key, out float value);
 
-            return MathEx.LinearToDecibel(value);
+            return MathEx.DecibelToLinear(value);
         }
     }
 }
