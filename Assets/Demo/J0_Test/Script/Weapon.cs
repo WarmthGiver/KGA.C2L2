@@ -30,6 +30,11 @@ public class Weapon : MonoBehaviour
 
     protected float tempElapsedTime = 0;
 
+    protected void Awake()
+    {
+        tempElapsedTime = coolTime;
+    }
+
     protected virtual void Update()
     {
         tempElapsedTime -= Time.deltaTime;
