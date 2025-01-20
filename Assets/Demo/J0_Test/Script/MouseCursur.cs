@@ -6,10 +6,6 @@ public class MouseCursur : MonoBehaviour
 {
     public static Vector3 mousePos;
 
-    void Update()
-    {
-        
-    }
     // 마우스 커서 위치
     public static Vector3 UpdateMousePosition()
     {

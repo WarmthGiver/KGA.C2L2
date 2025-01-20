@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using ZL.Unity.ObjectPooling;
 
-public class WeaponTypeActive : Weapon
+public sealed class WeaponTypeActive : Weapon
 {
-    private bool isSkillOn = false;
+    public static bool isSkillOn = false;
 
     Vector3 center = new Vector3(0, 0, 0);
 
@@ -31,20 +32,18 @@ public class WeaponTypeActive : Weapon
     
     protected override void FireBullet()
     {
-        tempVector = (muzzle.position - center).normalized;
-
-        tempAngle = muzzle.rotation;
-
-        StartCoroutine(ActiveSkill(tempVector, tempAngle));
+        StartCoroutine(ActiveSkillPattern());
     }
 
-    IEnumerator ActiveSkill(Vector3 shootDirection, Quaternion shootAngle)
+    IEnumerator ActiveSkillPattern()
     {
-        for (int i = 8; i > 0; i--)
+        for (int i = pullTriggerCount; i > 0; i--)
         {
-            var bullet = Instantiate(this.bullet, shootDirection, shootAngle);
+            var bullet = bulletPool.Generate();
+            bullet.transform.rotation = gameObject.transform.rotation;
+            bullet.transform.position = gameObject.transform.position;
             bullet.Initialize(bulletDamage, bulletSpeed);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(term);
         }
     }
 

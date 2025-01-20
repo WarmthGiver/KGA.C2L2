@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Range
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BodyMuzzle
+  - name: BulletBody
     uniqueID: 3932684263
     locked: 0
   - name: Body
