@@ -32,7 +32,7 @@ public class WeaponRotation : MonoBehaviour
     }
 
     // 무기 기준 방향벡터
-    protected Vector3 SideDirectionVector()
+    protected Vector3 WeaponDirectionVector()
     {
         return gameObject.transform.position - MouseCursur.UpdateMousePosition();
     }
@@ -53,6 +53,6 @@ public class WeaponRotation : MonoBehaviour
     // 마우스 커서 바라보기(집중 공격)
     protected void FacingCursur()
     {
-        gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(SideDirectionVector()));
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(WeaponDirectionVector()));
     }
 }

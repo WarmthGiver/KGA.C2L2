@@ -10,27 +10,22 @@ public sealed class WeaponActiveRotation : WeaponRotation
     protected override void Update()
     {
         // 항상 마우스 커서 향함
-        if (WeaponTypeActive.isSkillOn == false)
+        if (WeaponTypeActive.isSkillOn == true)
         {
-            FacingCursur();
+            StartCoroutine(FacingTarget(WeaponDirectionVector()));
         }
         // 스킬 지속하는 동안 방향 고정
         else
         {
-            StartCoroutine(FacingTarget(GetMousePosition()));
+            FacingCursur();
         }
-    }
-
-    Vector3 GetMousePosition()
-    {
-        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     IEnumerator FacingTarget(Vector3 lookAt)
     {
         while (WeaponTypeActive.isSkillOn == true)
         {
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(-lookAt));
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, AngleCalculator(lookAt));
             yield return null;
         }
     }
