@@ -16,6 +16,8 @@ namespace ZL.Unity.Tweeners
 
         private TweenerCore<T1, T2, TPlugOptions> current;
 
+        public TweenerCore<T1, T2, TPlugOptions> Current => current;
+
         public ValueTweener(DOGetter<T1> getter, DOSetter<T1> setter)
         {
             this.getter = getter;

@@ -81,24 +81,26 @@ namespace ZL.Unity.Audio
 
 #endif
 
-        protected override void OnAwake()
+        private void Start()
         {
             LoadVolumes();
         }
 
-        public void SaveVolumes()
+        public void LoadVolumes()
         {
-            foreach (var volumePref in parameters)
+            foreach (var parameter in parameters)
             {
-                volumePref.SaveValue();
+                parameter.TryLoadValue();
+
+                audioMixer.SetVolume(parameter.Key, parameter.Value);
             }
         }
 
-        public void LoadVolumes()
+        public void SaveVolumes()
         {
-            foreach (var volumePref in parameters)
+            foreach (var parameter in parameters)
             {
-                volumePref.TryLoadValue();
+                parameter.SaveValue();
             }
         }
 

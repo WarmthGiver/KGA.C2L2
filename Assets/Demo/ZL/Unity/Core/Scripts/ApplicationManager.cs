@@ -4,8 +4,6 @@ using ZL.Unity.IO;
 
 namespace ZL.Unity
 {
-    [CreateAfterSceneLoad]
-
     public sealed class ApplicationManager : MonoBehaviour
     {
         public static ApplicationManager Instance { get; private set; }

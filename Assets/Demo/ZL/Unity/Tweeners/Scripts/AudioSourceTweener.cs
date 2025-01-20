@@ -16,11 +16,11 @@ namespace ZL.Unity.Tweeners
 
         private AudioSource audioSource;
 
-        public FloatTweener VolumeTweener { get; private set; }
+        public FloatTweener Volume { get; private set; }
 
         private void Awake()
         {
-            VolumeTweener = new(() => audioSource.volume, value => audioSource.volume = value);
+            Volume = new(() => audioSource.volume, value => audioSource.volume = value);
         }
     }
 }

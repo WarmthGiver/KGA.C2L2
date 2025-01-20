@@ -4,11 +4,11 @@ namespace ZL.Unity.Tweeners
 {
     public static class AudioListenerTweener
     {
-        public static readonly FloatTweener volumeTweener;
+        public static FloatTweener Volume { get; private set; }
 
         static AudioListenerTweener()
         {
-            volumeTweener = new(() => AudioListener.volume, value => AudioListener.volume = value);
+            Volume = new(() => AudioListener.volume, value => AudioListener.volume = value);
         }
     }
 }

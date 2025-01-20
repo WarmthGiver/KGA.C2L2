@@ -21,4 +21,14 @@ namespace ZL.Unity
             Application.Quit();
         }
     }
+
+    public static class FixedEditorApplication
+    {
+        public static EditorApplication.CallbackFunction DelayCall
+        {
+            get => EditorApplication.delayCall;
+
+            set => EditorApplication.delayCall = value;
+        }
+    }
 }

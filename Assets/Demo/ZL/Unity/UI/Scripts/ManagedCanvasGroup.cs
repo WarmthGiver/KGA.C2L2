@@ -6,10 +6,46 @@ namespace ZL.Unity.UI
 
     [DisallowMultipleComponent]
 
-    [RequireComponent(typeof(CanvasGroup))]
+    [RequireComponent(typeof(CanvasGroupFader))]
 
-    public sealed class ManagedCanvasGroup : MonoBehaviour
+    public class ManagedCanvasGroup : MonoBehaviour
     {
+        [Space]
 
+        [SerializeField, GetComponent, ReadOnly]
+
+        protected CanvasGroupFader fader;
+
+        public CanvasGroupFader Fader => fader;
+
+        [Space]
+
+        [SerializeField]
+
+        private CanvasGroupManager manager;
+
+        private ManagedCanvasGroup prev = null;
+
+        public virtual void Enable()
+        {
+            prev = manager.SetCurrent(this);
+
+            if (prev != null)
+            {
+                prev.fader.TweenFaded(true, 0.1f);
+            }
+
+            fader.TweenFaded(false, 0.1f);
+        }
+
+        public virtual void Disable()
+        {
+            if (prev != null)
+            {
+                prev.Enable();
+            }
+
+
+        }
     }
 }
