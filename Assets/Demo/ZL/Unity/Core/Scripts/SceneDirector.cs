@@ -28,16 +28,30 @@ namespace ZL.Unity
 
         protected virtual IEnumerator Start()
         {
-            sceneFader.TweenFaded(true, fadeDuration).Current.SetEase(Ease.Linear);
+            AudioListenerTweener.VolumeTweener.Tween(1f, fadeDuration).
 
-            AudioListenerTweener.Volume.Tween(1f, fadeDuration);
+                SetEase(Ease.Linear);
+
+            sceneFader.TweenFaded(true, fadeDuration).
+                
+                SetEase(Ease.Linear);
 
             yield return WaitFor.Seconds(fadeDuration);
         }
 
         public void LoadScene(string name)
         {
-            SceneManager.LoadScene(name);
+            void LoadScene() => SceneManager.LoadScene(name);
+
+            AudioListenerTweener.VolumeTweener.Tween(0f, fadeDuration).
+
+                SetEase(Ease.Linear);
+
+            sceneFader.TweenFaded(false, fadeDuration).
+
+                SetEase(Ease.Linear).
+                
+                OnComplete(LoadScene);
         }
 
         public void Quit()

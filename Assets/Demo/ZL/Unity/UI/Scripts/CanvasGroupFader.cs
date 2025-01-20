@@ -1,5 +1,6 @@
 using DG.Tweening;
-
+using DG.Tweening.Core;
+using DG.Tweening.Plugins.Options;
 using System;
 
 using UnityEngine;
@@ -63,7 +64,7 @@ namespace ZL.Unity.UI
             IsFaded = isFaded;
         }
 
-        public FloatTweener TweenFaded(bool value, float duration)
+        public TweenerCore<float, float, FloatOptions> TweenFaded(bool value, float duration)
         {
             isFaded = value;
 
@@ -81,7 +82,7 @@ namespace ZL.Unity.UI
                 alphaTweener.ValueTweener.Tween(1f, duration);
             }
 
-            return alphaTweener.ValueTweener;
+            return alphaTweener.ValueTweener.Current;
         }
 
         private void OnFaded()

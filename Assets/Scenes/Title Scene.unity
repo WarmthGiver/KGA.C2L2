@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2000881, g: 0.20486705, b: 0.20775762, a: 1}
+  m_IndirectSpecularColor: {r: 0.20008785, g: 0.20485908, b: 0.20775275, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -928,12 +928,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3138608344094378969, guid: 01ef8e2feac02ea4fb43a82e44739b08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138608344094378969, guid: 01ef8e2feac02ea4fb43a82e44739b08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1373599712}
+      objectReference: {fileID: 1373599715}
     - target: {fileID: 3138608344094378969, guid: 01ef8e2feac02ea4fb43a82e44739b08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138608344094378969, guid: 01ef8e2feac02ea4fb43a82e44739b08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ZL.Unity.SceneDirector, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3138608344094378969, guid: 01ef8e2feac02ea4fb43a82e44739b08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Main Scene
       objectReference: {fileID: 0}
     - target: {fileID: 7935126721018021946, guid: 01ef8e2feac02ea4fb43a82e44739b08, type: 3}
       propertyPath: m_Name
@@ -1698,9 +1710,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 6862800633994599598}
   - {fileID: 1373599714}
-  - {fileID: 5898885285742414256}
   - {fileID: 1067535303}
+  - {fileID: 5898885285742414256}
   - {fileID: 1720898159}
   - {fileID: 1550709720604403920}
-  - {fileID: 2198743395277377509}
   - {fileID: 5035493017663164576}
+  - {fileID: 2198743395277377509}

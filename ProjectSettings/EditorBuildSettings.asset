@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Demo/ChoiHunyMin/Scenes/CHMscenes.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Title Scene.unity
+    guid: dc2de26d19c95c941addb1215b3abdab
+  - enabled: 1
+    path: Assets/Scenes/Main Scene.unity
+    guid: 2af4bd89c5b7fc94ebf56f77eff91576
   m_configObjects: {}
