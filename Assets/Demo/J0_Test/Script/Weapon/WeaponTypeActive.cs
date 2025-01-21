@@ -28,6 +28,15 @@ public sealed class WeaponTypeActive : Weapon
                 StartCoroutine(CoolTime());
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Time.timeScale = 0f;
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Time.timeScale = 1f;
+        }
     }
     
     protected override void FireBullet()
