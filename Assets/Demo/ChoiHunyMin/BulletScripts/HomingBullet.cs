@@ -21,9 +21,9 @@ namespace CHM
         public override void Process()
         {
             movementRigidbody2D.MoveTo((target.transform.position - transform.position).normalized);
+
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
-            //발사체 이동방향 설정
-            //transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
+           
         }
     }
 }

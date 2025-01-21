@@ -38,89 +38,39 @@ namespace CHM
         //스킬 사용 가능여부 반환하는 IsSkillAvailable 프로퍼티
 
       
-
+        
         private void Update()
         {
             OnSkill();
+            
         }
         public void OnSkill()
         {
             //스킬이 사용 가능한 상태인지 검사 (쿨타임)
             if (IsSkillAvailable == false) return;
-
-            //발사체 생성
-            //열거형에 선언된 숫자와 projectiles[]에 등록할 직선형 번호는 0번이라
-            //(int)projectileType = 0 배열 방번호랑 같음
-            /*GameObject clone = 
-            GameObject.Instantiate(projectiles[(int)projectileType], skillSpawnPoint.position, Quaternion.identity);
-
-            //ProjectileBase.Setup()함수 호출 목표 트랜스 폼과 데미지를 넣어준 상황
-            clone.GetComponent<ProjectileBase>().Setup(target, 1);
-
-            //currentCooldownTime에 현재 시간 저장 시간이 currentCooldownTime 만큼 지나면 스킬 사용가능
-            currentCooldownTime = Time.time;*/
-
+            //발사체 생성           
             //attackRate 주기로 발사체 생성
             //현 시간에서 -currentAttackRate 를 뺀 값이 attackRate보다 크면
             if (Time.time - currentAttackRate > attackRate)
             {
-                switch(bulletType)
-                { 
-                    case BulletType.Straight:
-                     //SerializableDictionary 클래스의 GameObjectPool 의 키 값을 projectileType = enum 값으로 생성함
-                     var clone = bullet[BulletType.Straight].Generate();
-                     clone.transform.position = bulletSpawnPoint.position;
-                     clone.transform.rotation = Quaternion.identity;
-                     
-                     //GameObject.Instantiate(projectiles[(int)projectileType], skillSpawnPoint.position, Quaternion.identity);
-                     //squadEnemy();
-                     //ProjectileBase.Setup() 메서드의 매개변수가 4개로 늘어남 
-                     //발사체 갯수(projectileCount),발사체 현재 순번(currentProjectileIndex)를 추가함
-                     clone.Setup(target, 1, bulletCount, currentBulletIndex);
-                        currentBulletIndex++;//발사체 생성시 증가
-                     currentAttackRate = Time.time;//currentAttackRate 값을 현재시간으로 초기화
-                        break;
+                var clone = bullet[bulletType].Generate();
+                clone.transform.position = bulletSpawnPoint.position;
+                clone.transform.rotation = Quaternion.identity;
 
-                    case BulletType.Homing:
-                        var homing = bullet[BulletType.Homing].Generate();
-                        homing.transform.position = bulletSpawnPoint.position;
-                        homing.transform.rotation = Quaternion.identity;
-                        homing.Setup(target, 1, bulletCount, currentBulletIndex);
-                        currentBulletIndex++;//발사체 생성시 증가
-                        currentAttackRate = Time.time;
-                        break;
+                clone.Setup(target, 1, bulletCount, currentBulletIndex);
 
-                    case BulletType.QuadraticHoming:
-                        var quadraticHoming = bullet[BulletType.QuadraticHoming].Generate();
-                        quadraticHoming.transform.position = bulletSpawnPoint.position;
-                        quadraticHoming.transform.rotation = Quaternion.identity;
-                        quadraticHoming.Setup(target, 1, bulletCount, currentBulletIndex);
-                        currentBulletIndex++;//발사체 생성시 증가
-                        currentAttackRate = Time.time;
-                        break;
+                currentBulletIndex++;//발사체 생성시 증가
+                currentAttackRate = Time.time;//currentAttackRate 값을 현재시간으로 초기화
 
-                    case BulletType.CubicHoming:
-                        var cubicHoming = bullet[BulletType.CubicHoming].Generate();
-                        cubicHoming.transform.position = bulletSpawnPoint.position;
-                        cubicHoming.transform.rotation = Quaternion.identity;
-                        cubicHoming.Setup(target, 1, bulletCount, currentBulletIndex);
-                        currentBulletIndex++;//발사체 생성시 증가
-                        currentAttackRate = Time.time;
-                        break;
-
-
-                }
-
-
-
-
+                
             }
 
+           this.gameObject.SetActive(true);
             //projectileCount 개수만큼 발사체를 생성한 후 쿨타임 초기화
             //지정된 개수만큼 발사체를 생성해 currentProjectileIndex가 projectileCount보다 크거나 같으면
             if (currentBulletIndex >= bulletCount)
             {
-                //currentProjectileIndex = 0;//currentProjectileIndex 를 0으로 만들고
+                currentBulletIndex = 0;//currentProjectileIndex 를 0으로 만들고
                 currentCooldownTime = Time.time;
                 //currentCooldownTime을 현재 시간으로 초기화해 다시 스킬 쿨타임이 초기화 될때 까지 대기함
             }

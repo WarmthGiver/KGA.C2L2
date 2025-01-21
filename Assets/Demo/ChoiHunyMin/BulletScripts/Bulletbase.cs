@@ -2,6 +2,7 @@
  * 날짜 25 - 1 - 20
  * 4가지 총알 궤도 사용할 총알 클래스
 */
+using CC;
 using UnityEngine;
 using ZL.Unity.Collections;
 using ZL.Unity.ObjectPooling;
@@ -12,11 +13,11 @@ namespace CHM
     {
         //프리팹 상속자
         [SerializeField]
-        private GameObject Animator;
+        private GameObject Animator;        
+        
         //[SerializeField]
         //private GameObject hitEffect; //피격 임팩트 프리팹
-        protected MovementRigidbody2D movementRigidbody2D;//이동제어 MovementRigidbody2D 변수
-        //[SerializeField] private SerializableDictionary<string, GameObjectPool<Bulletbase>> bullet;
+        protected MovementRigidbody2D movementRigidbody2D;//이동제어 MovementRigidbody2D 변수       
 
         //Setup 메서드는 자식 클래스에서 재정의 할수 있도록 virtual메서드로 만듬
         //총 4개의 매개변수 (목표 , 공격력 , 발사체 개수 , 발사체 순번)
@@ -27,7 +28,7 @@ namespace CHM
         private void Update()
         {
             Process();
-            
+            Test.stop();
         }
         //발사체가 업데이트 할 동안 호출할 Process 메서드
         //발사체 유형에 따라 자식 클래스에서 정의할수있도록 추상(abstract) 메서드로 만듬
@@ -37,13 +38,10 @@ namespace CHM
         {
             if (collision.CompareTag("Player"))
             {
-                //피격 프리팹 호출하고
-                //Instantiate(hitEffect, transform.position, Quaternion.identity);
-                squadAnimator();
-                //자기자신 삭제
-                //Destroy(gameObject);
+                squadAnimator();  
+                
                 gameObject.SetActive(false);
-                //적 캐릭터 피격 처리
+               
             }
         }
         void squadAnimator()
@@ -51,6 +49,8 @@ namespace CHM
             Instantiate(Animator, transform.position, transform.rotation);
             
         }
+       
+
         
 
     }
