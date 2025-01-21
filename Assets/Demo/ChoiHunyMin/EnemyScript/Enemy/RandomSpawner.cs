@@ -1,17 +1,21 @@
-using CHM;
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
+using ZL.Unity.Collections;
+using ZL.Unity.ObjectPooling;
 
 namespace CHM
 {
     public class RandomSpawner : MonoBehaviour
     {
-        [SerializeField] GameObject enemyPrefep;
+        
+        [SerializeField]
+        private SerializableDictionary<string, GameObjectPool<Enemy>> dictinary;        
         [SerializeField] float circleR;//반지름 값
         [SerializeField] float coolTime;//쿨타임
-        float coolTimeup;//증감식
+        [SerializeField] float coolTimeup;//흐르는시간
         int circleRandom;
         float speed;
         Vector3 targetPos = new Vector3(0, 0, 0);//기준
@@ -23,18 +27,12 @@ namespace CHM
             transform.rotation = Quaternion.Euler(0, 0, angle);
             Circle();
 
-            if (coolTimeup > coolTime)
+            if (coolTimeup < coolTime)
             {
 
                 circleRandom = Random.Range(0, 360);
                 squadEnemy();
 
-
-                //Vector3 pos = Random.insideUnitSphere * circleR;
-                //Vector2 pos = Random.insideUnitCircle * 10;
-                //GetComponent<Rigidbody2D>().velocity = Random.onUnitSphere * 10;
-                //transform.position = pos;
-                //Normalize();
                 coolTime = 0;
             }
         }
@@ -52,7 +50,10 @@ namespace CHM
         }
         void squadEnemy()
         {
-            Instantiate(enemyPrefep, transform.position, transform.rotation);
+            //Instantiate(dictinary, transform.position, transform.rotation);
+            Enemy straightEnemy  = dictinary["StraightEnemy"].Generate();
+            straightEnemy.transform.position = transform.position;
+            straightEnemy.transform.rotation = transform.rotation;
         }
     }
 }

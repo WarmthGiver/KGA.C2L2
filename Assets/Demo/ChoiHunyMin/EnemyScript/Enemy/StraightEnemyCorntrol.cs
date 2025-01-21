@@ -10,12 +10,13 @@ namespace CHM
 {
     public class StraightEnemyCorntrol : Enemy
     {
-        [SerializeField] float speed;
+        [SerializeField] float speed;        
         void Update()
         {
-            Vector3 direction = target - transform.position;//타겟포지션 - 적포지션 값
+            Vector3 direction = new Vector3(0,0,0) - transform.position;//타겟포지션 - 적포지션 값
             direction.Normalize();
             transform.position += direction * speed * Time.deltaTime;
         }
+        
     }
 }
