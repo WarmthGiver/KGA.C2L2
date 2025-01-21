@@ -14,8 +14,10 @@ namespace ZL.Unity
 {
     [DisallowMultipleComponent]
 
-    public abstract class SceneDirector : MonoBehaviour
+    public class SceneDirector : MonoBehaviour
     {
+        public static SceneDirector Instance { get; private set; }
+
         [Space]
 
         [SerializeField]
@@ -25,6 +27,13 @@ namespace ZL.Unity
         [SerializeField]
 
         private float fadeDuration = 2f;
+
+        private int pauseCall = 0;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         protected virtual IEnumerator Start()
         {
@@ -41,8 +50,6 @@ namespace ZL.Unity
 
         public void LoadScene(string name)
         {
-            void LoadScene() => SceneManager.LoadScene(name);
-
             AudioListenerTweener.VolumeTweener.Tween(0f, fadeDuration).
 
                 SetEase(Ease.Linear);
@@ -51,7 +58,24 @@ namespace ZL.Unity
 
                 SetEase(Ease.Linear).
                 
-                OnComplete(LoadScene);
+                OnComplete(() => SceneManager.LoadScene(name));
+        }
+
+        public void Pause()
+        {
+            ++pauseCall;
+
+            Time.timeScale = 0f;
+        }
+
+        public void Resume()
+        {
+            if (--pauseCall <= 0)
+            {
+                pauseCall = 0;
+
+                Time.timeScale = 1f;
+            }
         }
 
         public void Quit()

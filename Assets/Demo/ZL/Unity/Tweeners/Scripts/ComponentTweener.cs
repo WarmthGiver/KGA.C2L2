@@ -10,6 +10,6 @@ namespace ZL.Unity.Tweeners
 
         where TPlugOptions : struct, IPlugOptions
     {
-        public TValueTweener ValueTweener { get; protected set; }
+        public TValueTweener Tweener { get; protected set; }
     }
 }

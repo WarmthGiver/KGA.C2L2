@@ -20,7 +20,7 @@ namespace ZL.Unity.Tweeners
 
         private void Awake()
         {
-            ValueTweener = new(() => canvasGroup.alpha, value => canvasGroup.alpha = value);
+            Tweener = new(() => canvasGroup.alpha, value => canvasGroup.alpha = value);
         }
     }
 }

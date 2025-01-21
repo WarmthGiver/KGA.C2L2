@@ -1,7 +1,8 @@
 using DG.Tweening;
+
 using DG.Tweening.Core;
+
 using DG.Tweening.Plugins.Options;
-using System;
 
 using UnityEngine;
 
@@ -57,8 +58,6 @@ namespace ZL.Unity.UI
             }
         }
 
-        public event Action ActionOnFaded = null;
-
         private void Awake()
         {
             IsFaded = isFaded;
@@ -70,7 +69,9 @@ namespace ZL.Unity.UI
 
             if (isFaded == true)
             {
-                alphaTweener.ValueTweener.Tween(0f, duration).
+                alphaTweener.Tweener.Tween(0f, duration).
+                    
+                    SetUpdate(true).
 
                     OnComplete(OnFaded);
             }
@@ -79,19 +80,17 @@ namespace ZL.Unity.UI
             {
                 gameObject.SetActive(true);
 
-                alphaTweener.ValueTweener.Tween(1f, duration);
+                alphaTweener.Tweener.Tween(1f, duration).
+                    
+                    SetUpdate(true);
             }
 
-            return alphaTweener.ValueTweener.Current;
+            return alphaTweener.Tweener.Current;
         }
 
         private void OnFaded()
         {
             gameObject.SetActive(false);
-
-            ActionOnFaded?.Invoke();
-
-            ActionOnFaded = null;
         }
     }
 }

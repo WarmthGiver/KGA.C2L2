@@ -26,12 +26,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: playlist.value.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: playlist.value.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: e4c0e35960639794b97e0a058d76b8e2, type: 3}
+      objectReference: {fileID: 8300000, guid: f0acdf2da46c31443a59abdfaeb620c5, type: 3}
     - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: playlist.value.Array.data[1]
       value: 
