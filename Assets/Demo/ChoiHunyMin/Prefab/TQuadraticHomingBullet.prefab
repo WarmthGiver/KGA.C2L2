@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7789293450180497692}
   m_Layer: 0
   m_Name: TQuadraticHomingBullet
-  m_TagString: Untagged
+  m_TagString: BulletEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,4 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d1508234040d64899c41f93ad56fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletHp: 0
+  bulletDamage: 0
   Animator: {fileID: 5205637608671962883, guid: a1e387c766851aa4cb4dee5c96dce7c6, type: 3}

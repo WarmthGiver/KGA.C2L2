@@ -21,14 +21,8 @@ namespace CC
                 //부딪히면 player의 hp의 데미지를 준다
                 var player = collision.GetComponent<IDamageable>();
                 player.GetDamage(enemyDamage);
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
 
-            }
-
-            //임시 지워야댐 재형이꺼랑 머지하면
-            if (collision.gameObject.tag == "Bullet")
-            {
-                gameObject.SetActive(false);
             }
 
         }

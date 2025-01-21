@@ -9,8 +9,10 @@ using ZL.Unity.ObjectPooling;
 
 namespace CHM
 {
-    public abstract class Bulletbase : MonoBehaviour
+    public abstract class Bulletbase : MonoBehaviour, IDamageable
     {
+        [SerializeField] private int bulletHp = 1;
+        [SerializeField] private int bulletDamage = 1;
         //프리팹 상속자
         [SerializeField]
         private GameObject Animator;        
@@ -28,7 +30,6 @@ namespace CHM
         private void Update()
         {
             Process();
-            Test.stop();
         }
         //발사체가 업데이트 할 동안 호출할 Process 메서드
         //발사체 유형에 따라 자식 클래스에서 정의할수있도록 추상(abstract) 메서드로 만듬
@@ -43,15 +44,30 @@ namespace CHM
                 gameObject.SetActive(false);
                
             }
+            if (collision.CompareTag("Bullet"))
+            {
+                var player = collision.GetComponent<IDamageable>();
+                player.GetDamage(bulletDamage);
+                //gameObject.SetActive(false);
+
+            }
+
         }
         void squadAnimator()
         {
             Instantiate(Animator, transform.position, transform.rotation);
             
         }
-       
 
-        
-
+        public void GetDamage(int damage)
+        {
+            //불렛 hp를 줄여야댐
+            bulletHp -= damage;
+            if (bulletHp <= 0)
+            {
+                bulletHp = 0;
+                gameObject.SetActive(false);
+            }
+        }
     }
 }
