@@ -19,7 +19,7 @@ namespace CHM
 
         //Setup 메서드는 자식 클래스에서 재정의 할수 있도록 virtual메서드로 만듬
         //총 4개의 매개변수 (목표 , 공격력 , 발사체 개수 , 발사체 순번)
-        public virtual void Setup(Transform target, float damage, int maxCount = 1, int index = 0)
+        public virtual void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
         {
             movementRigidbody2D = GetComponent<MovementRigidbody2D>();
         }

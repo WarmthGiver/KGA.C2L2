@@ -24,7 +24,7 @@ namespace CHM
         [SerializeField]
         private Transform bulletSpawnPoint;//발사체가 생성되는 트랜스폼 컴포넌트 
         [SerializeField]
-        private Transform target;//목표물
+        private GameObject target;//목표물
         [SerializeField]
         private float attackRate = 0.5f;//발사체 사이의 사출 간격        
         [SerializeField] private SerializableDictionary<BulletType, GameObjectPool<Bulletbase>> bullet;
@@ -36,7 +36,9 @@ namespace CHM
         
         public bool IsSkillAvailable => (Time.time - currentCooldownTime > cooldownTime);
         //스킬 사용 가능여부 반환하는 IsSkillAvailable 프로퍼티
-        
+
+      
+
         private void Update()
         {
             OnSkill();

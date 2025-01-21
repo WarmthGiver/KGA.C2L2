@@ -6,8 +6,9 @@
 using UnityEngine;
 using ZL.Unity.ObjectPooling;
 using ZL.Unity.Collections;
+using CC;
 
-namespace CHM
+namespace CHO
 {
 
     public class SpiralEnemySpawner : Enemy
@@ -70,13 +71,12 @@ namespace CHM
             for (int i = 0; i < enemyCounter; i++)
             {
                 Vector2 currentPosition = transform.position;  // 현재 위치
-                Debug.Log(transform.position);  // 생성된 위치 확인
 
                 // 각도에 따른 방향 벡터 계산
                 Vector2 direction = Quaternion.Euler(0, 0, euler * i) * transform.up;
 
                 // 생성 위치 계산
-                Vector2 createPosition = currentPosition + direction * 0.5f;//(객체 간격)
+                Vector2 createPosition = currentPosition + direction * 0.25f;//(객체 간격)
 
                 var ee = prefabList[enemyName].Generate();
                 ee.transform.position = createPosition;
@@ -127,51 +127,51 @@ namespace CHM
         private void Update()
         {
             //자동 소환
-            //Shoot1();
-            //Shoot2();
+            Shoot1();
+            Shoot2();
 
             //위치
             rCreateCluster();
 
 
             //마우스 클릭시  활성화
-            if (Input.GetMouseButtonDown(0))
-            {
-                randomInt();
-                CreateCluster(3, "SpiralEnemy1");
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    randomInt();
+            //    CreateCluster(3, "SpiralEnemy1");
 
-            }
-            if (Input.GetMouseButtonDown(1))
-            {
-                var dod = base.transform.rotation;
-                dod.z = 0;
-                transform.rotation = dod;
-                transform.position = new Vector3(4.5f, 0, 0);
-                CreateCluster(4, "SpiralEnemy1");
+            //}
+            //if (Input.GetMouseButtonDown(1))
+            //{
+            //    var dod = base.transform.rotation;
+            //    dod.z = 0;
+            //    transform.rotation = dod;
+            //    transform.position = new Vector3(4.5f, 0, 0);
+            //    CreateCluster(4, "SpiralEnemy1");
 
-            }
+            //}
 
-            //임시 확인용 1~4마리 생성
-            if(Input.GetKeyDown(KeyCode.Q))
-            {
-                randomInt();
-                CreateCluster(1, "SpiralEnemy1");
-            }
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                randomInt();
-                CreateCluster(2, "SpiralEnemy1");
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                randomInt();
-                CreateCluster(3, "SpiralEnemy2");
-            }
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                randomInt();
-                CreateCluster(4, "SpiralEnemy3");
-            }
+            ////임시 확인용 1~4마리 생성
+            //if(Input.GetKeyDown(KeyCode.Q))
+            //{
+            //    randomInt();
+            //    CreateCluster(1, "SpiralEnemy1");
+            //}
+            //if (Input.GetKeyDown(KeyCode.W))
+            //{
+            //    randomInt();
+            //    CreateCluster(2, "SpiralEnemy1");
+            //}
+            //if (Input.GetKeyDown(KeyCode.E))
+            //{
+            //    randomInt();
+            //    CreateCluster(3, "SpiralEnemy2");
+            //}
+            //if (Input.GetKeyDown(KeyCode.R))
+            //{
+            //    randomInt();
+            //    CreateCluster(4, "SpiralEnemy3");
+            //}
 
 
 

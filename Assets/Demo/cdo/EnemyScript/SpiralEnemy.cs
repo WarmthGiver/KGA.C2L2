@@ -4,9 +4,10 @@
  * 내용: 나선형 적 구현
  */
 using UnityEngine;
+using CC;
 
 
-namespace CHM
+namespace CHO
 {
 
 

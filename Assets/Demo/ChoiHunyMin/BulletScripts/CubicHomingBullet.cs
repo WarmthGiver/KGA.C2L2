@@ -9,15 +9,15 @@ namespace CHM
     {
         private Vector2 start,end,point1,point2;
         private float duration, t = 0f;
-        private Transform target;
+        private GameObject target;
 
-        public override void Setup(Transform target, float damage, int maxCount = 1, int index = 0)
+        public override void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
         {
             base.Setup(target, damage);
 
             this.target = target;
             start =transform.position;
-            end = this.target.position;
+            end = this.target.transform.position;
 
             //시작 지점에서 목표까지의 거리 계산
             float distance = Vector3.Distance(start,end);
@@ -34,7 +34,7 @@ namespace CHM
         }
         public override void Process()
         {
-            end = this.target.position;
+            end = this.target.transform.position;
             t += Time.deltaTime / duration;
             transform.position = Utils.CubicCurve(start, point1, point2, end, t);
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);

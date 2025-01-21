@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5695787403109962844}
   - component: {fileID: 4380192225765541871}
   m_Layer: 0
-  m_Name: explosion_atlas_0
+  m_Name: explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 900
   m_Sprite: {fileID: -1948672080, guid: 769d91ee24077804d9c09e112198bc1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

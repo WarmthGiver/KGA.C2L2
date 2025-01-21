@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace CHM
+namespace CHO
 {
     public class Explosion : MonoBehaviour
     {

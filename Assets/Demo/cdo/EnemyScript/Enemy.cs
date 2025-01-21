@@ -1,7 +1,8 @@
 using System.Diagnostics;
 using UnityEngine;
 
-namespace CHM
+
+namespace CC
 {
     public abstract class Enemy : MonoBehaviour, IDamageable
     {
@@ -14,15 +15,14 @@ namespace CHM
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Player"))
+            if (collision.gameObject.tag == "Player")
             {
-                //부딪히면 player의 hp의 데미지를 준다
-                //var player = collision.GetComponent<IDamageable>();
-                //player.GetDamage(enemyDamage);
-
-                //임시 확인용
-                gameObject.SetActive(false);
                 Explosion();
+                //부딪히면 player의 hp의 데미지를 준다
+                var player = collision.GetComponent<IDamageable>();
+                player.GetDamage(enemyDamage);
+                gameObject.SetActive(false);
+
             }
 
             //임시 지워야댐 재형이꺼랑 머지하면
@@ -42,7 +42,7 @@ namespace CHM
             {
                 enemyHp = 0;
                 gameObject.SetActive(false);
-                //터지는 에셋
+
                 //터지는 기능
                 Explosion();
             }
