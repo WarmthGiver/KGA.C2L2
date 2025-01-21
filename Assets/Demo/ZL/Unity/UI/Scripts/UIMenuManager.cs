@@ -14,29 +14,16 @@ namespace ZL.Unity.UI
 
         protected UIMenu mainMenu;
 
-        private UIMenu current;
+        public UIMenu Current { get; set; } = null;
 
-        private void Awake()
+        public virtual void EnableMainMenu()
         {
-            current = mainMenu;
+            mainMenu.Enable();
         }
 
-        private void OnDisable()
+        public virtual void DisableCurrent()
         {
-            current.Fader.IsFaded = true;
-
-            current = mainMenu;
-
-            current.Fader.IsFaded = false;
-        }
-
-        public UIMenu SetCurrent(UIMenu target)
-        {
-            var prev = current;
-
-            current = target;
-
-            return prev;
+            Current.Disable();
         }
     }
 }

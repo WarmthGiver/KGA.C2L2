@@ -8,12 +8,32 @@ namespace ZL.Unity.ArmadaInvencible
 
     public sealed class PauseMenuManager : UIMenuManager
     {
+        private bool isPaused = false;
+
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (isPaused == false && Input.GetKeyDown(KeyCode.Escape) == true)
             {
-                mainMenu.Enable();
+                EnableMainMenu();
             }
+        }
+
+        public override void EnableMainMenu()
+        {
+            isPaused = true;
+
+            SceneDirector.Instance.Pause();
+
+            base.EnableMainMenu();
+        }
+
+        public override void DisableCurrent()
+        {
+            isPaused = false;
+
+            SceneDirector.Instance.Resume();
+
+            base.DisableCurrent();
         }
     }
 }

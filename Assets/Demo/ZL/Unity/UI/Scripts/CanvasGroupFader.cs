@@ -70,6 +70,8 @@ namespace ZL.Unity.UI
             if (isFaded == true)
             {
                 alphaTweener.Tweener.Tween(0f, duration).
+                    
+                    SetUpdate(true).
 
                     OnComplete(OnFaded);
             }
@@ -78,7 +80,9 @@ namespace ZL.Unity.UI
             {
                 gameObject.SetActive(true);
 
-                alphaTweener.Tweener.Tween(1f, duration);
+                alphaTweener.Tweener.Tween(1f, duration).
+                    
+                    SetUpdate(true);
             }
 
             return alphaTweener.Tweener.Current;

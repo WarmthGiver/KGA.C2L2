@@ -22,30 +22,21 @@ namespace ZL.Unity.UI
 
         protected CanvasGroupFader fader;
 
-        public CanvasGroupFader Fader => fader;
-
-        private UIMenu prev = null;
-
         public virtual void Enable()
         {
-            prev = manager.SetCurrent(this);
-
-            if (prev != null)
+            if (manager.Current != null)
             {
-                prev.fader.TweenFaded(true, 0.1f);
+                manager.Current.Disable();
             }
+
+            manager.Current = this;
 
             fader.TweenFaded(false, 0.1f);
         }
 
         public virtual void Disable()
         {
-            if (prev != null)
-            {
-                manager.SetCurrent(prev);
-
-                prev.fader.TweenFaded(false, 0.1f);
-            }
+            manager.Current = null;
 
             fader.TweenFaded(true, 0.1f);
         }

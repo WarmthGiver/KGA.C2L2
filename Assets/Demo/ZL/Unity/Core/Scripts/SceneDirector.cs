@@ -16,6 +16,8 @@ namespace ZL.Unity
 
     public class SceneDirector : MonoBehaviour
     {
+        public static SceneDirector Instance { get; private set; }
+
         [Space]
 
         [SerializeField]
@@ -25,6 +27,13 @@ namespace ZL.Unity
         [SerializeField]
 
         private float fadeDuration = 2f;
+
+        private int pauseCall = 0;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         protected virtual IEnumerator Start()
         {
@@ -54,12 +63,19 @@ namespace ZL.Unity
 
         public void Pause()
         {
+            ++pauseCall;
+
             Time.timeScale = 0f;
         }
 
         public void Resume()
         {
-            Time.timeScale = 1f;
+            if (--pauseCall <= 0)
+            {
+                pauseCall = 0;
+
+                Time.timeScale = 1f;
+            }
         }
 
         public void Quit()
