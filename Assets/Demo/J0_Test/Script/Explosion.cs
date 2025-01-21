@@ -13,11 +13,6 @@ public class Explosion : MonoBehaviour
         StartCoroutine(Remove());
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        
-    }
-
     IEnumerator Remove()
     {
         while (time > 0)

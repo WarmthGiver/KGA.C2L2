@@ -6,18 +6,18 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour, IDamageable
 {
     [SerializeField]
-    private int playerDamage;
+    private int playerHP;
 
     void Start()
     {
-        playerDamage = 40;
+        playerHP = 40;
     }
 
     public void GetDamage(int damage)
     {
-        playerDamage -= damage;
+        playerHP -= damage;
 
-        if (playerDamage <= 0)
+        if (playerHP <= 0)
         {
             Debug.Log("GameOver");
         }
