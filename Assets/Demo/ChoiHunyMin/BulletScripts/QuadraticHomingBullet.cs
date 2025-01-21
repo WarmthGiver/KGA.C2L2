@@ -7,8 +7,8 @@ namespace CHM
 {
     public class QuadraticHomingBullet : Bulletbase
     {
-        [SerializeField]
-        private float count;
+        
+        
         private Vector2 start, end, point;//시작지점, 끝지점 (목표) ,중간지점
         private float duration, t = 0f;//발사체 재생시간 , 보간위치를 위한 t
         private GameObject target;//목표 지정

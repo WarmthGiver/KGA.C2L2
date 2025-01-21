@@ -11,7 +11,7 @@ namespace CHM
         private float duration, t = 0f;
         private GameObject target;
 
-        public override void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
+        public override void Setup(GameObject target, float damage, int maxCount = 1, int index= 0)
         {
             base.Setup(target, damage);
 

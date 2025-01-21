@@ -26,9 +26,9 @@ namespace CHM
         [SerializeField]
         private GameObject target;//목표물
         [SerializeField]
-        private float attackRate = 0.5f;//발사체 사이의 사출 간격        
+        private float attackRate ;//발사체 사이의 사출 간격        
         [SerializeField] private SerializableDictionary<BulletType, GameObjectPool<Bulletbase>> bullet;
-
+        
         private int currentBulletIndex = 0;//현재 발사체 순번
         private float currentAttackRate = 0;//발사체 사이의 사출 간격 연산 변수
         private float currentCooldownTime = 0;//쿨타임 계산을위해 만든 변수

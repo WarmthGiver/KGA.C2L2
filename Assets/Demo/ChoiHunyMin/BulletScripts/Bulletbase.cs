@@ -11,7 +11,8 @@ namespace CHM
     public abstract class Bulletbase : MonoBehaviour
     {
         //프리팹 상속자
-
+        [SerializeField]
+        private GameObject Animator;
         //[SerializeField]
         //private GameObject hitEffect; //피격 임팩트 프리팹
         protected MovementRigidbody2D movementRigidbody2D;//이동제어 MovementRigidbody2D 변수
@@ -38,19 +39,19 @@ namespace CHM
             {
                 //피격 프리팹 호출하고
                 //Instantiate(hitEffect, transform.position, Quaternion.identity);
+                squadAnimator();
                 //자기자신 삭제
                 //Destroy(gameObject);
                 gameObject.SetActive(false);
                 //적 캐릭터 피격 처리
             }
         }
-        //void squadEnemy()
-        //{
-        //    //Instantiate(dictinary, transform.position, transform.rotation);
-        //    Bulletbase straightEnemy = dictinary["Buellet"].Generate();
-        //    straightEnemy.transform.position = transform.position;
-        //    straightEnemy.transform.rotation = transform.rotation;
-        //}
+        void squadAnimator()
+        {
+            Instantiate(Animator, transform.position, transform.rotation);
+            
+        }
+        
 
     }
 }
