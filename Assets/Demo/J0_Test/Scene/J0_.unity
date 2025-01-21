@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ab457b25dc2bf459e38209cd353416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDamage: 0
+  playerHP: 0
 --- !u!1001 &1916213987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -940,6 +940,10 @@ PrefabInstance:
       propertyPath: muzzle
       value: 
       objectReference: {fileID: 67633999}
+    - target: {fileID: 5028418121212233698, guid: 76910e88cf4d5bd44abc93ffa86d5df1, type: 3}
+      propertyPath: pullTriggerCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5536726041732869981, guid: 76910e88cf4d5bd44abc93ffa86d5df1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.15

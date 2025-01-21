@@ -43,6 +43,7 @@ public sealed class WeaponTypeActive : Weapon
             bullet.transform.rotation = gameObject.transform.rotation;
             bullet.transform.position = gameObject.transform.position;
             bullet.Initialize(bulletDamage, bulletSpeed);
+            bullet.gameObject.SetActive(true);
             yield return new WaitForSeconds(term);
         }
     }
