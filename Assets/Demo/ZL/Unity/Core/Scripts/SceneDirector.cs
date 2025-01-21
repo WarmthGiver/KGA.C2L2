@@ -14,7 +14,7 @@ namespace ZL.Unity
 {
     [DisallowMultipleComponent]
 
-    public abstract class SceneDirector : MonoBehaviour
+    public class SceneDirector : MonoBehaviour
     {
         [Space]
 
@@ -41,8 +41,6 @@ namespace ZL.Unity
 
         public void LoadScene(string name)
         {
-            void LoadScene() => SceneManager.LoadScene(name);
-
             AudioListenerTweener.VolumeTweener.Tween(0f, fadeDuration).
 
                 SetEase(Ease.Linear);
@@ -51,7 +49,17 @@ namespace ZL.Unity
 
                 SetEase(Ease.Linear).
                 
-                OnComplete(LoadScene);
+                OnComplete(() => SceneManager.LoadScene(name));
+        }
+
+        public void Pause()
+        {
+            Time.timeScale = 0f;
+        }
+
+        public void Resume()
+        {
+            Time.timeScale = 1f;
         }
 
         public void Quit()

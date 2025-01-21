@@ -12,7 +12,7 @@ namespace ZL.Unity.Tweeners
     {
         private void Awake()
         {
-            ValueTweener = new(() => transform.position, value => transform.position = value);
+            Tweener = new(() => transform.position, value => transform.position = value);
         }
     }
 }

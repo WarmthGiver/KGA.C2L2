@@ -134,7 +134,7 @@ namespace ZL.Unity.Tweeners
 
         protected virtual TweenerCore<T1, T2, TPlugOptions> TweenKeyFrame()
         {
-            return componentTweener.ValueTweener.Tween(keyFrames.Current(), duration).SetEase(ease);
+            return componentTweener.Tweener.Tween(keyFrames.Current(), duration).SetEase(ease);
         }
     }
 }

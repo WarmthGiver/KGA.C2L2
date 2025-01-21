@@ -10,7 +10,7 @@ namespace ZL.Unity.Audio
 
     [RequireComponent(typeof(AudioSource))]
 
-    public sealed class AudioTrack : Singleton<AudioTrack>
+    public sealed class AudioTrack : Immortal<AudioTrack>
     {
         [Space]
 
@@ -149,7 +149,7 @@ namespace ZL.Unity.Audio
 
                 case BGMPlayMode.Shuffle:
 
-                    int index = Random.Range(0, playlist.value.Length);
+                    playlistIndex = Random.Range(0, playlist.value.Length);
 
                     break;
             }
