@@ -16,7 +16,7 @@ namespace ZL.Unity.Audio
 
         [SerializeField, Range(0f, 1f)]
 
-        private float volume = 1f;
+        private float volume = 0f;
 
         private void OnValidate()
         {

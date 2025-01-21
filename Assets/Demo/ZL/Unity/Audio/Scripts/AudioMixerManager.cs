@@ -24,19 +24,24 @@ namespace ZL.Unity.Audio
 
         [SerializeField, Essential]
 
-        [Button(nameof(LoadAudioMixerParameters), "Load Parameters")]
+        [Button("LoadAudioMixerParameters", "Load Parameters")]
 
-        private AudioMixer audioMixer;
+        private AudioMixer audioMixer = null;
 
         [SerializeField]
 
-        [Button(nameof(LoadVolumes))]
+        [Button(nameof(LoadVolumes), "Load")]
 
-        [Button(nameof(SaveVolumes))]
+        [Button(nameof(SaveVolumes), "Save")]
 
         private SerializableDictionary<string, float, FloatPref> parameters;
 
 #if UNITY_EDITOR
+
+        private void Reset()
+        {
+            LoadAudioMixerParameters();
+        }
 
         public void LoadAudioMixerParameters()
         {
@@ -52,7 +57,7 @@ namespace ZL.Unity.Audio
 
                     FloatPref volumePref = new(key, value);
 
-                    volumePref.TryLoadValue();
+                    volumePref.TryLoad();
 
                     parameters.Add(volumePref);
                 }
@@ -60,6 +65,8 @@ namespace ZL.Unity.Audio
 
             EditorUtility.SetDirty(this);
         }
+
+#endif
 
         private void OnValidate()
         {
@@ -74,26 +81,26 @@ namespace ZL.Unity.Audio
             }
         }
 
-#endif
-
-        protected override void OnAwake()
+        private void Start()
         {
             LoadVolumes();
         }
 
-        public void SaveVolumes()
+        public void LoadVolumes()
         {
-            foreach (var volumePref in parameters)
+            foreach (var parameter in parameters)
             {
-                volumePref.SaveValue();
+                parameter.TryLoad();
+
+                audioMixer.SetVolume(parameter.Key, parameter.Value);
             }
         }
 
-        public void LoadVolumes()
+        public void SaveVolumes()
         {
-            foreach (var volumePref in parameters)
+            foreach (var parameter in parameters)
             {
-                volumePref.TryLoadValue();
+                parameter.SaveValue();
             }
         }
 

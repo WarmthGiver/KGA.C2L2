@@ -4,8 +4,6 @@ using ZL.Unity.IO;
 
 namespace ZL.Unity
 {
-    [CreateAfterSceneLoad]
-
     public sealed class ApplicationManager : MonoBehaviour
     {
         public static ApplicationManager Instance { get; private set; }
@@ -20,27 +18,50 @@ namespace ZL.Unity
 
         [SerializeField]
 
+        [Button(nameof(LoadTargetFrameRate), "Load")]
+
+        [Button(nameof(SaveTargetFrameRate), "Save")]
+
         private IntPref targetFrameRate = new("Target Frame Rate", 60);
-
-        private void Awake()
-        {
-            Instance = this;
-
-            Application.runInBackground = runInBackground;
-
-            targetFrameRate.TryLoadValue();
-
-            Application.targetFrameRate = targetFrameRate.Value;
-        }
 
         private void OnValidate()
         {
             Application.runInBackground = runInBackground;
         }
 
-        public static void TargetFrameRate(int value)
+        private void Awake()
         {
-            Instance.targetFrameRate.Value = value;
+            Instance = this;
+
+            DontDestroyOnLoad(Instance);
+
+            Application.runInBackground = runInBackground;
+
+            targetFrameRate.TryLoad();
+
+            Application.targetFrameRate = targetFrameRate.Value;
+        }
+
+        public void LoadTargetFrameRate()
+        {
+            targetFrameRate.TryLoad();
+
+            Application.targetFrameRate = targetFrameRate.Value;
+        }
+
+        public void SaveTargetFrameRate()
+        {
+            targetFrameRate.SaveValue();
+        }
+
+        public int GetTargetFrameRate()
+        {
+            return targetFrameRate.Value;
+        }
+
+        public void SetTargetFrameRate(int value)
+        {
+            targetFrameRate.Value = value;
 
             Application.targetFrameRate = value;
         }
