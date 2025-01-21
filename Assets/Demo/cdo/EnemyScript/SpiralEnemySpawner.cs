@@ -127,8 +127,8 @@ namespace CHO
         private void Update()
         {
             //자동 소환
-            //Shoot1();
-            //Shoot2();
+            Shoot1();
+            Shoot2();
 
             //위치
             rCreateCluster();
@@ -152,26 +152,26 @@ namespace CHO
             //}
 
             ////임시 확인용 1~4마리 생성
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                randomInt();
-                CreateCluster(1, "SpiralEnemy1");
-            }
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                randomInt();
-                CreateCluster(2, "SpiralEnemy1");
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                randomInt();
-                CreateCluster(3, "SpiralEnemy2");
-            }
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                randomInt();
-                CreateCluster(4, "SpiralEnemy3");
-            }
+            //if (Input.GetKeyDown(KeyCode.Q))
+            //{
+            //    randomInt();
+            //    CreateCluster(1, "SpiralEnemy1");
+            //}
+            //if (Input.GetKeyDown(KeyCode.W))
+            //{
+            //    randomInt();
+            //    CreateCluster(2, "SpiralEnemy1");
+            //}
+            //if (Input.GetKeyDown(KeyCode.E))
+            //{
+            //    randomInt();
+            //    CreateCluster(3, "SpiralEnemy2");
+            //}
+            //if (Input.GetKeyDown(KeyCode.R))
+            //{
+            //    randomInt();
+            //    CreateCluster(4, "SpiralEnemy3");
+            //}
 
 
 

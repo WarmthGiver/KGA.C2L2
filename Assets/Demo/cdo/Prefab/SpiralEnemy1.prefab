@@ -162,8 +162,8 @@ MonoBehaviour:
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
   explosionImage: {fileID: 7726945123084857508, guid: a261ec32f65eee64fa32674ada3df7f3, type: 3}
-  gap: 0.001
-  eulerEuler: 10
+  gap: 0.0005
+  eulerEuler: 20
 --- !u!58 &3518169154141858369
 CircleCollider2D:
   m_ObjectHideFlags: 0
