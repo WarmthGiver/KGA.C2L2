@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CHM
-{
+
     public abstract class Enemy : MonoBehaviour
     {
         [SerializeField] protected float enemyHp;//Àû Ã¼·Â
@@ -22,4 +21,4 @@ namespace CHM
 
         }
     }
-}
+

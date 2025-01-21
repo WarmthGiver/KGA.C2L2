@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CHM;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
@@ -10,19 +11,19 @@ namespace KGA
 {
     public class test : MonoBehaviour
     {
-    //    [SerializeField] private SpiralEnemy parentScript;
+        //[SerializeField] private Enemy parentScript;
 
-    //    private void OnTriggerEnter2D(Collider2D collision)
-    //    {
-    //        if (collision.gameObject.tag == "Bullet")
-    //        {
-    //            parentScript.spiralEnemyHp--;
-    //            Destroy(gameObject);
-    //        }
-    //        //a.transform.parent.gameObject.SetActive(false);
+        //private void OnTriggerEnter2D(Collider2D collision)
+        //{
+        //    if (collision.gameObject.tag == "Bullet")
+        //    {
+        //        parentScript.hp;
+        //        Destroy(gameObject);
+        //    }
+        //    //a.transform.parent.gameObject.SetActive(false);
 
 
-    //    }
+        //}
 
 
 

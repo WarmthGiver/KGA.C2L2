@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 8cb507e2be1846b40ad81e95cef5a76c, type: 3}
+  m_Sprite: {fileID: 21300004, guid: c4d8ed7c5adcd0e489c81b34c69fa753, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6694381047412550556}
   - component: {fileID: 3518169154141858369}
   m_Layer: 0
-  m_Name: SpiralEnemy2
+  m_Name: SpiralEnemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
