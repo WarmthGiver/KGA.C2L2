@@ -6,6 +6,6 @@ public class BulletActive : Bullet
 {
     protected override void BulletMovement()
     {
-        bulletRigid.AddForce(transform.up.normalized * speed, ForceMode2D.Force);
+        bulletRigid.AddForce(transform.up.normalized * speed * Time.timeScale, ForceMode2D.Force);
     }
 }

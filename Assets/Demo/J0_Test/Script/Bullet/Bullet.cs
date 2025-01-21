@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     protected virtual void BulletMovement()
     {
-        bulletRigid.AddForce(transform.up.normalized * speed * 5, ForceMode2D.Impulse);
+        bulletRigid.AddForce(transform.up.normalized * speed * 5 * Time.timeScale, ForceMode2D.Impulse);
     }
 
     public void Initialize(int damage, float speed)
