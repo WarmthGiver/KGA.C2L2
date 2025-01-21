@@ -1,0 +1,937 @@
+fileFormatVersion: 2
+guid: 4231ead45afa08a479b04c378c319936
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 287
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1cb29ced450a74faacdc8be09693b1
+      internalID: 1583741107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 286
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355b39d31d5ef5345bff0ac1a70323d0
+      internalID: 490887461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 283
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c646d2705d04aa94f8bf3604cdfa75d3
+      internalID: 585972494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 281
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eed16869387cec45a54e06d8665a9be
+      internalID: -1921749523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 278
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcdb9ac108df78439dc349684810dd1
+      internalID: -1475468514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 276
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1ea493dd6278c4088c48bc02bcb804
+      internalID: -630138851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 276
+        width: 39
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288d490bbbbdd2e459a0bdc10a2744de
+      internalID: -60058888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 211
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab7c68144b33eb4787a852d3dfb4e83
+      internalID: -1324482661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 207
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c5c72ed37f76249b484f710c229dc2
+      internalID: -475792321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 204
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35bad849b630e4146900fd6d20a062b7
+      internalID: -758089872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 200
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07672701a2621ad45a55543d62d427e9
+      internalID: 69328813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 195
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c550cef114eb4468a94f8e7d4ddafb
+      internalID: -1435363521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 191
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb104616d3d30984ea49d0d1f56d3a21
+      internalID: 659041383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 189
+        width: 76
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38172dc880671f340a3d70bb3856279d
+      internalID: -54450844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 141
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf1661c53b2aa6468ed1e48057c1edc
+      internalID: -113912200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 139
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7157d4fbc26d04daddcadcff9e4714
+      internalID: -1435607067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 139
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a23efbddb223d343a1ed6adf61d907e
+      internalID: 1546343429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 138
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488b45fe5a9d7fa4e8ac7fd3db251693
+      internalID: -1982366070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 138
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815923ab4f5c78f40842731ca1be3471
+      internalID: -702919882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 138
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5726b5a61d376694cabf2e171ca9d99a
+      internalID: 363476701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 138
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc3892cb874914468babae71dd75593
+      internalID: 1270063710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 139
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e803f4a7e68ec7646afb0d28ac7e1a0f
+      internalID: 808663180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 142
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3517f04c63960d4db223cf39d72fa21
+      internalID: -1039966682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 143
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6481e837c737c74bba7003d168febce
+      internalID: -806749197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 144
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5fce09713f51f45a0cd2c1f6b4c012
+      internalID: 476363715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_40
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 90
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eee020b0feef5043b25eb74befbcd9c
+      internalID: 178067773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_41
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 86
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9a6591d1e35534094f8dba901d7a88
+      internalID: 904207146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 83
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7bae118094fbd498b9d9d1eef28eaa
+      internalID: -97512276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_43
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 83
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4efe240db541f274ebf29d38d54d0dc5
+      internalID: -1837654204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_44
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 82
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcbfd2f71fb70ba4ebc0af59cb71512f
+      internalID: -388105256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_50
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 40
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef67fa4cc207704fb6eb885b368289b
+      internalID: -56589687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_51
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 39
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06b2885d86965e4faae76333ea1fb68
+      internalID: -1232272609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_52
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 37
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e3934ee966f904eb6d59722ce71c03
+      internalID: 21114934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 277
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb467f345a65c244b8967cbc012c96d4
+      internalID: 1002252245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 189
+        width: 45
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8aa84b93c764fc4ebaef103ed86567f
+      internalID: 108116088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 144
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152853dbe5c0f8845be95ab9cc8bd4f7
+      internalID: -1748335514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TwinkleExplosion-removebg-preview_0: 1583741107
+      TwinkleExplosion-removebg-preview_1: 490887461
+      TwinkleExplosion-removebg-preview_10: -2133053331
+      TwinkleExplosion-removebg-preview_11: -1324482661
+      TwinkleExplosion-removebg-preview_12: -475792321
+      TwinkleExplosion-removebg-preview_13: -758089872
+      TwinkleExplosion-removebg-preview_14: 69328813
+      TwinkleExplosion-removebg-preview_15: -1435363521
+      TwinkleExplosion-removebg-preview_16: 659041383
+      TwinkleExplosion-removebg-preview_17: -54450844
+      TwinkleExplosion-removebg-preview_18: 778601630
+      TwinkleExplosion-removebg-preview_19: -767318515
+      TwinkleExplosion-removebg-preview_2: 585972494
+      TwinkleExplosion-removebg-preview_20: -97140334
+      TwinkleExplosion-removebg-preview_21: -113912200
+      TwinkleExplosion-removebg-preview_22: -1435607067
+      TwinkleExplosion-removebg-preview_23: 1546343429
+      TwinkleExplosion-removebg-preview_24: -1982366070
+      TwinkleExplosion-removebg-preview_25: -702919882
+      TwinkleExplosion-removebg-preview_26: 363476701
+      TwinkleExplosion-removebg-preview_27: 1270063710
+      TwinkleExplosion-removebg-preview_28: 808663180
+      TwinkleExplosion-removebg-preview_29: -1039966682
+      TwinkleExplosion-removebg-preview_3: -1921749523
+      TwinkleExplosion-removebg-preview_30: -806749197
+      TwinkleExplosion-removebg-preview_31: 476363715
+      TwinkleExplosion-removebg-preview_32: -608595371
+      TwinkleExplosion-removebg-preview_33: -1219164627
+      TwinkleExplosion-removebg-preview_34: 44124364
+      TwinkleExplosion-removebg-preview_35: 1051886110
+      TwinkleExplosion-removebg-preview_36: 1629971598
+      TwinkleExplosion-removebg-preview_37: 586966545
+      TwinkleExplosion-removebg-preview_38: -1815560531
+      TwinkleExplosion-removebg-preview_39: -1955858170
+      TwinkleExplosion-removebg-preview_4: -1475468514
+      TwinkleExplosion-removebg-preview_40: 178067773
+      TwinkleExplosion-removebg-preview_41: 904207146
+      TwinkleExplosion-removebg-preview_42: -97512276
+      TwinkleExplosion-removebg-preview_43: -1837654204
+      TwinkleExplosion-removebg-preview_44: -388105256
+      TwinkleExplosion-removebg-preview_45: -228077420
+      TwinkleExplosion-removebg-preview_46: 534119933
+      TwinkleExplosion-removebg-preview_47: -756460868
+      TwinkleExplosion-removebg-preview_48: 2944843
+      TwinkleExplosion-removebg-preview_49: 1202138541
+      TwinkleExplosion-removebg-preview_5: 1002252245
+      TwinkleExplosion-removebg-preview_50: -56589687
+      TwinkleExplosion-removebg-preview_51: -1232272609
+      TwinkleExplosion-removebg-preview_52: 21114934
+      TwinkleExplosion-removebg-preview_53: -1981037550
+      TwinkleExplosion-removebg-preview_6: 108116088
+      TwinkleExplosion-removebg-preview_7: -630138851
+      TwinkleExplosion-removebg-preview_8: -1748335514
+      TwinkleExplosion-removebg-preview_9: -60058888
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

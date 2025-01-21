@@ -7,19 +7,19 @@ namespace CHM
 {
     public class QuadraticHomingBullet : Bulletbase
     {
-        [SerializeField]
-        private float count;
+        
+        
         private Vector2 start, end, point;//시작지점, 끝지점 (목표) ,중간지점
         private float duration, t = 0f;//발사체 재생시간 , 보간위치를 위한 t
-        private Transform target;//목표 지정
+        private GameObject target;//목표 지정
 
-        public override void Setup(Transform target, float damage, int maxCount = 1, int index = 0)
+        public override void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
         {
             base.Setup(target, damage,maxCount);
 
             this.target = target;//매개변수로 가져온 타겟 담아주기
             start = transform.position;//시작점은 현재위치
-            end = this.target.position;//끝 지점 목표의 트렌스폼
+            end = this.target.transform.position;//끝 지점 목표의 트렌스폼
             
             //시작 지점에서 목표까지의 거리 계산
             float distance = Vector3.Distance(start, end);
@@ -53,7 +53,7 @@ namespace CHM
         }
         public override void Process()
         {
-            end = target.position;//현재 목표의 위치값
+            end = target.transform.position;//현재 목표의 위치값
             t += Time.deltaTime / duration; //duration의 시간동안 t 가 0.0 ~ 1.0으로 점진적으로 바뀌도록 설정
             //발사체의 현재위치는 Utils.QuadraticCurve메서드를 호출해
             //시작부터 목표까지 중간지점인 포인트 정보를 바탕으로 곡선이동하도록 설정

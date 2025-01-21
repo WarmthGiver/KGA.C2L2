@@ -5,6 +5,7 @@
 */
 
 using UnityEngine;
+using CC;
 
 
 namespace CHM
@@ -23,10 +24,19 @@ namespace CHM
         private float coolTime;//쿨타임
         private float speed;//증가하는 수 담을 변수
 
+        private void Start()
+        {
+            R = 6f;
+
+        }
+
         void Update()
         {
+            if (R >= 4.5f)
+            {
+                R = R - Time.deltaTime * Rspeed;//반지름이 스피드 만큼 줄어듬
+            }
             //NormalBulletHoming(target, start, 3, 3, 5, 1);
-            //R = R - Rspeed;//반지름이 스피드 만큼 줄어듬
             speed += Time.deltaTime * bossSpeed;//보스 본체 이동속도
 
             float x = R * Mathf.Cos(speed);//원의 반지름 *  Mathf.Cos (증가식)

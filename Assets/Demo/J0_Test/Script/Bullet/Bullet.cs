@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            //collision.GetComponent<IDamageable>().GetDamage(damage);
+            collision.GetComponent<IDamageable>().GetDamage(damage);
             Debug.Log("적 맞음");
             gameObject.SetActive(false);
         }

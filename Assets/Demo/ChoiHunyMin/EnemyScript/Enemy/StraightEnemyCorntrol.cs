@@ -5,6 +5,7 @@
 */
 
 using UnityEngine;
+using CC;
 
 namespace CHM
 {

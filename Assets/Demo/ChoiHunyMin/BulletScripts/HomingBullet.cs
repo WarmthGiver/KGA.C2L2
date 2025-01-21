@@ -8,10 +8,10 @@ namespace CHM
     public class HomingBullet : Bulletbase
     {
         //유도 미사일
-        private Transform target;
+        private GameObject target;
 
         //Setup 메서드 재정의
-        public override void Setup(Transform target, float damage, int maxCount = 1, int index = 0)
+        public override void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
         {
             base.Setup(target, damage);
 
@@ -20,10 +20,10 @@ namespace CHM
         }
         public override void Process()
         {
-            movementRigidbody2D.MoveTo((target.position - transform.position).normalized);
+            movementRigidbody2D.MoveTo((target.transform.position - transform.position).normalized);
+
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
-            //발사체 이동방향 설정
-            //transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
+           
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CHM
+namespace CHO
 {
 
     public class SquardEnemy : MonoBehaviour

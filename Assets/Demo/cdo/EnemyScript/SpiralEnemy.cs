@@ -4,9 +4,10 @@
  * 내용: 나선형 적 구현
  */
 using UnityEngine;
+using CC;
 
 
-namespace CHM
+namespace CHO
 {
 
 
@@ -48,9 +49,9 @@ namespace CHM
             //양의 z축 기준으로 오브젝트 주위를 eulerEuler(각도)로 돌고, player쪽으로 들어와 나선형으로 보임
             transform.RotateAround(center, Vector3.forward, eulerEuler * Time.deltaTime);
 
-            direction = (transform.position - center).normalized;
-            distance -= gap;
-            transform.position = center + direction * distance;
+            //direction = (transform.position - center).normalized;
+            //distance -= gap;
+            //transform.position = center + direction * distance;
 
             ////삼각함수
             //R = R - 0.001f;

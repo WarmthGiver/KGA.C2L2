@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: d2eb70b25d0908f4287bba7740149685
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NucleusExplosion1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 466
+        width: 74
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4610d075882f3574f822be248069ccee
+      internalID: -1921036145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 462
+        width: 82
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14e1b5ed0d1ef9489d12a106ac03731
+      internalID: 417391117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion_15
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 461
+        width: 82
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b24d72c140e4c54fafe282e10415012
+      internalID: 71343678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 396
+        width: 81
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155300b103170814cbbb16e33fadf515
+      internalID: -1520282366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 395
+        width: 82
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1211f57710b06fd45aed6a83512a99c2
+      internalID: -1769053104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 395
+        width: 82
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e17aca793f24f7e4c8bf4db71a5107e4
+      internalID: 938397432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 312
+        width: 103
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 157ed6cbd20894644ba197132db92451
+      internalID: 1707157670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 312
+        width: 99
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d7b9c72b66e174d8b0df717d0e04e8
+      internalID: 200643644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 312
+        width: 112
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a36ea7c4df8cb47ac92de719dd4a4f
+      internalID: 723504254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 223
+        width: 125
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002aad81dcda16046865df88b1006438
+      internalID: -512437704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 223
+        width: 130
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c959760c6d0300459eb539ff7195ea5
+      internalID: 502300335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 138
+        width: 135
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298bbe40467c8904b82a088f366639bb
+      internalID: 1108532474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_48
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 138
+        width: 129
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ff40d896eac0749bd2e6613aa0a2b3
+      internalID: -924558975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_49
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 14
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca60f251fdb377240a579130d8a7dcd8
+      internalID: -1825015818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_50
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 14
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b2ad77ba43bffe45bbf33b42c075d7e
+      internalID: -2141067725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_51
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 14
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd674b5c37bdca4ca8c839114fef0d6
+      internalID: -108669726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_52
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 14
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e5ca6d56c74c344bde4e4cc86adc1c
+      internalID: -185308939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_54
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ca6c0b41fe56442b9f8d0f7170a0c0
+      internalID: 928931685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NucleusExplosion-removebg-preview_58
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 14
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391529e76b6a9cf4ab8ee53847d5dc74
+      internalID: -1173194753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NucleusExplosion-removebg-preview_0: 510147589
+      NucleusExplosion-removebg-preview_1: -84478410
+      NucleusExplosion-removebg-preview_10: -336238746
+      NucleusExplosion-removebg-preview_11: -244691523
+      NucleusExplosion-removebg-preview_12: 1229025615
+      NucleusExplosion-removebg-preview_16: -1520282366
+      NucleusExplosion-removebg-preview_17: -1769053104
+      NucleusExplosion-removebg-preview_18: 938397432
+      NucleusExplosion-removebg-preview_19: 1707157670
+      NucleusExplosion-removebg-preview_2: 1829414627
+      NucleusExplosion-removebg-preview_20: -593772897
+      NucleusExplosion-removebg-preview_21: 200643644
+      NucleusExplosion-removebg-preview_22: 723504254
+      NucleusExplosion-removebg-preview_23: -1026618241
+      NucleusExplosion-removebg-preview_24: 835893644
+      NucleusExplosion-removebg-preview_25: -540890023
+      NucleusExplosion-removebg-preview_26: 416738421
+      NucleusExplosion-removebg-preview_27: 915470542
+      NucleusExplosion-removebg-preview_28: -512437704
+      NucleusExplosion-removebg-preview_29: 932937350
+      NucleusExplosion-removebg-preview_3: -310392260
+      NucleusExplosion-removebg-preview_30: -1540512856
+      NucleusExplosion-removebg-preview_31: 1216016301
+      NucleusExplosion-removebg-preview_32: 502300335
+      NucleusExplosion-removebg-preview_33: 2145107753
+      NucleusExplosion-removebg-preview_34: 1108532474
+      NucleusExplosion-removebg-preview_35: 1532677380
+      NucleusExplosion-removebg-preview_36: -1987487266
+      NucleusExplosion-removebg-preview_37: -445953035
+      NucleusExplosion-removebg-preview_38: 456676219
+      NucleusExplosion-removebg-preview_39: 1793201211
+      NucleusExplosion-removebg-preview_4: 67992507
+      NucleusExplosion-removebg-preview_40: -1765717219
+      NucleusExplosion-removebg-preview_41: -1864393522
+      NucleusExplosion-removebg-preview_42: -27507014
+      NucleusExplosion-removebg-preview_43: -858555346
+      NucleusExplosion-removebg-preview_44: -925599133
+      NucleusExplosion-removebg-preview_45: 679669734
+      NucleusExplosion-removebg-preview_46: 1655201755
+      NucleusExplosion-removebg-preview_47: 1780309843
+      NucleusExplosion-removebg-preview_48: -924558975
+      NucleusExplosion-removebg-preview_49: -1825015818
+      NucleusExplosion-removebg-preview_5: -1592766288
+      NucleusExplosion-removebg-preview_50: -2141067725
+      NucleusExplosion-removebg-preview_51: -108669726
+      NucleusExplosion-removebg-preview_52: -185308939
+      NucleusExplosion-removebg-preview_53: -872230534
+      NucleusExplosion-removebg-preview_54: 928931685
+      NucleusExplosion-removebg-preview_55: -1952902865
+      NucleusExplosion-removebg-preview_56: 1688816669
+      NucleusExplosion-removebg-preview_57: -1595614241
+      NucleusExplosion-removebg-preview_58: -1173194753
+      NucleusExplosion-removebg-preview_59: -689710559
+      NucleusExplosion-removebg-preview_6: -1282197509
+      NucleusExplosion-removebg-preview_60: 1809174339
+      NucleusExplosion-removebg-preview_7: -1132940998
+      NucleusExplosion-removebg-preview_8: -599674084
+      NucleusExplosion-removebg-preview_9: -904420750
+      NucleusExplosion1: -1921036145
+      NucleusExplosion_1: 417391117
+      NucleusExplosion_15: 71343678
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

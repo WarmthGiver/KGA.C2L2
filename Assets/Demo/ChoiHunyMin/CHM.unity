@@ -148,8 +148,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75812789}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -169,10 +169,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletType: 2
   bulletCount: 6
-  cooldownTime: 2
+  cooldownTime: 5
   bulletSpawnPoint: {fileID: 75812790}
-  target: {fileID: 971584825}
-  attackRate: 0.5
+  target: {fileID: 1927239230}
+  attackRate: 1
   bullet:
     elements:
     - key: 2
@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 355580622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -224,10 +224,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 3
-  bulletCount: 5
+  bulletCount: 4
   cooldownTime: 2
   bulletSpawnPoint: {fileID: 355580623}
-  target: {fileID: 971584825}
+  target: {fileID: 1927239230}
   attackRate: 0.5
   bullet:
     elements:
@@ -394,11 +394,62 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4.7
---- !u!4 &971584825 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4203316644678140300, guid: 044eb505012bf9e4392845a0b7c6fefc, type: 3}
-  m_PrefabInstance: {fileID: 7327564791694189693}
+--- !u!1 &920626782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920626783}
+  - component: {fileID: 920626784}
+  m_Layer: 0
+  m_Name: StraighBullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &920626783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920626782}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2081182306}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920626784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920626782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletType: 0
+  bulletCount: 5
+  cooldownTime: 2
+  bulletSpawnPoint: {fileID: 920626783}
+  target: {fileID: 1927239230}
+  attackRate: 1
+  bullet:
+    elements:
+    - key: 0
+      value:
+        original: {fileID: 6094927715678572803, guid: 1c442127b161b7642a106a10e76c28cd, type: 3}
+        parent: {fileID: 0}
 --- !u!1 &1714966209
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 1714966209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -444,17 +495,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
-  bulletCount: 5
-  cooldownTime: 2
+  bulletCount: 2
+  cooldownTime: 5
   bulletSpawnPoint: {fileID: 1714966210}
-  target: {fileID: 971584825}
-  attackRate: 0.5
+  target: {fileID: 1927239230}
+  attackRate: 2
   bullet:
     elements:
     - key: 1
       value:
         original: {fileID: 396665187167504072, guid: 6e54ded1527f65b4b9cb3e2f8fa2a9ea, type: 3}
         parent: {fileID: 0}
+--- !u!1 &1927239230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5458746221758714461, guid: 044eb505012bf9e4392845a0b7c6fefc, type: 3}
+  m_PrefabInstance: {fileID: 7327564791694189693}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2038446504
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +577,6 @@ GameObject:
   - component: {fileID: 2081182304}
   - component: {fileID: 2081182303}
   - component: {fileID: 2081182302}
-  - component: {fileID: 2081182307}
   - component: {fileID: 2081182308}
   m_Layer: 0
   m_Name: Boss
@@ -543,8 +598,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHp: 50
-  damage: 0
+  enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
+  explosionImage: {fileID: 0}
   prefabSpeed: 1
   Rspeed: 0.0001
   bossSpeed: 0.3
@@ -975,7 +1031,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8cb507e2be1846b40ad81e95cef5a76c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1003,32 +1059,9 @@ Transform:
   - {fileID: 1714966210}
   - {fileID: 75812790}
   - {fileID: 355580623}
+  - {fileID: 920626783}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2081182307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2081182299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletType: 0
-  bulletCount: 3
-  cooldownTime: 1
-  bulletSpawnPoint: {fileID: 2081182306}
-  target: {fileID: 971584825}
-  attackRate: 0.5
-  bullet:
-    elements:
-    - key: 0
-      value:
-        original: {fileID: 6094927715678572803, guid: 1c442127b161b7642a106a10e76c28cd, type: 3}
-        parent: {fileID: 0}
 --- !u!114 &2081182308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1050,6 +1083,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2117045473532364207, guid: 044eb505012bf9e4392845a0b7c6fefc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4203316644678140300, guid: 044eb505012bf9e4392845a0b7c6fefc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -9,7 +9,7 @@ namespace CHM
     public class MovementRigidbody2D : MonoBehaviour
     {
         [SerializeField]
-        private float moveSpeed = 10f;// 이동속도
+        private float moveSpeed;// 이동속도
         private Rigidbody2D rigid2D;//리지드바디 정보
 
         public float MoveSpeed => moveSpeed;//외부에서 이동속도 확인할수있도록 Get 프로퍼티
