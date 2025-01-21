@@ -58,10 +58,10 @@ public class Weapon : MonoBehaviour
         for (int i = pullTriggerCount; i > 0; i--)
         {
             var bullet = bulletPool.Generate();
-            gameObject.SetActive(true);
             bullet.transform.rotation = muzzle.rotation;
             bullet.transform.position = muzzle.position;
             bullet.Initialize(bulletDamage, bulletSpeed);
+            bullet.gameObject.SetActive(true);
             yield return new WaitForSeconds(term);
         }
     }
