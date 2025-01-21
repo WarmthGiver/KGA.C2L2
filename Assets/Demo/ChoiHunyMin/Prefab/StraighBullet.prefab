@@ -148,8 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224ebcd1b46748447b7464b3f2836104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
-  bulletDamage: 0
+  bulletHp: 1
+  bulletDamage: 1
   Animator: {fileID: 5205637608671962883, guid: a1e387c766851aa4cb4dee5c96dce7c6, type: 3}
 --- !u!50 &8505171140335204146
 Rigidbody2D:
