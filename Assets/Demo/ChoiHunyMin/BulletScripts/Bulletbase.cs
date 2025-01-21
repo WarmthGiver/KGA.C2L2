@@ -44,13 +44,13 @@ namespace CHM
                 gameObject.SetActive(false);
                
             }
-            if (collision.CompareTag("Bullet"))
-            {
-                var player = collision.GetComponent<IDamageable>();
-                player.GetDamage(bulletDamage);
-                //gameObject.SetActive(false);
+            //if (collision.CompareTag("Bullet"))
+            //{
+            //    var player = collision.GetComponent<IDamageable>();
+            //    player.GetDamage(bulletDamage);
+            //    //gameObject.SetActive(false);
 
-            }
+            //}
 
         }
         void squadAnimator()

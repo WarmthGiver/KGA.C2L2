@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8505171140335204146}
   m_Layer: 0
   m_Name: StraighBullet
-  m_TagString: BulletEnemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletHp: 1
   bulletDamage: 1
-  Animator: {fileID: 5205637608671962883, guid: a1e387c766851aa4cb4dee5c96dce7c6, type: 3}
+  Animator: {fileID: 987808010222446665, guid: cb15c7155bf8ac3449574de6c30133b8, type: 3}
 --- !u!50 &8505171140335204146
 Rigidbody2D:
   serializedVersion: 4

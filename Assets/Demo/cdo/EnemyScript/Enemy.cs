@@ -21,7 +21,7 @@ namespace CC
                 //부딪히면 player의 hp의 데미지를 준다
                 var player = collision.GetComponent<IDamageable>();
                 player.GetDamage(enemyDamage);
-                //gameObject.SetActive(false);
+                gameObject.SetActive(false);
 
             }
 

@@ -26,15 +26,18 @@ namespace CHM
 
         private void Start()
         {
-            R = 6f;
+            R = 15f;
 
         }
 
         void Update()
         {
+            
             if (R >= 4.5f)
             {
                 R = R - Time.deltaTime * Rspeed;//반지름이 스피드 만큼 줄어듬
+                bossSpeed = 0.5f;
+
             }
             //NormalBulletHoming(target, start, 3, 3, 5, 1);
             speed += Time.deltaTime * bossSpeed;//보스 본체 이동속도
