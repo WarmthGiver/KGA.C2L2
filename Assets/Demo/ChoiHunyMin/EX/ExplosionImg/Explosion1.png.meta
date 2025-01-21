@@ -1,0 +1,887 @@
+fileFormatVersion: 2
+guid: d06f7b175429eba419fc567852002454
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Explosion1_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 260
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18c9920a5d60374ebad19e0d83719c8
+      internalID: 179549325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 259
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976318b8258a7b9449de345ce0682b58
+      internalID: 908244381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 260
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8eeb242055f06448ac1627e66aa908c
+      internalID: -1128364081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 259
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398d11b72ae48744ea7e827a14aaee20
+      internalID: -1858817614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_4
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 257
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412d759beb791aa44a18420a5936c98b
+      internalID: -127113909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 254
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a284fff1db311cc4b8d10ded9e00422a
+      internalID: 2144589521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_6
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 254
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e84232b3311f2640b08ef3691900033
+      internalID: 193157991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_7
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 250
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dd18b4b4d497344aec0dcc1bde9c49
+      internalID: -2093144101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_8
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 250
+        width: 55
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be61001a59180c4c8dcaa000e57d13b
+      internalID: 1106489688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion1_9
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 249
+        width: 63
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed2733382b1f954887e50489095e68a
+      internalID: -71026977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_10
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 189
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a69647e415d8c146af7ec339fae3345
+      internalID: -1032271159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_11
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 187
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4d9a68dd7e45947b66d1857e133f91
+      internalID: -487004649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_12
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 187
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d0eaf742c10b644bbd15591e14b46f
+      internalID: -480002640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_13
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 187
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f947ba854561c76489757e4384f482fc
+      internalID: 190304495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_14
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 185
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2fbc43d0d9121409309ac1a40e803e
+      internalID: 763190961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_15
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 184
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a56ae2485c49c48ac7a8276f211f47
+      internalID: 808671944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TwinkleExplosion_16
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 184
+        width: 86
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de27714aadc271a46a41d646a979a6bf
+      internalID: 1867992263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_23
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 67
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a7e9f048dc25c4a96e3f80eaf2091c
+      internalID: -1932131714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_24
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 65
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4abe20fcdcc87d4f9cec23753e58a5b
+      internalID: 1027658284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_25
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 66
+        width: 34
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84330f03bf68af344ac59bd2de56fe2b
+      internalID: -1493029734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_26
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 66
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b38b78d5ab65454e983cce4544380bc
+      internalID: -2077329144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_27
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 64
+        width: 53
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e436270d2d8b14dbd865cdfbbe39b2
+      internalID: 1616606454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 63
+        width: 68
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddfdb540e09da54c9a15a9db3ee54e6
+      internalID: 62518641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedTwinkleExplosion_29
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 62
+        width: 80
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbd2cb960c904c4391a78a4b90388d5
+      internalID: -907353270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_30
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 15
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53b1256892b05e43a509572eee39e10
+      internalID: -395162059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_31
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 12
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3facb59cd4e4948b46ec8138ef618c
+      internalID: -1273587500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_32
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 9
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826c25965a2ec5c4184252db8777a0d8
+      internalID: -724552880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_33
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 6
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae5126a3ca8bea43a191d52f7070622
+      internalID: -1601004608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_34
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 5
+        width: 43
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3330e0b796e32cc4ba734608d14dd46a
+      internalID: -1086997004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_35
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 3
+        width: 56
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb813a2c6f78aeb4b9ce6f71355bef9e
+      internalID: 1417467356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_40
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 17
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 884373b0336bdbb49b81dac5a68fedcb
+      internalID: 2010952068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_41
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 16
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0319bd4b6cee2248af00ec66aaeb89c
+      internalID: -173001375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_42
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 16
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee1e43681440874e913e868fd16b4c1
+      internalID: 675337943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellTwinkleExplosion_43
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1
+        width: 72
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b989063297612445818000ae0f1d664
+      internalID: 644578453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Explosion1_0: -1032271159
+      Explosion1_1: 908244381
+      Explosion1_17: 553121768
+      Explosion1_18: -342696267
+      Explosion1_19: -1973962267
+      Explosion1_2: -1128364081
+      Explosion1_20: -1039257457
+      Explosion1_21: -694561608
+      Explosion1_22: -293585348
+      Explosion1_3: -1858817614
+      Explosion1_36: 1904034670
+      Explosion1_37: 1116041715
+      Explosion1_38: -964985323
+      Explosion1_39: 2010952068
+      Explosion1_4: -127113909
+      Explosion1_44: 2100459952
+      Explosion1_45: 179549325
+      Explosion1_5: 2144589521
+      Explosion1_6: 193157991
+      Explosion1_7: -2093144101
+      Explosion1_8: 1106489688
+      Explosion1_9: -71026977
+      RedTwinkleExplosion_23: 1027658284
+      RedTwinkleExplosion_24: -1493029734
+      RedTwinkleExplosion_25: -1493029734
+      RedTwinkleExplosion_26: -2077329144
+      RedTwinkleExplosion_27: 1616606454
+      RedTwinkleExplosion_28: 62518641
+      RedTwinkleExplosion_29: -907353270
+      TwinkleExplosion_10: -487004649
+      TwinkleExplosion_11: -480002640
+      TwinkleExplosion_12: 190304495
+      TwinkleExplosion_13: 763190961
+      TwinkleExplosion_14: 808671944
+      TwinkleExplosion_15: 1867992263
+      TwinkleExplosion_16: -1932131714
+      YellTwinkleExplosion_30: -395162059
+      YellTwinkleExplosion_31: -1273587500
+      YellTwinkleExplosion_32: -724552880
+      YellTwinkleExplosion_33: -1601004608
+      YellTwinkleExplosion_34: -1086997004
+      YellTwinkleExplosion_35: 1417467356
+      YellTwinkleExplosion_40: 2010952068
+      YellTwinkleExplosion_41: -173001375
+      YellTwinkleExplosion_42: 675337943
+      YellTwinkleExplosion_43: 644578453
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
