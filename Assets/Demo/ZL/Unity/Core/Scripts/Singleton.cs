@@ -6,22 +6,22 @@ namespace ZL.Unity
         
         where T : Singleton<T>
     {
-        public static T Instance { get; private set; }
+        public static T Instance { get; protected set; }
 
-        protected void Awake()
+        protected virtual void Awake()
         {
-            if (Instance == null)
+            if (Instance != null)
             {
-                Instance = (T)this;
-
-                DontDestroyOnLoad(gameObject);
-
-                OnAwake();
+                Destroy(gameObject);
 
                 return;
             }
 
-            Destroy(gameObject);
+            Instance = (T)this;
+
+            DontDestroyOnLoad(gameObject);
+
+            OnAwake();
         }
 
         protected virtual void OnAwake() { }

@@ -9,8 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
+      propertyPath: track
+      value: Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: playMode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
+      propertyPath: trackName
+      value: Title
       objectReference: {fileID: 0}
     - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: isPlayModeShuffle
@@ -70,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420748478114087488, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: m_Name
-      value: Title Audio Looper (Singleton)
+      value: Title Scene Audio Track (Singleton)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

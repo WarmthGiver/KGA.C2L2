@@ -4,19 +4,25 @@ using ZL.Unity.Collections;
 
 namespace ZL.Unity.Audio
 {
-    [AddComponentMenu("ZL/Audio/Audio Looper (Singleton)")]
+    [AddComponentMenu("ZL/Audio/Audio Track (Singleton)")]
 
     [DisallowMultipleComponent]
 
     [RequireComponent(typeof(AudioSource))]
 
-    public sealed class AudioLooper : Singleton<AudioLooper>
+    public sealed class AudioTrack : Singleton<AudioTrack>
     {
         [Space]
 
         [SerializeField, GetComponent, ReadOnly]
 
         private AudioSource audioSource;
+
+        [Space]
+
+        [SerializeField, Label("Name")]
+
+        private string trackName = string.Empty;
 
         [Space]
 
@@ -32,7 +38,7 @@ namespace ZL.Unity.Audio
 
         [Space]
 
-        [SerializeField, ToggledField(nameof(isPlayModeShuffle), true)]
+        [SerializeField, ToggledField("isPlayModeShuffle", true)]
 
         [Button(nameof(Play))]
 
@@ -54,11 +60,23 @@ namespace ZL.Unity.Audio
 
         public bool isPlayModeShuffle;
 
-#endif
-
         private void OnValidate()
         {
             isPlayModeShuffle = playMode == BGMPlayMode.Shuffle;
+        }
+
+#endif
+
+        protected override void Awake()
+        {
+            if (Instance != null && Instance.trackName != trackName)
+            {
+                Destroy(Instance.gameObject);
+
+                Instance = null;
+            }
+
+            base.Awake();
         }
 
         protected override void OnAwake()
@@ -131,17 +149,7 @@ namespace ZL.Unity.Audio
 
                 case BGMPlayMode.Shuffle:
 
-                    while (true)
-                    {
-                        int index = Random.Range(0, playlist.value.Length);
-
-                        if (playlistIndex != index)
-                        {
-                            playlistIndex = index;
-
-                            break;
-                        }
-                    }
+                    int index = Random.Range(0, playlist.value.Length);
 
                     break;
             }

@@ -24,37 +24,24 @@ namespace ZL.Unity.Audio
 
         [SerializeField, Essential]
 
-        [Button(nameof(LoadAudioMixerParameters), "Load Parameters")]
+        [Button("LoadAudioMixerParameters", "Load Parameters")]
 
         private AudioMixer audioMixer = null;
 
         [SerializeField]
 
-        [Button(nameof(LoadVolumes))]
+        [Button(nameof(LoadVolumes), "Load")]
 
-        [Button(nameof(SaveVolumes))]
+        [Button(nameof(SaveVolumes), "Save")]
 
         private SerializableDictionary<string, float, FloatPref> parameters;
+
+#if UNITY_EDITOR
 
         private void Reset()
         {
             LoadAudioMixerParameters();
         }
-
-        private void OnValidate()
-        {
-            foreach (var parameter in parameters)
-            {
-                parameter.Value = Mathf.Clamp01(parameter.Value);
-
-                if (Application.isPlaying == true)
-                {
-                    SetVolume(parameter.Key, parameter.Value);
-                }
-            }
-        }
-
-#if UNITY_EDITOR
 
         public void LoadAudioMixerParameters()
         {
@@ -70,7 +57,7 @@ namespace ZL.Unity.Audio
 
                     FloatPref volumePref = new(key, value);
 
-                    volumePref.TryLoadValue();
+                    volumePref.TryLoad();
 
                     parameters.Add(volumePref);
                 }
@@ -81,6 +68,19 @@ namespace ZL.Unity.Audio
 
 #endif
 
+        private void OnValidate()
+        {
+            foreach (var parameter in parameters)
+            {
+                parameter.Value = Mathf.Clamp01(parameter.Value);
+
+                if (Application.isPlaying == true)
+                {
+                    SetVolume(parameter.Key, parameter.Value);
+                }
+            }
+        }
+
         private void Start()
         {
             LoadVolumes();
@@ -90,7 +90,7 @@ namespace ZL.Unity.Audio
         {
             foreach (var parameter in parameters)
             {
-                parameter.TryLoadValue();
+                parameter.TryLoad();
 
                 audioMixer.SetVolume(parameter.Key, parameter.Value);
             }

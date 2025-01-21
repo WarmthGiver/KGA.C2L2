@@ -6,7 +6,7 @@ namespace KGA.C2L2
 {
     [AddComponentMenu("")]
 
-    public sealed class MainSceneDirector : SceneDirector
+    public sealed class BattleSceneDirector : SceneDirector
     {
 
     }

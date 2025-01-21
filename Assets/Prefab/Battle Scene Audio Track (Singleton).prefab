@@ -9,6 +9,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
+      propertyPath: track
+      value: Battle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
+      propertyPath: trackName
+      value: Battle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1118599552000296751, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: playlist.value.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -62,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4420748478114087488, guid: 67840085902bfd547b98c82b3331e95e, type: 3}
       propertyPath: m_Name
-      value: Main Scene Audio Looper (Singleton)
+      value: Battle Scene Audio Looper (Singleton)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

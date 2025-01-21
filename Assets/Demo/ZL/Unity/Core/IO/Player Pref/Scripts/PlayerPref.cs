@@ -30,7 +30,7 @@ namespace ZL.Unity.IO
             this.value = value;
         }
 
-        public bool TryLoadValue()
+        public bool TryLoad()
         {
             if (HasKey(key) == true)
             {

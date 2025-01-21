@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20008785, g: 0.20485908, b: 0.20775275, a: 1}
+  m_IndirectSpecularColor: {r: 0.2000881, g: 0.20486705, b: 0.20775762, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 819481877}
   - component: {fileID: 819481876}
   m_Layer: 0
-  m_Name: Scene Director
+  m_Name: Battle Scene Director
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,7 +361,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4863616388280715514, guid: 4ec5ad82d6681394c93a09631a8428c9, type: 3}
       propertyPath: m_Name
-      value: Main Scene Audio Looper (Singleton)
+      value: Battle Scene Audio Track (Singleton)
       objectReference: {fileID: 0}
     - target: {fileID: 7206388898954353019, guid: 4ec5ad82d6681394c93a09631a8428c9, type: 3}
       propertyPath: m_LocalPosition.x
