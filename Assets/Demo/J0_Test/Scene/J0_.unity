@@ -1602,7 +1602,7 @@ MonoBehaviour:
   - {fileID: 562749190}
   - {fileID: 2114391064}
   weapons:
-  - {fileID: 8886657450479239666, guid: b4ebdb0f9dde4df40ae80f37a25bb2ee, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
