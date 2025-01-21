@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletTypeExplosion : Bullet
+public class BulletExplosion : Bullet
 {
     [SerializeField]
     protected GameObject explosion;

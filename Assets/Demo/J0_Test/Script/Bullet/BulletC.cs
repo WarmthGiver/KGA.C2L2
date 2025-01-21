@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletC : BulletTypeExplosion
+public sealed class BulletC : BulletExplosion
 {
-
+    // BulletExplosion 상속받음
 }
