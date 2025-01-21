@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletTypeActive : Bullet
+public class BulletActive : Bullet
 {
     protected override void BulletMovement()
     {
