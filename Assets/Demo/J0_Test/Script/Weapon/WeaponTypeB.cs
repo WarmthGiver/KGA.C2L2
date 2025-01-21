@@ -18,8 +18,9 @@ public class WeaponTypeB : Weapon
                 bullet.transform.rotation = muzzleTypeB[j].rotation;
                 bullet.transform.position = muzzleTypeB[j].position;
                 bullet.Initialize(bulletDamage, bulletSpeed);
+                bullet.gameObject.SetActive(true);
             }
-                yield return new WaitForSeconds(term);
+            yield return new WaitForSeconds(term);
         }
     }
 }
