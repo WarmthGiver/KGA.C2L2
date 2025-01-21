@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,7 +15,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField]
     private Transform[] slots = new Transform[5];
 
-    // EquipWeapon �Լ� Ȯ�ο�
+    // EquipWeapon 함수 확인용
     [SerializeField]
     private Weapon[] weapons = new Weapon[5];
 

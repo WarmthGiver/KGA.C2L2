@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -20,7 +20,7 @@ public sealed class WeaponTypeActive : Weapon
 
         if(tempElapsedTime < 0f && isSkillOn == false)
         {
-            // ½ºÆäÀÌ½º ´©¸¦ ¶§ ½ÇÇà
+            // ìŠ¤íŽ˜ì´ìŠ¤ ëˆ„ë¥¼ ë•Œ ì‹¤í–‰
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isSkillOn = true;
