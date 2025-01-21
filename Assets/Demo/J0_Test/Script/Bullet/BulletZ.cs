@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public sealed class BulletZ : Bullet
+public sealed class BulletZ : BulletTypeExplosion
 {
 
 }

@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    int time;
+    [SerializeField]
+    private int time;
 
     private void Start()
     {
-        time = 1;
         StartCoroutine(Remove());
     }
 
