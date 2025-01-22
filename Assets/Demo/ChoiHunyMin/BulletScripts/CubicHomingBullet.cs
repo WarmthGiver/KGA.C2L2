@@ -17,9 +17,9 @@ namespace CHM
 
         private float distance;
 
-        public override void Setup(GameObject target, int maxCount = 1, int index= 0)
+        public override void Setup(string v, GameObject target, int maxCount = 1, int index= 0)
         {
-            base.Setup(target);
+            base.Setup("CubicHomingBullet", target);
 
             this.target = target;
 

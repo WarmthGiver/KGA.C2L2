@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2856449461711593257
+--- !u!1 &72211008643765787
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4583360171866911168}
-  - component: {fileID: 9048396250969437347}
-  - component: {fileID: 1345714415623747471}
-  - component: {fileID: 6907400900017042434}
-  - component: {fileID: 1658649743143051267}
-  - component: {fileID: 4763125941321208043}
+  - component: {fileID: 7224063996463400940}
+  - component: {fileID: 1313408578151568182}
+  - component: {fileID: -4598709139435268535}
+  - component: {fileID: 1298421730446256347}
+  - component: {fileID: 6607593532207867976}
   m_Layer: 0
-  m_Name: CubicHoming
+  m_Name: BezierCurvesBullet
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4583360171866911168
+--- !u!4 &7224063996463400940
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856449461711593257}
+  m_GameObject: {fileID: 72211008643765787}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.2, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &9048396250969437347
+--- !u!212 &1313408578151568182
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856449461711593257}
+  m_GameObject: {fileID: 72211008643765787}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,25 +76,25 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: da841e0ed6399bd4695ebcfa661935f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 23a10fa0df1140746adb7bda3d420aba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.37, y: 1.97}
+  m_Size: {x: 0.82, y: 3.62}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &1345714415623747471
+--- !u!50 &-4598709139435268535
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856449461711593257}
+  m_GameObject: {fileID: 72211008643765787}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -115,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &6907400900017042434
-CapsuleCollider2D:
+--- !u!58 &1298421730446256347
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856449461711593257}
+  m_GameObject: {fileID: 72211008643765787}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -148,33 +147,21 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.2, y: 2}
-  m_Direction: 0
---- !u!114 &1658649743143051267
+  serializedVersion: 2
+  m_Radius: 2
+--- !u!114 &6607593532207867976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856449461711593257}
+  m_GameObject: {fileID: 72211008643765787}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46d8463ef2792dd4290d6d87525fd5d5, type: 3}
+  m_Script: {fileID: 11500000, guid: bd6e13eae5c49804485208ba81e2494a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
---- !u!114 &4763125941321208043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2856449461711593257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b21b25213e0242e4188fcaf7f05e97f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 0.5
+  m_target: {fileID: 8881186335420961912, guid: 9cd1dede63c85904db60d199fa9988d5, type: 3}

@@ -15,18 +15,20 @@ namespace CHM
         //발사체 재생시간 , 보간위치를 위한 t
         private float duration, t = 0f;
 
+        [SerializeField] private int indexx;
+
         //목표 지정
         private GameObject target;
 
         private float distance;
 
-        public override void Setup(GameObject target, int maxCount = 1, int index = 0)
+        public override void Setup(string v, GameObject target, int maxCount = 1, int index =0)
         {
-            base.Setup(target);
+            base.Setup("QuadraticHomingBullet", target);
 
             //매개변수로 가져온 타겟 담아주기
             this.target = target;
-
+            this.indexx = index;
             //시작점은 현재위치
             start = transform.position;
 
@@ -45,16 +47,16 @@ namespace CHM
 
             //순번에 따라 일정한 각도의 원형으로 위치 설정
             //0 부터 동일한 각도의 원둘레 위치를 포인트로 설정
-            //float angle = 360 / maxCount * index;
+            float angle = 360 / maxCount * index;
 
-            //순번에 따라 위 or 아래 대각선 (45 or 315도)위치로 설정
-            float angle = 45 + 315 * (index % 2);
+            //순번에 따라 위 or 아래 대각선 (45 or 315도)위치로 설정 index가 홀수면 45, 짝수면 315
+            //float angle = 45 + 315 * (indexx % 2);
 
             //현재 시작위치의 회전 값 적용을 위해  angle 값에 더해준다
             angle += Utils.GetAngleFromPosition(start, end);
 
             //시작 지점에서 목표지점 사이의 angle 각도로 30% 떨어진위치
-            point = Utils.GetNewPoint(start, angle, distance * 0.9f);
+            point = Utils.GetNewPoint(start, angle, distance * 0.2f);
 
             //poubt 위치 확인을 위한 디버깅 코드 [결과 확인후 삭제]
             //포인트위치에 오브ㅏ젝트를 생성하도록 디버깅 코드 작성

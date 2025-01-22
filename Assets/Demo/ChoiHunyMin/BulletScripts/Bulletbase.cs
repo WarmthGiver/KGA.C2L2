@@ -4,7 +4,7 @@
 */
 
 using ArmadaInvencible;
-
+using System;
 using UnityEngine;
 
 namespace CHM
@@ -12,18 +12,17 @@ namespace CHM
     public abstract class Bulletbase : MonoBehaviour, IDamageable
     {
         [SerializeField]
-        
+
         private int bulletHp;
 
         [SerializeField]
-        
+
         private int bulletDMG;
 
         [SerializeField]
-        
+
         private int resetHp;
 
-        [SerializeField]
 
         //프리팹 상속자
         //private GameObject Animator;
@@ -34,11 +33,11 @@ namespace CHM
         //private GameObject hitEffect;
 
         //이동제어 MovementRigidbody2D 변수 
-        protected MovementRigidbody2D movementRigidbody2D;      
+        protected MovementRigidbody2D movementRigidbody2D;
 
         //Setup 메서드는 자식 클래스에서 재정의 할수 있도록 virtual메서드로 만듬
         //총 4개의 매개변수 (목표 , 공격력 , 발사체 개수 , 발사체 순번)
-        public virtual void Setup(GameObject target, int maxCount = 10, int index = 0)
+        public virtual void Setup(string v, GameObject target, int maxCount = 10, int index = 0)
         {
             movementRigidbody2D = GetComponent<MovementRigidbody2D>();
         }
@@ -64,9 +63,9 @@ namespace CHM
                 var player = collision.GetComponent<IDamageable>();
 
                 player.GetDamage(bulletDMG);
-
-                Dead();
-            }          
+                gameObject.SetActive(false);
+                //Dead();
+            }
         }
 
         public void GetDamage(int damage)
@@ -98,5 +97,6 @@ namespace CHM
 
             gameObject.SetActive(false);
         }
+
     }
 }
