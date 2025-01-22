@@ -25,5 +25,6 @@ namespace CHM
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
            
         }
+       
     }
 }

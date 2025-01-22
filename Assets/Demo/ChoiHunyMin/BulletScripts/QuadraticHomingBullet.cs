@@ -3,6 +3,7 @@
  * ¾ç¿·À¸·Î °î¼± ±Ëµµ ±×¸®¸ç ¹ß»çÇÏ´Â ÃÑ¾Ë
 */
 using Unity.VisualScripting;
+using UnityEditor.Overlays;
 using UnityEngine;
 namespace CHM
 {
@@ -61,8 +62,9 @@ namespace CHM
             transform.position = Utils.QuadraticCurve(start, point, end, t);
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
         }
-        private void OnEnable()
+        protected override void OnEnable()
         {
+            base.OnEnable();
             t = 0;
             distance = Vector3.Distance(start, end);
 

@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &75812790
 Transform:
   m_ObjectHideFlags: 0
@@ -198,8 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
-  bulletDMG: 0
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
   Animator: {fileID: 0}
   bulletType: 2
   bulletCount: 1
@@ -412,8 +413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
-  bulletDMG: 0
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
   Animator: {fileID: 0}
   bulletType: 3
   bulletCount: 1
@@ -661,7 +663,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1086485683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1483,7 +1485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1714966210
 Transform:
   m_ObjectHideFlags: 0
@@ -1511,8 +1513,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
-  bulletDMG: 0
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
   Animator: {fileID: 0}
   bulletType: 1
   bulletCount: 1
@@ -2116,7 +2119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2038446505
 Transform:
   m_ObjectHideFlags: 0
@@ -2199,8 +2202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
-  bulletDMG: 0
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
   Animator: {fileID: 0}
   bulletType: 0
   bulletCount: 1
@@ -2248,7 +2252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1a59420d6f5654da1fd0c7c67ffbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetEnemyhp: 0
+  resetEnemyhp: 1
   enemyHp: 50
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}

@@ -41,8 +41,9 @@ namespace CHM
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
             
         }
-        private void OnEnable()
+        protected override void OnEnable()
         {
+            base.OnEnable();
             t = 0;
             distance = Vector3.Distance(start, end);
             

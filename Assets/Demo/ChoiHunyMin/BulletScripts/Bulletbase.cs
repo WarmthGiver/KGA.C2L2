@@ -13,6 +13,7 @@ namespace CHM
     {
         [SerializeField] private int bulletHp;
         [SerializeField] private int bulletDMG;
+        [SerializeField] private int resetHp;
         //프리팹 상속자
         [SerializeField]
         private GameObject Animator;        
@@ -46,15 +47,7 @@ namespace CHM
                 gameObject.SetActive(false);
                 
                
-            }
-            //if (collision.CompareTag("Bullet"))
-            //{
-            //    var player = collision.GetComponent<IDamageable>();
-            //    player.GetDamage(bulletDamage);
-            //    //gameObject.SetActive(false);
-
-            //}
-
+            }          
         }
         void squadAnimator()
         {
@@ -71,6 +64,10 @@ namespace CHM
                 bulletHp = 0;
                 gameObject.SetActive(false);
             }
+        }
+        protected virtual void OnEnable()
+        {
+            bulletHp = resetHp;
         }
     }
 }
