@@ -9,7 +9,7 @@ public class BulletExplosion : Bullet
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        // Àû ´êÀ¸¸é Æø¹ßÀÌ ÀÏ¾î³ª°í »ç¶óÁü
+        // ì  ë‹¿ìœ¼ë©´ í­ë°œì´ ì¼ì–´ë‚˜ê³  ì‚¬ë¼ì§
         if (collision.CompareTag("Enemy"))
         {
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);

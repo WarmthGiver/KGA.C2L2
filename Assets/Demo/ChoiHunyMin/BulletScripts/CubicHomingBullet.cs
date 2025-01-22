@@ -14,7 +14,7 @@ namespace CHM
 
         public override void Setup(GameObject target, int maxCount = 1, int index= 0)
         {
-            base.Setup(target,maxCount);
+            base.Setup(target);
 
             this.target = target;
             start =transform.position;
@@ -41,8 +41,9 @@ namespace CHM
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
             
         }
-        private void OnEnable()
+        protected override void OnEnable()
         {
+            base.OnEnable();
             t = 0;
             distance = Vector3.Distance(start, end);
             

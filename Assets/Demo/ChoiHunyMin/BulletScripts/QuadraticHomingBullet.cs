@@ -3,6 +3,7 @@
  * 양옆으로 곡선 궤도 그리며 발사하는 총알
 */
 using Unity.VisualScripting;
+using UnityEditor.Overlays;
 using UnityEngine;
 namespace CHM
 {
@@ -16,7 +17,7 @@ namespace CHM
         private float distance;
         public override void Setup(GameObject target, int maxCount = 1, int index = 0)
         {
-            base.Setup(target,maxCount);
+            base.Setup(target);
 
             this.target = target;//매개변수로 가져온 타겟 담아주기
             start = transform.position;//시작점은 현재위치
@@ -61,8 +62,9 @@ namespace CHM
             transform.position = Utils.QuadraticCurve(start, point, end, t);
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
         }
-        private void OnEnable()
+        protected override void OnEnable()
         {
+            base.OnEnable();
             t = 0;
             distance = Vector3.Distance(start, end);
 

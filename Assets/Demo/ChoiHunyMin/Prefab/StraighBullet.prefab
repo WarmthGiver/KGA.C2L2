@@ -149,8 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHp: 1
-  bulletDamage: 1
-  Animator: {fileID: 987808010222446665, guid: cb15c7155bf8ac3449574de6c30133b8, type: 3}
+  bulletDMG: 1
+  resetHp: 1
+  Animator: {fileID: 7726945123084857508, guid: a261ec32f65eee64fa32674ada3df7f3, type: 3}
 --- !u!50 &8505171140335204146
 Rigidbody2D:
   serializedVersion: 4

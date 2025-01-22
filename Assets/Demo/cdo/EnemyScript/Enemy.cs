@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -6,7 +7,8 @@ namespace CC
 {
     public abstract class Enemy : MonoBehaviour, IDamageable
     {
-        [SerializeField] protected int enemyHp = 10;//적 체력
+        [SerializeField] private int resetEnemyhp;//초기 적 최대 체력
+        [SerializeField] protected int enemyHp ;//적 체력
         [SerializeField] protected int enemyDamage = 1;//적 데미지
         [SerializeField] protected Vector3 target = new Vector3(0,0,0);//일단 중심점
 
@@ -49,7 +51,13 @@ namespace CC
             Instantiate(explosionImage).transform.position = transform.position;
 
         }
+        protected virtual void OnEnable()
+        {
+            //초기화 기능 넣어야댐 
+            //hp, 거리 등
+            enemyHp = resetEnemyhp;
 
+        }
 
 
 

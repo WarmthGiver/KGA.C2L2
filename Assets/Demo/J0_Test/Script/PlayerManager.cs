@@ -22,4 +22,8 @@ public class PlayerManager : MonoBehaviour, IDamageable
             Debug.Log("GameOver");
         }
     }
+    private void Update()
+    {
+        Debug.Log(playerHP);
+    }
 }

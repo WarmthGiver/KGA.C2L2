@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.043663032, g: 0.04482539, b: 0.059559315, a: 1}
+  m_IndirectSpecularColor: {r: 0.042872936, g: 0.043978684, b: 0.0584172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &75812790
 Transform:
   m_ObjectHideFlags: 0
@@ -198,17 +198,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
+
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
+
   Animator: {fileID: 0}
   bulletType: 2
-  bulletCount: 1
-  count: 1
-  cooldownTime: 3
+  bulletCount: 4
+  cooldownTime: 1
   bulletSpawnPoint: {fileID: 75812790}
   target: {fileID: 1948126029}
-  attackRate: 3
+  attackRate: 0.3
   bullet:
     elements:
+    - key: 2
+      value:
+        original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
+        parent: {fileID: 0}
+    - key: 2
+      value:
+        original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
+        parent: {fileID: 0}
+    - key: 2
+      value:
+        original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
+        parent: {fileID: 0}
     - key: 2
       value:
         original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
@@ -411,15 +426,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
+  resetbulletHp: 1
+
   Animator: {fileID: 0}
   bulletType: 3
   bulletCount: 1
-  count: 1
   cooldownTime: 1
   bulletSpawnPoint: {fileID: 355580623}
   target: {fileID: 1948126029}
-  attackRate: 0.3
+  attackRate: 5
   bullet:
     elements:
     - key: 3
@@ -611,73 +629,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!1 &844960578
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 844960579}
-  - component: {fileID: 844960580}
-  m_Layer: 0
-  m_Name: Range
-  m_TagString: Range
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &844960579
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844960578}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &844960580
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844960578}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 4.7
 --- !u!1 &1074547471
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6854a3d47f8644ab4229106ab0537e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEnemyhp: 0
   enemyHp: 0
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
@@ -1547,7 +1499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1714966210
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,21 +1527,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
+
   Animator: {fileID: 0}
   bulletType: 1
   bulletCount: 1
-  count: 1
   cooldownTime: 3
   bulletSpawnPoint: {fileID: 1714966210}
   target: {fileID: 1948126029}
   attackRate: 3
   bullet:
-    elements:
-    - key: 1
-      value:
-        original: {fileID: 396665187167504072, guid: 6e54ded1527f65b4b9cb3e2f8fa2a9ea, type: 3}
-        parent: {fileID: 0}
+    elements: []
 --- !u!1 &1833793197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,11 +2108,11 @@ MonoBehaviour:
   - {fileID: 562749190}
   - {fileID: 2114391064}
   weapons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1709835401756397508, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
+  - {fileID: 8031372114124153138, guid: 4d317073487226248972acf7bdc9b117, type: 3}
+  - {fileID: 8031372114124153138, guid: 4d317073487226248972acf7bdc9b117, type: 3}
+  - {fileID: 5028418121212233698, guid: 76910e88cf4d5bd44abc93ffa86d5df1, type: 3}
+  - {fileID: 8886657450479239666, guid: b4ebdb0f9dde4df40ae80f37a25bb2ee, type: 3}
 --- !u!1 &2038446504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2038446505
 Transform:
   m_ObjectHideFlags: 0
@@ -2189,7 +2139,7 @@ Transform:
   m_GameObject: {fileID: 2038446504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2215,9 +2165,9 @@ MonoBehaviour:
         parent: {fileID: 0}
   circleR: 10
   coolTimeup: 1
-  time: 5
+  time: 3
   coolTimeCk: 0
-  coolTime: 5
+  coolTime: 0.2
 --- !u!1 &2040648941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2040648942
 Transform:
   m_ObjectHideFlags: 0
@@ -2262,21 +2212,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
+
+  bulletHp: 1
+  bulletDMG: 1
+  resetHp: 1
+
   Animator: {fileID: 0}
   bulletType: 0
   bulletCount: 1
-  count: 1
   cooldownTime: 2
   bulletSpawnPoint: {fileID: 2040648942}
   target: {fileID: 1948126029}
   attackRate: 1
   bullet:
-    elements:
-    - key: 0
-      value:
-        original: {fileID: 6094927715678572803, guid: 1c442127b161b7642a106a10e76c28cd, type: 3}
-        parent: {fileID: 0}
+    elements: []
 --- !u!1 &2081182299
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,11 +2242,11 @@ GameObject:
   - component: {fileID: 2081182308}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2081182302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,10 +2259,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1a59420d6f5654da1fd0c7c67ffbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEnemyhp: 1
   enemyHp: 50
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
-  explosionImage: {fileID: 0}
+  explosionImage: {fileID: 7726945123084857508, guid: a261ec32f65eee64fa32674ada3df7f3, type: 3}
   prefabSpeed: 1
   Rspeed: 3
   bossSpeed: 0.3
@@ -2823,10 +2773,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1261003100}
   - {fileID: 1948126030}
+  - {fileID: 1261003100}
   - {fileID: 1086485685}
-  - {fileID: 844960579}
   - {fileID: 2038446505}
   - {fileID: 2081182306}
   - {fileID: 1865268203}

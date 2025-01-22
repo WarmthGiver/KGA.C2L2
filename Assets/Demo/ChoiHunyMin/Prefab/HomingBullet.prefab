@@ -176,5 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHp: 1
-  bulletDamage: 1
-  Animator: {fileID: 7255195934796996125, guid: 7870f729472ae3f41af857b748ad327b, type: 3}
+  bulletDMG: 1
+  resetHp: 1
+  Animator: {fileID: 7726945123084857508, guid: a261ec32f65eee64fa32674ada3df7f3, type: 3}

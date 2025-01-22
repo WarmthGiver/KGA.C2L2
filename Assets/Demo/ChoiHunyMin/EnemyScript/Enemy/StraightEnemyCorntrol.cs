@@ -18,6 +18,10 @@ namespace CHM
             direction.Normalize();
             transform.position += direction * speed * Time.deltaTime;
         }
-        
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+            
+        }
     }
 }
