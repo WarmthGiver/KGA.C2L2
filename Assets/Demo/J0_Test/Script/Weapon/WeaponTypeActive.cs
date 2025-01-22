@@ -1,18 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
+﻿using ArmadaInvencible;
+
+using System.Collections;
+
 using UnityEngine;
-using ZL.Unity.ObjectPooling;
 
 public sealed class WeaponTypeActive : Weapon
 {
     public static bool isSkillOn = false;
 
-    Vector3 center = new Vector3(0, 0, 0);
+    private Vector3 center = new Vector3(0, 0, 0);
 
-    Vector3 tempVector;
+    private Vector3 tempVector;
 
-    Quaternion tempAngle;
+    private Quaternion tempAngle;
 
     protected override void Update()
     {
@@ -24,18 +24,11 @@ public sealed class WeaponTypeActive : Weapon
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isSkillOn = true;
+
                 FireBullet();
+
                 StartCoroutine(CoolTime());
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Time.timeScale = 0f;
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Time.timeScale = 1f;
         }
     }
     
@@ -44,26 +37,39 @@ public sealed class WeaponTypeActive : Weapon
         StartCoroutine(ActiveSkillPattern());
     }
 
-    IEnumerator ActiveSkillPattern()
+    private IEnumerator ActiveSkillPattern()
     {
         for (int i = pullTriggerCount; i > 0; i--)
         {
             var bullet = bulletPool.Generate();
+
             bullet.transform.rotation = gameObject.transform.rotation;
+
             bullet.transform.position = gameObject.transform.position;
+
             bullet.Initialize(bulletDamage, bulletSpeed);
+
             bullet.gameObject.SetActive(true);
+
+            var sfx = SFXPoolManager.Instance.Generate(sfxName);
+
+            sfx.transform.position = transform.position;
+
+            sfx.gameObject.SetActive(true);
+
             yield return new WaitForSeconds(term);
         }
     }
 
-    IEnumerator CoolTime()
+    private IEnumerator CoolTime()
     {
         for (float i = coolTime; i > 0; i--)
         {
             yield return new WaitForSeconds(1f);
         }
+
         tempElapsedTime = coolTime;
+
         isSkillOn = false;
     }
 }

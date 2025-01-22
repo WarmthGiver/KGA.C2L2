@@ -32,6 +32,8 @@ namespace ZL.Unity
 
         private float fadeDuration = 2f;
 
+        [SerializeField]
+
         private int pauseCall = 0;
 
         private void Awake()

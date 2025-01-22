@@ -120,6 +120,7 @@ MonoBehaviour:
     parent: {fileID: 0}
   term: 0
   pullTriggerCount: 1
+  sfxName: Gunshot 4
 --- !u!1001 &3938437354506028077
 PrefabInstance:
   m_ObjectHideFlags: 0

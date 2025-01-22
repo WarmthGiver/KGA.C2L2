@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 namespace CHO
 {
@@ -13,12 +10,15 @@ namespace CHO
         {
             ExplosionTimeDelay();
         }
+
         private void ExplosionTimeDelay()
         {
             coolTime2 += Time.deltaTime;
+
             if (coolTime2 > 1f)
             {
                 Destroy(gameObject);
+
                 coolTime2 = 0;
             }
         }

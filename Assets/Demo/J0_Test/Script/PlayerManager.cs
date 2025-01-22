@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using ArmadaInvencible;
+
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDamageable
 {
     [SerializeField]
-    private int playerHP;
 
-    void Start()
-    {
-        playerHP = 40;
-    }
+    private int playerHP = 100;
 
     public void GetDamage(int damage)
     {
@@ -21,9 +16,5 @@ public class PlayerManager : MonoBehaviour, IDamageable
         {
             Debug.Log("GameOver");
         }
-    }
-    private void Update()
-    {
-        Debug.Log(playerHP);
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.017085062, g: 0.018387752, b: 0.024557577, a: 1}
+  m_IndirectSpecularColor: {r: 0.043663032, g: 0.04482539, b: 0.059559315, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -857,7 +857,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -992083381
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1740771669
@@ -1464,6 +1464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Fader
       objectReference: {fileID: 0}
+    - target: {fileID: 5886600780211426165, guid: 6e3e727887163f546ac2360e380c328e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 502520268}
     - target: {fileID: 9165408091045637446, guid: 6e3e727887163f546ac2360e380c328e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -1,19 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using ArmadaInvencible;
+
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    [SerializeField]
-    private int time;
-
     private int damage;
-
-    private void Start()
-    {
-        StartCoroutine(Remove());
-    }
 
     public void Initialize(int damage)
     {
@@ -24,19 +15,9 @@ public class Explosion : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            //Debug.Log("적 맞음");
+
             collision.GetComponent<IDamageable>()?.GetDamage(damage);
-            Debug.Log("적 맞음");
         }
-    }
-
-
-    IEnumerator Remove()
-    {
-        while (time > 0)
-        {
-            time--;
-            yield return new WaitForSeconds(1f);
-        }
-        Destroy(gameObject);
     }
 }

@@ -1,23 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+﻿using ArmadaInvencible;
+
 using UnityEngine;
-using ZL.Unity;
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
+
     protected Rigidbody2D bulletRigid;
 
     protected int damage;
+
     protected float speed;
 
     [SerializeField]
+
     protected TrailRenderer trailRenderer;
 
     protected virtual void Update()
     {
         BulletMovement();
+
         IfOutRange();
     }
 
@@ -29,6 +31,7 @@ public class Bullet : MonoBehaviour
     public void Initialize(int damage, float speed)
     {
         this.damage = damage;
+
         this.speed = speed;
     }
 
@@ -41,16 +44,20 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
+            //Debug.Log("적 맞음");
+
             collision.GetComponent<IDamageable>()?.GetDamage(damage);
-            Debug.Log("적 맞음");
+
             gameObject.SetActive(false);
         }
     }
+
     protected void IfOutRange()
     {
         if (gameObject.transform.position.x > 10f || gameObject.transform.position.x < -10f || gameObject.transform.position.y > 10f || gameObject.transform.position.y < -10f)
         {
-            Debug.Log("범위 밖");
+            //Debug.Log("범위 밖");
+
             gameObject.SetActive(false);
         }
     }

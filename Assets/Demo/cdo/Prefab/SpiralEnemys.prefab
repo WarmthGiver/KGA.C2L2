@@ -161,10 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b787094cc6a60fb4f9584897f627318e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEnemyhp: 0
   enemyHp: 5
-  damage: 0
-  playerObj: {fileID: 0}
-  spiralEnemyHp: 5
+  enemyDamage: 1
+  target: {x: 0, y: 0, z: 0}
   gap: 0.0005
   eulerEuler: 90
 --- !u!1 &1268730616988533923
@@ -328,10 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b787094cc6a60fb4f9584897f627318e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEnemyhp: 0
   enemyHp: 5
-  damage: 0
-  playerObj: {fileID: 0}
-  spiralEnemyHp: 5
+  enemyDamage: 1
+  target: {x: 0, y: 0, z: 0}
   gap: 0.0005
   eulerEuler: 90
 --- !u!1 &3336782425267334306
@@ -498,10 +498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b787094cc6a60fb4f9584897f627318e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHp: 10
-  damage: 0
-  playerObj: {fileID: 0}
-  spiralEnemyHp: 5
+  resetEnemyhp: 1
+  enemyHp: 0
+  enemyDamage: 1
+  target: {x: 0, y: 0, z: 0}
   gap: 0.0005
   eulerEuler: 90
 --- !u!1 &8652369299838493885

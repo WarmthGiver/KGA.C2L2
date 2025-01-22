@@ -3,31 +3,44 @@
  * 수정 날짜: 25/01/20
  * 내용: 나선형 적 생성(인스턴스), 인자값에 따른 군집 생성, 위치 생성
  */
-using UnityEngine;
-using ZL.Unity.ObjectPooling;
-using ZL.Unity.Collections;
+
 using CC;
+
+using UnityEngine;
+
+using ZL.Unity.ObjectPooling;
+
+using ZL.Unity.Collections;
 
 namespace CHO
 {
-
     public class SpiralEnemySpawner : Enemy
     {
-        //풀링 Dictionary
-        [SerializeField] private SerializableDictionary<string, GameObjectPool<Enemy>> prefabList;
+        [SerializeField]
+
+        //풀 Dictionary
+        private SerializableDictionary<string, GameObjectPool<Enemy>> prefabList;
 
         //쿨타임
         private float coolTime = 0;
+
         private float coolTime2 = 0;
+
         private float coolTime3 = 0;
-        [SerializeField] private float coolTime4 = 0;
+
         private float timeDley = 3f;
 
         //나오는 위치
-        [SerializeField] private float EnemyPosition = 3.14f;
+        [SerializeField]
+        
+        private float EnemyPosition = 3.14f;
 
         [Header("시간 증가 시 변경")]
-        [SerializeField] private float spiralSpawnDelay; //생성 주기 //적을 수록 많이 나옴
+
+        [SerializeField]
+
+        //생성 주기 //적을 수록 많이 나옴
+        private float spiralSpawnDelay;
 
         //생성주기 프로퍼티 //적을 수록 많이 나옴
         public float SpiralSpawnDelay
@@ -36,12 +49,14 @@ namespace CHO
             {
                 return spiralSpawnDelay;
             }
+
             set
             {
                 if (value < 0.2f)
                 {
                     spiralSpawnDelay = 0.2f;
                 }
+
                 else
                 {
                     spiralSpawnDelay = value;
@@ -49,18 +64,19 @@ namespace CHO
             }
         }
 
-
         private void Start()
         {
             //처음 로테이션 바꿈 => 프리팹 사진 앞보게 할려고
             var dod = transform.rotation;
+
             dod.z = -180;
+
             transform.rotation = dod;
 
-            InvokeRepeating("spiralSpawnDelay1", 1, 3);
+            InvokeRepeating("SpiralSpawnDelay1", 1, 3);
         }
 
-        private void spiralSpawnDelay1()
+        private void SpiralSpawnDelay1()
         {
             SpiralSpawnDelay -= 0.2f;
         }
@@ -69,10 +85,13 @@ namespace CHO
         {
             //적 생성 지연
             coolTime += Time.deltaTime;
+
             if (coolTime > timeDley * SpiralSpawnDelay)
             {
-                randomInt();
+                RandomInt();
+
                 CreateCluster(1, "SpiralEnemy1");
+
                 coolTime = 0;
             }
         }
@@ -80,10 +99,13 @@ namespace CHO
         private void Shoot2()
         {
             coolTime2 += Time.deltaTime;
+
             if (coolTime2 > timeDley *1.4f * SpiralSpawnDelay)
             {
-                randomInt();
+                RandomInt();
+
                 CreateCluster(2, "SpiralEnemy2");
+
                 coolTime2 = 0;
             }
         }
@@ -91,20 +113,16 @@ namespace CHO
         private void Shoot3()
         {
             coolTime3 += Time.deltaTime;
+
             if (coolTime3 > timeDley*1.7 * SpiralSpawnDelay)
             {
-                randomInt();
+                RandomInt();
+
                 CreateCluster(3, "SpiralEnemy3");
+
                 coolTime3 = 0;
             }
         }
-
-        
-
-
-
-
-
 
         //군집 생성
         //인자값(몇마리,적이름)
@@ -126,68 +144,69 @@ namespace CHO
                 Vector2 createPosition = currentPosition + direction * 0.25f;//(객체 간격)
 
                 var ee = prefabList[enemyName].Generate();
+
                 ee.transform.position = createPosition;
+
                 ee.transform.rotation = transform.rotation;
 
                 ee.gameObject.SetActive(true);//명시적***
             }
-
         }
-
 
         //반지름5 간격(위치)으로 위치 생성
         private void rCreateCluster()
         {
             //EnemyPosition += Time.deltaTime; 
+
             float x = 5 * Mathf.Cos(EnemyPosition);
+
             float y = 5 * Mathf.Sin(EnemyPosition);
+
             transform.position = new Vector2(x, y);
 
             var dd = transform.position - Vector3.zero;
 
             var angde = sds(Vector2.zero, dd);
+
             transform.rotation = Quaternion.Euler(0, 0, angde);
-
-
         }
 
         //진짜 귀한거****
         //각도를 가져옴
         //start 내포지션, end 바로볼포지션
-        float sds(Vector2 start, Vector2 end)
+        private float sds(Vector2 start, Vector2 end)
         {
             Vector2 ver = end - start;
-            return Mathf.Atan2(ver.y, ver.x) * Mathf.Rad2Deg;
 
+            return Mathf.Atan2(ver.y, ver.x) * Mathf.Rad2Deg;
         }
 
         //랜덤위치
-        private void randomInt()
+        private void RandomInt()
         {
             //0일경우(5,0), 3.14일경우(-5,0)
             EnemyPosition = Random.Range(0, 3.14f * 2);
-
-
         }
-
 
         private void Update()
         {
             //자동 소환
             Shoot1();
+
             Shoot2();
+
             Shoot3();
 
             //coolTime4 += Time.deltaTime;
+            //
             //if (coolTime4 > 30)
             //{
-
             //    SpiralSpawnDelay -= 0.2f;
-
+            //
             //    coolTime4 = 0;
             //}
 
-            Debug.Log("spiralSpawnDelay"+ spiralSpawnDelay);
+            //Debug.Log("spiralSpawnDelay"+ spiralSpawnDelay);
 
             //위치
             rCreateCluster();
@@ -196,47 +215,51 @@ namespace CHO
             //if (Input.GetMouseButtonDown(0))
             //{
             //    randomInt();
+            //
             //    CreateCluster(3, "SpiralEnemy1");
-
             //}
+            //
             //if (Input.GetMouseButtonDown(1))
             //{
             //    var dod = base.transform.rotation;
+            //
             //    dod.z = 0;
+            //
             //    transform.rotation = dod;
+            //
             //    transform.position = new Vector3(4.5f, 0, 0);
+            //
             //    CreateCluster(4, "SpiralEnemy1");
-
             //}
 
             //임시 확인용 1~4마리 생성
             //if (Input.GetKeyDown(KeyCode.Q))
             //{
             //    randomInt();
+            //
             //    CreateCluster(1, "SpiralEnemy1");
             //}
+            //
             //if (Input.GetKeyDown(KeyCode.W))
             //{
             //    randomInt();
+            //
             //    CreateCluster(2, "SpiralEnemy1");
             //}
+            //
             //if (Input.GetKeyDown(KeyCode.E))
             //{
             //    randomInt();
+            //
             //    CreateCluster(3, "SpiralEnemy2");
             //}
+            //
             //if (Input.GetKeyDown(KeyCode.R))
             //{
             //    randomInt();
+            //
             //    CreateCluster(4, "SpiralEnemy3");
             //}
-
-
-
-
         }
-
-
-
     }
 }

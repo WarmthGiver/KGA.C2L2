@@ -1,10 +1,12 @@
 using UnityEngine;
 
+using ZL.Unity;
+
 using ZL.Unity.Audio;
 
 using ZL.Unity.UI;
 
-namespace ZL.Unity.ArmadaInvencible
+namespace ArmadaInvencible.ZL
 {
     [AddComponentMenu("")]
 

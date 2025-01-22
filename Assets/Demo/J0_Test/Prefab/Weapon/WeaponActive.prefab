@@ -99,6 +99,7 @@ MonoBehaviour:
     parent: {fileID: 0}
   term: 0.15
   pullTriggerCount: 8
+  sfxName: Gunshot 1
 --- !u!212 &7027448369459919036
 SpriteRenderer:
   m_ObjectHideFlags: 0

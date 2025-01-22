@@ -1,4 +1,7 @@
-public interface IDamageable
+namespace ArmadaInvencible
 {
-    public void GetDamage(int damage);
+    public interface IDamageable
+    {
+        public void GetDamage(int damage);
+    }
 }

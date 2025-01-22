@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6160676574281932508
+--- !u!1001 &4243787827750906761
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,23 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 703021199149041157, guid: 21ae4f517418a0e4db8ae7f8f04159da, type: 3}
       propertyPath: m_Volume
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 703021199149041157, guid: 21ae4f517418a0e4db8ae7f8f04159da, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: cae161a964905e14a8777622de7defde, type: 3}
-    - target: {fileID: 703021199149041157, guid: 21ae4f517418a0e4db8ae7f8f04159da, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 1998851119778196753, guid: 26c29bc63145c184a88403110657c357, type: 2}
+      objectReference: {fileID: 8300000, guid: f0bba60dd1813bd40af826dbaa99b983, type: 3}
     - target: {fileID: 2386063998381337289, guid: 21ae4f517418a0e4db8ae7f8f04159da, type: 3}
       propertyPath: time
-      value: 0.984
+      value: 1.875
       objectReference: {fileID: 0}
     - target: {fileID: 5487772663512420322, guid: 21ae4f517418a0e4db8ae7f8f04159da, type: 3}
       propertyPath: m_Name
-      value: Gunshot 3 SFX
+      value: Explosion 1 SFX
       objectReference: {fileID: 0}
     - target: {fileID: 5487772663512420322, guid: 21ae4f517418a0e4db8ae7f8f04159da, type: 3}
       propertyPath: m_IsActive

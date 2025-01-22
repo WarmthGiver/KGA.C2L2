@@ -1,67 +1,82 @@
-using System.Diagnostics;
-using Unity.VisualScripting;
-using UnityEngine;
+using ArmadaInvencible;
 
+using UnityEngine;
 
 namespace CC
 {
     public abstract class Enemy : MonoBehaviour, IDamageable
     {
-        [SerializeField] private int resetEnemyhp;//초기 적 최대 체력
-        [SerializeField] protected int enemyHp ;//적 체력
-        [SerializeField] protected int enemyDamage = 1;//적 데미지
-        [SerializeField] protected Vector3 target = new Vector3(0,0,0);//일단 중심점
+        [SerializeField]
 
-        [SerializeField] protected GameObject explosionImage;
+        //초기 적 최대 체력
+        private int resetEnemyhp;
 
+        [SerializeField]
+
+        //적 체력
+        protected int enemyHp;
+
+        [SerializeField]
+
+        //적 데미지
+        protected int enemyDamage = 1;
+
+        [SerializeField]
+
+        //일단 중심점
+        protected Vector3 target = Vector3.zero;
+
+        protected virtual void OnEnable()
+        {
+            //초기화 기능 넣어야댐 
+            //hp, 거리 등
+            enemyHp = resetEnemyhp;
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag == "Player")
             {
-                Explosion();
                 //부딪히면 player의 hp의 데미지를 준다
                 var player = collision.GetComponent<IDamageable>();
+
                 player.GetDamage(enemyDamage);
-                gameObject.SetActive(false);
 
+                Dead();
             }
-
         }
 
         //데미지 입음
         public void GetDamage(int damage)
         {
             //플레이어 hp를 줄여야댐
-            enemyHp -= damage;  
+            enemyHp -= damage;
+
             if(enemyHp <= 0)
             {
                 enemyHp = 0;
-                gameObject.SetActive(false);
 
                 //터지는 기능
-                Explosion();
+                Dead();
             }
-
         }
 
         //파괴시 폭발 효과
-        private void Explosion()
+        private void Dead()
         {
-            Instantiate(explosionImage).transform.position = transform.position;
+            var fx = FXPoolManager.Instance.Generate("Explosion 1");
+                
+            fx.transform.position = transform.position;
 
+            fx.gameObject.SetActive(true);
+
+            var sfx = SFXPoolManager.Instance.Generate("Explosion 1");
+
+            sfx.transform.position = transform.position;
+
+            sfx.gameObject.SetActive(true);
+
+            gameObject.SetActive(false);
         }
-        protected virtual void OnEnable()
-        {
-            //초기화 기능 넣어야댐 
-            //hp, 거리 등
-            enemyHp = resetEnemyhp;
-
-        }
-
-
-
-
-
     }
 }

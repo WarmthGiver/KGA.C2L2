@@ -3,28 +3,32 @@
  * 유도총알
 */
 using UnityEngine;
+
 namespace CHM
 {
     public class HomingBullet : Bulletbase
     {
         //유도 미사일
         private GameObject target;
-        int count;
+
+        private int count;
+
         //Setup 메서드 재정의
         public override void Setup(GameObject target, int maxCount = 10, int index = 0)
         {
             base.Setup(target, maxCount);
 
-            this.target = target;//타겟정보를 받아옴 
+            //타겟정보를 받아옴 
+            this.target = target;
+
             count = maxCount;
         }
+
         public override void Process()
         {
             movementRigidbody2D.MoveTo((target.transform.position - transform.position).normalized);
 
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
-           
         }
-       
     }
 }

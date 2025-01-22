@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6848043465926022115}
   - component: {fileID: 195686836815897287}
   m_Layer: 0
-  m_Name: Z
+  m_Name: Bullet Z
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRigid: {fileID: 7589528944543741312}
   trailRenderer: {fileID: 116478859916101369}
-  explosionPrefab: {fileID: 8664657736377660936, guid: 1676fc78b7c2d23488ecce99e7e0c9bb, type: 3}
+  explosionPool:
+    original: {fileID: 7243300012888066721, guid: 39f8e209ad481bb4882e8a9f7b02c632, type: 3}
+    parent: {fileID: 0}
 --- !u!1 &4185455352580060142
 GameObject:
   m_ObjectHideFlags: 0
