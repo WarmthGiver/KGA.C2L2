@@ -726,7 +726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1086485683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,8 +757,9 @@ MonoBehaviour:
       value:
         original: {fileID: 6694381047412550556, guid: a0a9db5266fc559439c56b8e6109bf3a, type: 3}
         parent: {fileID: 0}
-  spawnRate: 2
+  coolTime4: 0
   EnemyPosition: 3
+  spiralSpawnDelay: 1
 --- !u!212 &1086485684
 SpriteRenderer:
   m_ObjectHideFlags: 0
