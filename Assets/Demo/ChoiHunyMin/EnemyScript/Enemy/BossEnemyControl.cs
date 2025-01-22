@@ -26,9 +26,19 @@ namespace CHM
 
         private void Start()
         {
+            gameObject.SetActive(false);
+            //몇초후 함수 실행
+            Invoke("gameobjectSetActive", 10);
             R = 15f;
             
         }
+        private void gameobjectSetActive()
+        {
+            gameObject.SetActive(true);
+        }
+
+
+
 
         void Update()
         {

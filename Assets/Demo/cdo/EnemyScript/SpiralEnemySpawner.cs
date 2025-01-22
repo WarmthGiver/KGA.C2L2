@@ -19,11 +19,36 @@ namespace CHO
         //쿨타임
         private float coolTime = 0;
         private float coolTime2 = 0;
+        private float coolTime3 = 0;
+        [SerializeField] private float coolTime4 = 0;
         private float timeDley = 3f;
 
-        [Header("라운드 증가 시 변경")]
-        [SerializeField] private float spawnRate; //생성 주기 //적을 수록 많이 나옴
-        [SerializeField] private float EnemyPosition = 3.14f;//나오는 위치
+        //나오는 위치
+        [SerializeField] private float EnemyPosition = 3.14f;
+
+        [Header("시간 증가 시 변경")]
+        [SerializeField] private float spiralSpawnDelay; //생성 주기 //적을 수록 많이 나옴
+
+        //생성주기 프로퍼티 //적을 수록 많이 나옴
+        public float SpiralSpawnDelay
+        {
+            get
+            {
+                return spiralSpawnDelay;
+            }
+            set
+            {
+                if (value < 0.2f)
+                {
+                    spiralSpawnDelay = 0.2f;
+                }
+                else
+                {
+                    spiralSpawnDelay = value;
+                }
+            }
+        }
+
 
         private void Start()
         {
@@ -31,16 +56,23 @@ namespace CHO
             var dod = transform.rotation;
             dod.z = -180;
             transform.rotation = dod;
+
+            InvokeRepeating("spiralSpawnDelay1", 1, 30);
+        }
+
+        private void spiralSpawnDelay1()
+        {
+            SpiralSpawnDelay -= 0.2f;
         }
 
         private void Shoot1()
         {
             //적 생성 지연
             coolTime += Time.deltaTime;
-            if (coolTime > timeDley * 1.4 * spawnRate)
+            if (coolTime > timeDley * SpiralSpawnDelay)
             {
                 randomInt();
-                CreateCluster(3, "SpiralEnemy1");
+                CreateCluster(1, "SpiralEnemy1");
                 coolTime = 0;
             }
         }
@@ -48,13 +80,28 @@ namespace CHO
         private void Shoot2()
         {
             coolTime2 += Time.deltaTime;
-            if (coolTime2 > timeDley * spawnRate)
+            if (coolTime2 > timeDley *1.4f * SpiralSpawnDelay)
             {
                 randomInt();
-                CreateCluster(4, "SpiralEnemy1");
+                CreateCluster(2, "SpiralEnemy2");
                 coolTime2 = 0;
             }
         }
+
+        private void Shoot3()
+        {
+            coolTime3 += Time.deltaTime;
+            if (coolTime3 > timeDley*1.7 * SpiralSpawnDelay)
+            {
+                randomInt();
+                CreateCluster(3, "SpiralEnemy3");
+                coolTime3 = 0;
+            }
+        }
+
+        
+
+
 
 
 
@@ -129,10 +176,21 @@ namespace CHO
             //자동 소환
             Shoot1();
             Shoot2();
+            Shoot3();
+
+            //coolTime4 += Time.deltaTime;
+            //if (coolTime4 > 30)
+            //{
+
+            //    SpiralSpawnDelay -= 0.2f;
+
+            //    coolTime4 = 0;
+            //}
+
+            Debug.Log("spiralSpawnDelay"+ spiralSpawnDelay);
 
             //위치
             rCreateCluster();
-
 
             //마우스 클릭시  활성화
             //if (Input.GetMouseButtonDown(0))

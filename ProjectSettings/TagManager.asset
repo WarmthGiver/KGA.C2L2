@@ -60,3 +60,6 @@ TagManager:
   - name: Bullet
     uniqueID: 1687865773
     locked: 0
+  - name: Effect
+    uniqueID: 1269292683
+    locked: 0

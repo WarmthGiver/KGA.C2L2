@@ -159,11 +159,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHp: 5
-  enemyDamage: 1
+  enemyDamage: 2
   target: {x: 0, y: 0, z: 0}
-  explosionImage: {fileID: 7255195934796996125, guid: 7870f729472ae3f41af857b748ad327b, type: 3}
-  gap: 0.0005
-  eulerEuler: 20
+  explosionImage: {fileID: 7726945123084857508, guid: a261ec32f65eee64fa32674ada3df7f3, type: 3}
+  gap: 0.0008
+  eulerEuler: 80
 --- !u!58 &3518169154141858369
 CircleCollider2D:
   m_ObjectHideFlags: 0
