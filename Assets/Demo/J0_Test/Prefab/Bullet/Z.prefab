@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletRigid: {fileID: 7589528944543741312}
   trailRenderer: {fileID: 116478859916101369}
-  explosion: {fileID: 273420850262268392, guid: 1676fc78b7c2d23488ecce99e7e0c9bb, type: 3}
+  explosionPrefab: {fileID: 8664657736377660936, guid: 1676fc78b7c2d23488ecce99e7e0c9bb, type: 3}
 --- !u!1 &4185455352580060142
 GameObject:
   m_ObjectHideFlags: 0
