@@ -14,6 +14,8 @@ public class BulletExplosion : Bullet
         {
             gameObject.SetActive(false);
             Instantiate(explosion, transform.position, transform.rotation);
+            collision.GetComponent<IDamageable>()?.GetDamage(damage);
+            gameObject.SetActive(false);
         }
     }
 }
