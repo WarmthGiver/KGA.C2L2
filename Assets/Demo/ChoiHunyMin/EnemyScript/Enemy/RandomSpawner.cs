@@ -50,7 +50,7 @@ namespace CHM
             transform.rotation = Quaternion.Euler(0, 0, angle);
             Circle();
 
-            if (coolTimeup>coolTime)
+            if (coolTimeup>CoolTime)
             {
 
                 circleRandom = Random.Range(0, 360);
@@ -62,7 +62,7 @@ namespace CHM
             if (coolTimeCk > time)
             {
 
-                coolTime -= 0.2f;
+                CoolTime -= 0.2f;
 
                 coolTimeCk = 0;
             }

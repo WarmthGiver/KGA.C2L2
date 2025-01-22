@@ -45,30 +45,35 @@ namespace CHM
         private void Update()
         {
             OnSkill();
-           // if (Input.GetKeyDown(KeyCode.V))
-           // {
-           // }
-            
+            // if (Input.GetKeyDown(KeyCode.V))
+            // {
+            // }
+
         }
+        float time;
         public void OnSkill()
         {
+            time += Time.deltaTime;
+            
             //스킬이 사용 가능한 상태인지 검사 (쿨타임)
             if (IsSkillAvailable == false) return;
 
             //발사체 생성           
             //attackRate 주기로 발사체 생성
             //현 시간에서 -currentAttackRate 를 뺀 값이 attackRate보다 크면
-            //if (Time.time - currentAttackRate > attackRate)
-            //{
-            //    generationBullet();
-            //    currentAttackRate = Time.time;//currentAttackRate 값을 현재시간으로 초기화                                
-            //}
+            if (time > attackRate)
+            {
+                generationBullet();
+                currentAttackRate = Time.time;//currentAttackRate 값을 현재시간으로 초기화
+                time = 0;                              
+
+            }
 
             //BulletCount 개수만큼 발사체를 생성한 후 쿨타임 초기화
             //지정된 개수만큼 발사체를 생성해 currentBulletIndex가 BuletCount보다 크거나 같으면
             if (cooldownTime >= count)
             {
-                generationBullet();
+                //generationBullet();
                 currentBulletIndex = 0;//currentProjectileIndex 를 0으로 만들고
                 currentCooldownTime = Time.time;
                 //currentCooldownTime을 현재 시간으로 초기화해 다시 스킬 쿨타임이 초기화 될때 까지 대기함

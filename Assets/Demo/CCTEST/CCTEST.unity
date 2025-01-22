@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &75812790
 Transform:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   cooldownTime: 1
   bulletSpawnPoint: {fileID: 355580623}
   target: {fileID: 1948126029}
-  attackRate: 0.3
+  attackRate: 5
   bullet:
     elements:
     - key: 3
@@ -674,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6854a3d47f8644ab4229106ab0537e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEnemyhp: 0
   enemyHp: 0
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
@@ -1482,7 +1483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1714966210
 Transform:
   m_ObjectHideFlags: 0
@@ -2115,7 +2116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2038446505
 Transform:
   m_ObjectHideFlags: 0
@@ -2125,7 +2126,7 @@ Transform:
   m_GameObject: {fileID: 2038446504}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2153,7 +2154,7 @@ MonoBehaviour:
   coolTimeup: 1
   time: 3
   coolTimeCk: 0
-  coolTime: 5
+  coolTime: 0.2
 --- !u!1 &2040648941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,7 +2235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2081182302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,6 +2248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1a59420d6f5654da1fd0c7c67ffbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resetEnemyhp: 0
   enemyHp: 50
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}

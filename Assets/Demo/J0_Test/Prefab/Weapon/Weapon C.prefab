@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45c337852e76132428e4833582dbb5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 1
+  bulletDamage: 3
   coolTime: 0.5
   bulletSpeed: 0.003
   muzzle: {fileID: 8521467397280366292}

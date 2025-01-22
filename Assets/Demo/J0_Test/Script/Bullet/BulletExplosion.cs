@@ -12,8 +12,10 @@ public class BulletExplosion : Bullet
         // 적 닿으면 폭발이 일어나고 사라짐
         if (collision.CompareTag("Enemy"))
         {
-            gameObject.SetActive(false);
             Instantiate(explosion, transform.position, transform.rotation);
+            collision.GetComponent<IDamageable>()?.GetDamage(damage);
+            gameObject.SetActive(false);
+            Debug.Log("범위 닿음");
         }
     }
 }
