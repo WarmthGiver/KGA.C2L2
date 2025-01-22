@@ -12,6 +12,7 @@ namespace CHM
     public abstract class Bulletbase : MonoBehaviour, IDamageable
     {
         [SerializeField] private int bulletHp;
+        [SerializeField] private int bulletDMG;
         //프리팹 상속자
         [SerializeField]
         private GameObject Animator;        
@@ -39,9 +40,11 @@ namespace CHM
         {
             if (collision.CompareTag("Player"))
             {
-                squadAnimator();  
-                
+                squadAnimator();
+                var player = collision.GetComponent<IDamageable>();
+                player.GetDamage(bulletDMG);
                 gameObject.SetActive(false);
+                
                
             }
             //if (collision.CompareTag("Bullet"))

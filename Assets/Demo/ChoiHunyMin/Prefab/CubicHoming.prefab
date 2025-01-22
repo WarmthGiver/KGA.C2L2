@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletHp: 1
-  bulletDamage: 1
+  bulletDMG: 1
   Animator: {fileID: 7726945123084857508, guid: a261ec32f65eee64fa32674ada3df7f3, type: 3}
 --- !u!114 &4763125941321208043
 MonoBehaviour:

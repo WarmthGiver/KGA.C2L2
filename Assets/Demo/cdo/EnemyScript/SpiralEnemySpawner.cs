@@ -57,7 +57,7 @@ namespace CHO
             dod.z = -180;
             transform.rotation = dod;
 
-            InvokeRepeating("spiralSpawnDelay1", 1, 30);
+            InvokeRepeating("spiralSpawnDelay1", 1, 3);
         }
 
         private void spiralSpawnDelay1()

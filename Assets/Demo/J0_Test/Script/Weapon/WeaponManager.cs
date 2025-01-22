@@ -23,7 +23,7 @@ public class WeaponManager : MonoBehaviour
 
     private void Start()
     {
-        equipTime = 30f;
+        equipTime = 3f;
         StartCoroutine(EquipWeapon(weapons));
     }
     private IEnumerator EquipWeapon(Weapon[] weapon)
