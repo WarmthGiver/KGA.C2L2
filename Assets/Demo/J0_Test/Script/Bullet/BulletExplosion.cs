@@ -5,17 +5,16 @@ using UnityEngine;
 public class BulletExplosion : Bullet
 {
     [SerializeField]
-    protected GameObject explosion;
+    protected Explosion explosionPrefab;
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        // Àû ´êÀ¸¸é Æø¹ßÀÌ ÀÏ¾î³ª°í »ç¶óÁü
+        // ì  ë‹¿ìœ¼ë©´ í­ë°œì´ ì¼ì–´ë‚˜ê³  ì‚¬ë¼ì§
         if (collision.CompareTag("Enemy"))
         {
-            Instantiate(explosion, transform.position, transform.rotation);
-            collision.GetComponent<IDamageable>()?.GetDamage(damage);
+            var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+            explosion.Initialize(damage);
             gameObject.SetActive(false);
-            Debug.Log("¹üÀ§ ´êÀ½");
         }
     }
 }
