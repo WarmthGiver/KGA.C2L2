@@ -4,7 +4,11 @@ using ZL.Unity.IO;
 
 namespace ZL.Unity
 {
-    public sealed class ApplicationManager : MonoBehaviour
+    [AddComponentMenu("")]
+
+    [DisallowMultipleComponent]
+
+    public class ApplicationManager : MonoBehaviour
     {
         public static ApplicationManager Instance { get; private set; }
 
@@ -13,6 +17,24 @@ namespace ZL.Unity
         [SerializeField]
 
         private bool runInBackground = false;
+
+        [SerializeField]
+
+        private bool cursorVisible = true;
+
+        [Space]
+
+        [SerializeField]
+
+        private Texture2D cursorTexture = null;
+
+        [SerializeField]
+
+        private Vector2 cursorHotspot = Vector2.zero;
+
+        [SerializeField]
+
+        private CursorMode cursorMode = CursorMode.Auto;
 
         [Space]
 
@@ -27,6 +49,8 @@ namespace ZL.Unity
         private void OnValidate()
         {
             Application.runInBackground = runInBackground;
+
+            Cursor.visible = cursorVisible;
         }
 
         private void Awake()
@@ -36,6 +60,13 @@ namespace ZL.Unity
             DontDestroyOnLoad(Instance);
 
             Application.runInBackground = runInBackground;
+
+            Cursor.visible = cursorVisible;
+
+            if (cursorTexture != null)
+            {
+                Cursor.SetCursor(cursorTexture, cursorHotspot, cursorMode);
+            }
 
             targetFrameRate.TryLoad();
 

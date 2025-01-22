@@ -33,5 +33,10 @@ namespace ZL.Unity
 
             skybox.SetFloat("_Rotation", rotation);
         }
+
+        private void OnApplicationQuit()
+        {
+            skybox.SetFloat("_Rotation", 0f);
+        }
     }
 }

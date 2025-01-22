@@ -10,7 +10,7 @@ namespace ZL.Unity.Audio
     {
         [Space]
 
-        [SerializeField, GetComponentInChildren, ReadOnly]
+        [SerializeField]
 
         private Slider slider;
 
