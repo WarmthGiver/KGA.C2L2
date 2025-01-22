@@ -1602,11 +1602,11 @@ MonoBehaviour:
   - {fileID: 562749190}
   - {fileID: 2114391064}
   weapons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1709835401756397508, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
+  - {fileID: 1709835401756397508, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
+  - {fileID: 8031372114124153138, guid: 4d317073487226248972acf7bdc9b117, type: 3}
+  - {fileID: 5028418121212233698, guid: 76910e88cf4d5bd44abc93ffa86d5df1, type: 3}
+  - {fileID: 8886657450479239666, guid: b4ebdb0f9dde4df40ae80f37a25bb2ee, type: 3}
 --- !u!1 &2114391063
 GameObject:
   m_ObjectHideFlags: 0

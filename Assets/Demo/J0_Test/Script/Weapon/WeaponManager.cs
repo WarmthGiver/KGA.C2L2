@@ -19,37 +19,20 @@ public class WeaponManager : MonoBehaviour
     [SerializeField]
     private Weapon[] weapons = new Weapon[5];
 
-    bool isPlaceable;
-
-    static int slotNumber = 0;
+    private float equipTime;
 
     private void Start()
     {
-        isPlaceable = true;
+        equipTime = 30f;
+        StartCoroutine(EquipWeapon(weapons));
     }
-
-    private void Update()
+    private IEnumerator EquipWeapon(Weapon[] weapon)
     {
-        CheckPlaceable();
-
-        if (isPlaceable == true)
+        for (int i = 0; i < 5; i++)
         {
-            EquipWeapon(weapons[slotNumber]);
-        }
-    }
-    private void EquipWeapon(Weapon weapon)
-    {
-        if (this.weapons[slotNumber] != null)
-        {
-            Instantiate(weapon, slots[slotNumber], false);
-            slotNumber++;
-        }
-    }
-    void CheckPlaceable()
-    {
-        if (slotNumber >= 5)
-        {
-            isPlaceable = false;
+            Instantiate(weapon[i], slots[i], false);
+            Debug.Log($"{i + 1}번째 생성");
+            yield return new WaitForSeconds(equipTime);
         }
     }
 }

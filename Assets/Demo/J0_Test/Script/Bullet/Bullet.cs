@@ -12,9 +12,13 @@ public class Bullet : MonoBehaviour
     protected int damage;
     protected float speed;
 
+    [SerializeField]
+    protected TrailRenderer trailRenderer;
+
     protected virtual void Update()
     {
         BulletMovement();
+        IfOutRange();
     }
 
     protected virtual void BulletMovement()
@@ -28,12 +32,25 @@ public class Bullet : MonoBehaviour
         this.speed = speed;
     }
 
+    protected virtual void OnDisable()
+    {
+        trailRenderer.Clear();
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponent<IDamageable>().GetDamage(damage);
+            collision.GetComponent<IDamageable>()?.GetDamage(damage);
             Debug.Log("적 맞음");
+            gameObject.SetActive(false);
+        }
+    }
+    protected void IfOutRange()
+    {
+        if (gameObject.transform.position.x > 10f || gameObject.transform.position.x < -10f || gameObject.transform.position.y > 10f || gameObject.transform.position.y < -10f)
+        {
+            Debug.Log("범위 밖");
             gameObject.SetActive(false);
         }
     }
