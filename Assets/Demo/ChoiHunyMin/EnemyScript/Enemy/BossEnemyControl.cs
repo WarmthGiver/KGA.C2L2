@@ -28,7 +28,7 @@ namespace CHM
         {
             gameObject.SetActive(false);
             //몇초후 함수 실행
-            Invoke("gameobjectSetActive", 0);
+            Invoke("gameobjectSetActive", 10);
             R = 15f;
             
         }

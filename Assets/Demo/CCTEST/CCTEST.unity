@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.042872936, g: 0.043978684, b: 0.0584172, a: 1}
+  m_IndirectSpecularColor: {r: 0.02960526, g: 0.03164227, b: 0.042082924, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &75812790
 Transform:
   m_ObjectHideFlags: 0
@@ -198,32 +198,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
-  bulletHp: 1
-  bulletDMG: 1
-  resetHp: 1
-
+  bulletHp: 0
+  bulletDMG: 0
+  resetHp: 0
   Animator: {fileID: 0}
   bulletType: 2
-  bulletCount: 4
+  bulletCount: 1
   cooldownTime: 1
   bulletSpawnPoint: {fileID: 75812790}
   target: {fileID: 1948126029}
-  attackRate: 0.3
+  attackRate: 1
   bullet:
     elements:
-    - key: 2
-      value:
-        original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
-        parent: {fileID: 0}
-    - key: 2
-      value:
-        original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
-        parent: {fileID: 0}
-    - key: 2
-      value:
-        original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
-        parent: {fileID: 0}
     - key: 2
       value:
         original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
@@ -429,15 +415,13 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
-  resetbulletHp: 1
-
   Animator: {fileID: 0}
   bulletType: 3
   bulletCount: 1
   cooldownTime: 1
   bulletSpawnPoint: {fileID: 355580623}
   target: {fileID: 1948126029}
-  attackRate: 5
+  attackRate: 1
   bullet:
     elements:
     - key: 3
@@ -677,7 +661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1086485683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1499,7 +1483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1714966210
 Transform:
   m_ObjectHideFlags: 0
@@ -1530,16 +1514,19 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
-
   Animator: {fileID: 0}
   bulletType: 1
   bulletCount: 1
-  cooldownTime: 3
+  cooldownTime: 1
   bulletSpawnPoint: {fileID: 1714966210}
   target: {fileID: 1948126029}
-  attackRate: 3
+  attackRate: 1
   bullet:
-    elements: []
+    elements:
+    - key: 1
+      value:
+        original: {fileID: 396665187167504072, guid: 6e54ded1527f65b4b9cb3e2f8fa2a9ea, type: 3}
+        parent: {fileID: 0}
 --- !u!1 &1833793197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,7 +2096,7 @@ MonoBehaviour:
   - {fileID: 2114391064}
   weapons:
   - {fileID: 1709835401756397508, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
-  - {fileID: 8031372114124153138, guid: 4d317073487226248972acf7bdc9b117, type: 3}
+  - {fileID: 1709835401756397508, guid: 808bbbcc1831e144cab12791e856a1aa, type: 3}
   - {fileID: 8031372114124153138, guid: 4d317073487226248972acf7bdc9b117, type: 3}
   - {fileID: 5028418121212233698, guid: 76910e88cf4d5bd44abc93ffa86d5df1, type: 3}
   - {fileID: 8886657450479239666, guid: b4ebdb0f9dde4df40ae80f37a25bb2ee, type: 3}
@@ -2129,7 +2116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2038446505
 Transform:
   m_ObjectHideFlags: 0
@@ -2167,7 +2154,7 @@ MonoBehaviour:
   coolTimeup: 1
   time: 3
   coolTimeCk: 0
-  coolTime: 0.2
+  coolTime: 5
 --- !u!1 &2040648941
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,18 +2199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-
-  bulletHp: 1
-  bulletDMG: 1
-  resetHp: 1
-
+  bulletHp: 0
+  bulletDMG: 0
+  resetHp: 0
   Animator: {fileID: 0}
   bulletType: 0
-  bulletCount: 1
-  cooldownTime: 2
-  bulletSpawnPoint: {fileID: 2040648942}
+  bulletCount: 0
+  cooldownTime: 0
+  bulletSpawnPoint: {fileID: 0}
   target: {fileID: 1948126029}
-  attackRate: 1
+  attackRate: 0
   bullet:
     elements: []
 --- !u!1 &2081182299
@@ -2246,7 +2231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2081182302
 MonoBehaviour:
   m_ObjectHideFlags: 0
