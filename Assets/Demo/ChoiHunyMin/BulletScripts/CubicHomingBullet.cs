@@ -14,7 +14,7 @@ namespace CHM
 
         public override void Setup(GameObject target, int maxCount = 1, int index= 0)
         {
-            base.Setup(target,maxCount);
+            base.Setup(target);
 
             this.target = target;
             start =transform.position;

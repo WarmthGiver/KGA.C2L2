@@ -17,7 +17,7 @@ namespace CHM
         private float distance;
         public override void Setup(GameObject target, int maxCount = 1, int index = 0)
         {
-            base.Setup(target,maxCount);
+            base.Setup(target);
 
             this.target = target;//매개변수로 가져온 타겟 담아주기
             start = transform.position;//시작점은 현재위치

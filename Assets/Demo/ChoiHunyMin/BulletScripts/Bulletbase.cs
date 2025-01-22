@@ -13,7 +13,12 @@ namespace CHM
     {
         [SerializeField] private int bulletHp;
         [SerializeField] private int bulletDMG;
+<<<<<<< Updated upstream
         [SerializeField] private int resetHp;
+=======
+        [SerializeField] private int resetbulletHp;
+        
+>>>>>>> Stashed changes
         //프리팹 상속자
         [SerializeField]
         private GameObject Animator;        
@@ -65,9 +70,17 @@ namespace CHM
                 gameObject.SetActive(false);
             }
         }
+<<<<<<< Updated upstream
         protected virtual void OnEnable()
         {
             bulletHp = resetHp;
+=======
+        private void OnEnable()
+        {
+            bulletHp = resetbulletHp;
+
+
+>>>>>>> Stashed changes
         }
     }
 }
