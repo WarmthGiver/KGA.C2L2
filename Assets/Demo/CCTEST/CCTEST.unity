@@ -206,6 +206,9 @@ MonoBehaviour:
   bulletHp: 0
   bulletDMG: 0
   resetbulletHp: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   Animator: {fileID: 0}
   bulletType: 2
@@ -433,7 +436,11 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   resetHp: 1
+=======
+  resetbulletHp: 1
+>>>>>>> Stashed changes
 =======
   resetbulletHp: 1
 >>>>>>> Stashed changes
@@ -1541,6 +1548,9 @@ MonoBehaviour:
   bulletHp: 0
   bulletDMG: 0
   resetbulletHp: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   Animator: {fileID: 0}
   bulletType: 1
@@ -2231,6 +2241,9 @@ MonoBehaviour:
   bulletHp: 0
   bulletDMG: 0
   resetbulletHp: 0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   Animator: {fileID: 0}
   bulletType: 0

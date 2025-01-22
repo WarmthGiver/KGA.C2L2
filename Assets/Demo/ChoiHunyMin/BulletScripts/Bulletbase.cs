@@ -14,7 +14,12 @@ namespace CHM
         [SerializeField] private int bulletHp;
         [SerializeField] private int bulletDMG;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         [SerializeField] private int resetHp;
+=======
+        [SerializeField] private int resetbulletHp;
+        
+>>>>>>> Stashed changes
 =======
         [SerializeField] private int resetbulletHp;
         
@@ -71,15 +76,21 @@ namespace CHM
             }
         }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         protected virtual void OnEnable()
         {
             bulletHp = resetHp;
 =======
+=======
+>>>>>>> Stashed changes
         private void OnEnable()
         {
             bulletHp = resetbulletHp;
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         }
     }
