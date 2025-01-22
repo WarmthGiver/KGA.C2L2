@@ -16,7 +16,7 @@ namespace CHO
         //거리
         private float distance;
 
-        [Header("라운드 변경 시")]
+        [Header("시간 증가 시")]
         //들어오는 간격 = 속도
         [SerializeField] private float gap = 0.0005f;
         //원 속도
@@ -50,7 +50,7 @@ namespace CHO
             transform.RotateAround(center, Vector3.forward, eulerEuler * Time.deltaTime);
 
             direction = (transform.position - center).normalized;
-            distance -= gap;
+            distance -= gap*Time.timeScale;
             transform.position = center + direction * distance;
 
             ////삼각함수

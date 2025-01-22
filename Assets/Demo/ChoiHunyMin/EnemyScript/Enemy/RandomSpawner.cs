@@ -15,26 +15,56 @@ namespace CHM
         [SerializeField]
         private SerializableDictionary<string, GameObjectPool<Enemy>> dictinary;        
         [SerializeField] float circleR;//반지름 값
-        [SerializeField] float coolTime;//쿨타임
         [SerializeField] float coolTimeup;//흐르는시간
+        [SerializeField] float time;
+        [SerializeField] float coolTimeCk;//흐르는시간
+        [SerializeField] float coolTime;//쿨타임
+       public float CoolTime
+        {
+            get
+            {
+                return coolTime;
+            }
+            set
+            {
+                if (value < 0.2f)
+                {
+                    coolTime = 0.2f;
+                }
+                else
+                {
+                    coolTime = value;
+                }
+            }
+        }
+
+
         int circleRandom;
         float speed;
         Vector3 targetPos = new Vector3(0, 0, 0);//기준
         void Update()
         {
-            coolTime += Time.deltaTime;
+            coolTimeup += Time.deltaTime;
 
             var angle = GetAngle(transform.position, targetPos);
             transform.rotation = Quaternion.Euler(0, 0, angle);
             Circle();
 
-            if (coolTimeup < coolTime)
+            if (coolTimeup>coolTime)
             {
 
                 circleRandom = Random.Range(0, 360);
                 squadEnemy();
 
-                coolTime = 0;
+                coolTimeup = 0;
+            }
+            coolTimeCk += Time.deltaTime;
+            if (coolTimeCk > time)
+            {
+
+                coolTime -= 0.2f;
+
+                coolTimeCk = 0;
             }
         }
         float GetAngle(Vector2 start, Vector2 end)
@@ -55,6 +85,7 @@ namespace CHM
             Enemy straightEnemy  = dictinary["StraightEnemy"].Generate();
             straightEnemy.transform.position = transform.position;
             straightEnemy.transform.rotation = transform.rotation;
+            straightEnemy.gameObject.SetActive(true);
         }
     }
 }
