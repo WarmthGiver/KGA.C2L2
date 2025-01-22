@@ -198,18 +198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
+
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
-=======
-  bulletHp: 0
-  bulletDMG: 0
-  resetbulletHp: 0
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
   Animator: {fileID: 0}
   bulletType: 2
   bulletCount: 4
@@ -435,15 +428,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletHp: 1
   bulletDMG: 1
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   resetHp: 1
-=======
   resetbulletHp: 1
->>>>>>> Stashed changes
-=======
-  resetbulletHp: 1
->>>>>>> Stashed changes
+
   Animator: {fileID: 0}
   bulletType: 3
   bulletCount: 1
@@ -1540,18 +1527,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
-=======
-  bulletHp: 0
-  bulletDMG: 0
-  resetbulletHp: 0
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
   Animator: {fileID: 0}
   bulletType: 1
   bulletCount: 1
@@ -2233,18 +2212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
+
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
-=======
-  bulletHp: 0
-  bulletDMG: 0
-  resetbulletHp: 0
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
   Animator: {fileID: 0}
   bulletType: 0
   bulletCount: 1
