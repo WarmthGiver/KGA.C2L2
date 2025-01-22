@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRigid: {fileID: 7589528944543741312}
+  trailRenderer: {fileID: 116478859916101369}
   explosion: {fileID: 273420850262268392, guid: 1676fc78b7c2d23488ecce99e7e0c9bb, type: 3}
 --- !u!1 &4185455352580060142
 GameObject:
@@ -235,8 +236,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1687865773
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Time: 0.35
   m_PreviewTimeScale: 1
