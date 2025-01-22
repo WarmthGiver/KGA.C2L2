@@ -12,7 +12,7 @@ namespace ZL.Unity
 
         [SerializeField]
 
-        private bool runInBackground = true;
+        private bool runInBackground = false;
 
         [Space]
 

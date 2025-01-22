@@ -31,19 +31,24 @@ namespace ZL.Unity
 
         private void OnEnable()
         {
-            Invoke(nameOfOnTime, time);
+            Invoke(methodName, time);
         }
 
         private void OnDisable()
         {
-            CancelInvoke(nameOfOnTime);
+            CancelInvoke(methodName);
         }
 
-        private static readonly string nameOfOnTime = nameof(OnTime);
+        private static readonly string methodName = nameof(OnTime);
 
         private void OnTime()
         {
             eventOnTime.Invoke();
+        }
+
+        public void SetActive(bool value)
+        {
+            gameObject.SetActive(value);
         }
 	}
 }

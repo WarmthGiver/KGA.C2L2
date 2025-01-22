@@ -26,6 +26,10 @@ namespace ZL.Unity
 
         [SerializeField]
 
+        private float delay = 0.5f;
+
+        [SerializeField]
+
         private float fadeDuration = 2f;
 
         private int pauseCall = 0;
@@ -37,7 +41,9 @@ namespace ZL.Unity
 
         protected virtual IEnumerator Start()
         {
-            AudioListenerTweener.VolumeTweener.Tween(1f, fadeDuration).
+            yield return WaitFor.Seconds(delay);
+
+            AudioListenerVolumeTweener.Tweener.Tween(1f, fadeDuration).
 
                 SetEase(Ease.Linear);
 
@@ -50,15 +56,24 @@ namespace ZL.Unity
 
         public void LoadScene(string name)
         {
-            AudioListenerTweener.VolumeTweener.Tween(0f, fadeDuration).
+            void Callback()
+            {
+                Time.timeScale = 1f;
 
-                SetEase(Ease.Linear);
+                SceneManager.LoadScene(name);
+            }
+
+            AudioListenerVolumeTweener.Tweener.Tween(0f, fadeDuration).
+
+                SetEase(Ease.Linear).
+                
+                SetUpdate(true);
 
             sceneFader.TweenFaded(false, fadeDuration).
 
                 SetEase(Ease.Linear).
                 
-                OnComplete(() => SceneManager.LoadScene(name));
+                OnComplete(Callback);
         }
 
         public void Pause()
