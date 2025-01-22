@@ -649,6 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 1185482827}
+  delay: 0.5
   fadeDuration: 2
 --- !u!4 &819481877
 Transform:
@@ -662,8 +663,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1185482828}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &885246405
@@ -786,7 +786,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 819481877}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2371519380391588978, guid: 6e3e727887163f546ac2360e380c328e, type: 3}
       propertyPath: m_Name
@@ -848,11 +848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c14694658fd94c4eac0ef69fca8ee08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1185482828 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9165408091045637446, guid: 6e3e727887163f546ac2360e380c328e, type: 3}
-  m_PrefabInstance: {fileID: 1185482826}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1824931836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1825,6 +1820,7 @@ SceneRoots:
   - {fileID: 194895435}
   - {fileID: 819481877}
   - {fileID: 694293269}
+  - {fileID: 1185482826}
   - {fileID: 426281095}
   - {fileID: 885246405}
   - {fileID: 1077404332}

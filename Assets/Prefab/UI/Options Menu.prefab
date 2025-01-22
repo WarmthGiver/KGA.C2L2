@@ -423,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575661913848129929, guid: 56d3d7f82d30c2d4899db47bae079e43, type: 3}
       propertyPath: m_Name
-      value: Master Volume Slider
+      value: Master Volume Slider (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 6936305316723240965, guid: 56d3d7f82d30c2d4899db47bae079e43, type: 3}
       propertyPath: m_AnchorMax.x
@@ -583,7 +583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575661913848129929, guid: 56d3d7f82d30c2d4899db47bae079e43, type: 3}
       propertyPath: m_Name
-      value: SFX Volume Slider
+      value: SFX Volume Slider (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 6936305316723240965, guid: 56d3d7f82d30c2d4899db47bae079e43, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1011,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575661913848129929, guid: 56d3d7f82d30c2d4899db47bae079e43, type: 3}
       propertyPath: m_Name
-      value: BGM Volume Slider
+      value: BGM Volume Slider (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 6936305316723240965, guid: 56d3d7f82d30c2d4899db47bae079e43, type: 3}
       propertyPath: m_AnchorMax.x

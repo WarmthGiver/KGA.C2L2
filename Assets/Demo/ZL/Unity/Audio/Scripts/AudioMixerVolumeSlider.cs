@@ -25,7 +25,7 @@ namespace ZL.Unity.Audio
             slider.value = AudioMixerManager.Instance.GetVolume(key) * 100f;
         }
 
-        public void OnValueChanged()
+        public void SetVolume()
         {
             AudioMixerManager.Instance.SetVolume(key, slider.value * 0.01f);
         }
