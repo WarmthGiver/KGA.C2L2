@@ -11,8 +11,7 @@ namespace CHM
 {
     public abstract class Bulletbase : MonoBehaviour, IDamageable
     {
-        [SerializeField] private int bulletHp = 1;
-        [SerializeField] private int bulletDamage = 1;
+        [SerializeField] private int bulletHp;
         //프리팹 상속자
         [SerializeField]
         private GameObject Animator;        
@@ -23,9 +22,10 @@ namespace CHM
 
         //Setup 메서드는 자식 클래스에서 재정의 할수 있도록 virtual메서드로 만듬
         //총 4개의 매개변수 (목표 , 공격력 , 발사체 개수 , 발사체 순번)
-        public virtual void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
+        public virtual void Setup(GameObject target, int maxCount = 10, int index = 0)
         {
             movementRigidbody2D = GetComponent<MovementRigidbody2D>();
+            
         }
         private void Update()
         {

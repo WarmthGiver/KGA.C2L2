@@ -27,7 +27,7 @@ namespace CHM
         private void Start()
         {
             R = 15f;
-
+            
         }
 
         void Update()
@@ -37,7 +37,7 @@ namespace CHM
             {
                 R = R - Time.deltaTime * Rspeed;//반지름이 스피드 만큼 줄어듬
                 bossSpeed = 0.5f;
-
+               
             }
             //NormalBulletHoming(target, start, 3, 3, 5, 1);
             speed += Time.deltaTime * bossSpeed;//보스 본체 이동속도
@@ -58,33 +58,6 @@ namespace CHM
             }
         }
        
-
-        //void NormalBulletHoming(GameObject target, GameObject start, float f_xs, float f_ys, float f_ms, float f_a)
-        //{
-        //    Vector3 targetPos;
-        //    Vector3 startPos;
-        //
-        //    targetPos = target.transform.position;
-        //    float targetX = targetPos.x;
-        //    float targetY = targetPos.y;
-        //
-        //    startPos = start.transform.position;
-        //    startPos.x = (startPos.x - targetX) / Mathf.Pow((startPos.x - targetX) * (startPos.x - targetX) + (startPos.y - targetY) * (startPos.y - targetY), 0.5f) * f_a;
-        //    startPos.y = (startPos.y - targetY) / Mathf.Pow((startPos.x - targetX) * (startPos.x - targetX) + (startPos.y - targetY) * (startPos.y - targetY), 0.5f) * f_a;
-        //
-        //    bulletXspeed = f_xs - targetPos.x;
-        //    bulletYspeed = f_ys - targetPos.y;
-        //
-        //    MorethanMaxSpeed();
-        //}
-        //void MorethanMaxSpeed()
-        //{
-        //    float bulletSpeed = Mathf.Pow(bulletXspeed * bulletXspeed + bulletYspeed * bulletYspeed, 0.5f);
-        //    if (bulletSpeed > bulletMaxSpeed)
-        //    {
-        //        bulletXspeed = bulletXspeed / bulletSpeed * bulletMaxSpeed;
-        //        bulletYspeed = bulletYspeed / bulletSpeed * bulletMaxSpeed;
-        //    }
-        //}
+       
     }
 }

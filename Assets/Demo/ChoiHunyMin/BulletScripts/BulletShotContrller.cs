@@ -12,21 +12,24 @@ public enum BulletType { Straight, Homing, QuadraticHoming, CubicHoming }
 namespace CHM
 {
 
-    public class BulletShotContrller : MonoBehaviour
+    public class BulletShotContrller : Bulletbase
     {
         
         [SerializeField]
         private BulletType bulletType;//발사체 선택 직선형 먼저
         [SerializeField]
-        private int bulletCount = 5;//발사체 갯수
+        private int bulletCount;//발사체 갯수
         [SerializeField]
-        private float cooldownTime = 2f;//쿨타임         
+        private int count;
+        [SerializeField]
+        private float cooldownTime;//쿨타임         
         [SerializeField]
         private Transform bulletSpawnPoint;//발사체가 생성되는 트랜스폼 컴포넌트 
         [SerializeField]
         private GameObject target;//목표물
         [SerializeField]
         private float attackRate ;//발사체 사이의 사출 간격        
+
         [SerializeField] private SerializableDictionary<BulletType, GameObjectPool<Bulletbase>> bullet;
         
         private int currentBulletIndex = 0;//현재 발사체 순번
@@ -42,39 +45,49 @@ namespace CHM
         private void Update()
         {
             OnSkill();
+           // if (Input.GetKeyDown(KeyCode.V))
+           // {
+           // }
             
         }
         public void OnSkill()
         {
             //스킬이 사용 가능한 상태인지 검사 (쿨타임)
             if (IsSkillAvailable == false) return;
+
             //발사체 생성           
             //attackRate 주기로 발사체 생성
             //현 시간에서 -currentAttackRate 를 뺀 값이 attackRate보다 크면
-            if (Time.time - currentAttackRate > attackRate)
+            //if (Time.time - currentAttackRate > attackRate)
+            //{
+            //    generationBullet();
+            //    currentAttackRate = Time.time;//currentAttackRate 값을 현재시간으로 초기화                                
+            //}
+
+            //BulletCount 개수만큼 발사체를 생성한 후 쿨타임 초기화
+            //지정된 개수만큼 발사체를 생성해 currentBulletIndex가 BuletCount보다 크거나 같으면
+            if (cooldownTime >= count)
             {
-                var clone = bullet[bulletType].Generate();
-                clone.transform.position = bulletSpawnPoint.position;
-                clone.transform.rotation = Quaternion.identity;
-
-                clone.Setup(target, 1, bulletCount, currentBulletIndex);
-
-                currentBulletIndex++;//발사체 생성시 증가
-                currentAttackRate = Time.time;//currentAttackRate 값을 현재시간으로 초기화
-
-                
-            }
-
-           this.gameObject.SetActive(true);
-            //projectileCount 개수만큼 발사체를 생성한 후 쿨타임 초기화
-            //지정된 개수만큼 발사체를 생성해 currentProjectileIndex가 projectileCount보다 크거나 같으면
-            if (currentBulletIndex >= bulletCount)
-            {
+                generationBullet();
                 currentBulletIndex = 0;//currentProjectileIndex 를 0으로 만들고
                 currentCooldownTime = Time.time;
                 //currentCooldownTime을 현재 시간으로 초기화해 다시 스킬 쿨타임이 초기화 될때 까지 대기함
             }
         }
+        public void generationBullet()
+        {
+            for (int i = 0; i < bulletCount; i++)
+            {
+                var clone = bullet[bulletType].Generate();
+                clone.transform.position = bulletSpawnPoint.position;
+                //Quaternion.identity  =쿼터니언은 "회전 없음"을 의미 오브젝트는 완벽하게 월드 좌표 축 또는 부모의 축으로 정렬
+                clone.transform.rotation = Quaternion.identity;
+                clone.Setup(target, count, currentBulletIndex);
+                clone.gameObject.SetActive(true);
+            }
+        }
+
+        public override void Process() { }
         
 
     }

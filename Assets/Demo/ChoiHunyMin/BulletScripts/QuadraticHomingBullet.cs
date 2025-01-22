@@ -2,6 +2,7 @@
  * 날짜 25 - 1 - 20
  * 양옆으로 곡선 궤도 그리며 발사하는 총알
 */
+using Unity.VisualScripting;
 using UnityEngine;
 namespace CHM
 {
@@ -12,17 +13,17 @@ namespace CHM
         private Vector2 start, end, point;//시작지점, 끝지점 (목표) ,중간지점
         private float duration, t = 0f;//발사체 재생시간 , 보간위치를 위한 t
         private GameObject target;//목표 지정
-
-        public override void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
+        private float distance;
+        public override void Setup(GameObject target, int maxCount = 1, int index = 0)
         {
-            base.Setup(target, damage,maxCount);
+            base.Setup(target,maxCount);
 
             this.target = target;//매개변수로 가져온 타겟 담아주기
             start = transform.position;//시작점은 현재위치
             end = this.target.transform.position;//끝 지점 목표의 트렌스폼
             
             //시작 지점에서 목표까지의 거리 계산
-            float distance = Vector3.Distance(start, end);
+            distance = Vector3.Distance(start, end);
             //재생시간 설정 (거리 / 이동속도)
             //거리에 따라 distance값이 달라지기 때문에 동일한 속도로 이동
             duration = distance/ movementRigidbody2D.MoveSpeed;
@@ -60,7 +61,12 @@ namespace CHM
             transform.position = Utils.QuadraticCurve(start, point, end, t);
             transform.rotation = Utils.LookTaget(transform.position, target.transform.position);
         }
+        private void OnEnable()
+        {
+            t = 0;
+            distance = Vector3.Distance(start, end);
 
+        }
 
     }
 }

@@ -9,14 +9,14 @@ namespace CHM
     {
         //유도 미사일
         private GameObject target;
-
+        int count;
         //Setup 메서드 재정의
-        public override void Setup(GameObject target, float damage, int maxCount = 1, int index = 0)
+        public override void Setup(GameObject target, int maxCount = 10, int index = 0)
         {
-            base.Setup(target, damage);
+            base.Setup(target, maxCount);
 
             this.target = target;//타겟정보를 받아옴 
-            
+            count = maxCount;
         }
         public override void Process()
         {
