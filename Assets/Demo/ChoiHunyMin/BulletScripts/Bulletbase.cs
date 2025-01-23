@@ -23,6 +23,10 @@ namespace CHM
 
         private int resetHp;
 
+        [SerializeField]
+
+        protected TrailRenderer trailrenderer;
+
 
         //프리팹 상속자
         //private GameObject Animator;
@@ -67,6 +71,12 @@ namespace CHM
                 //Dead();
             }
         }
+
+        private void OnDisable()
+        {
+            trailrenderer.Clear();
+        }
+
 
         public void GetDamage(int damage)
         {

@@ -171,8 +171,9 @@ MonoBehaviour:
       value:
         original: {fileID: 6694381047412550556, guid: a0a9db5266fc559439c56b8e6109bf3a, type: 3}
         parent: {fileID: 0}
+  testTime: 0
   EnemyPosition: 3
-  spiralSpawnDelay: 1
+  spiralSpawnDelay: 2
 --- !u!212 &67850908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -250,19 +251,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1037737272646107317, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -422,19 +423,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1953,7 +1954,7 @@ MonoBehaviour:
   attackRate: 0.1
   bulletPool:
     elements:
-    - key: 0
+    - key: 2
       value:
         original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
         parent: {fileID: 0}
@@ -1977,7 +1978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1180551668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,7 +2005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetEnemyhp: 100
-  enemyHp: 0
+  enemyHp: 100
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
   prefabSpeed: 1
@@ -3142,7 +3143,7 @@ MonoBehaviour:
         parent: {fileID: 0}
   circleR: 10
   coolTimeup: 1
-  time: 3
+  time: 8
   coolTimeCk: 0
   coolTime: 5
 --- !u!4 &1616035681

@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 523ee4c058efc6b4f9430a408b9580b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetEnemyhp: 1
-  enemyHp: 0
+  resetEnemyhp: 3
+  enemyHp: 3
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
   speed: 1

@@ -30,6 +30,8 @@ namespace CHO
 
         private float timeDley = 3f;
 
+        [SerializeField] private float testTime;
+
         //나오는 위치
         [SerializeField]
         
@@ -52,9 +54,9 @@ namespace CHO
 
             set
             {
-                if (value < 0.2f)
+                if (value < 0.5f)
                 {
-                    spiralSpawnDelay = 0.2f;
+                    spiralSpawnDelay = 0.5f;
                 }
 
                 else
@@ -73,12 +75,14 @@ namespace CHO
 
             transform.rotation = dod;
 
-            InvokeRepeating("SpiralSpawnDelay1", 1, 3);
+            InvokeRepeating("SpiralSpawnDelay1", 1, 10);
+
+            testTime = Time.time;   
         }
 
         private void SpiralSpawnDelay1()
         {
-            SpiralSpawnDelay -= 0.2f;
+            SpiralSpawnDelay -= 0.3f;
         }
 
         private void Shoot1()
@@ -190,6 +194,9 @@ namespace CHO
 
         private void Update()
         {
+            testTime += Time.deltaTime;
+            
+
             //자동 소환
             Shoot1();
 

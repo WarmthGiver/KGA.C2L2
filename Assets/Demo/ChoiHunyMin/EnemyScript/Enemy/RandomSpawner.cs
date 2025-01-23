@@ -27,9 +27,9 @@ namespace CHM
             }
             set
             {
-                if (value < 0.2f)
+                if (value < 0.4f)
                 {
-                    coolTime = 0.2f;
+                    coolTime = 0.4f;
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace CHM
             if (coolTimeCk > time)
             {
 
-                CoolTime -= 0.2f;
+                CoolTime -= 0.8f;
 
                 coolTimeCk = 0;
             }

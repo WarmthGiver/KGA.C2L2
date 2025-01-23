@@ -159,11 +159,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetEnemyhp: 1
-  enemyHp: 0
+  enemyHp: 1
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
-  gap: 0.0002
-  eulerEuler: 20
+  gap: 0.0032
+  eulerEuler: 60
 --- !u!58 &3518169154141858369
 CircleCollider2D:
   m_ObjectHideFlags: 0

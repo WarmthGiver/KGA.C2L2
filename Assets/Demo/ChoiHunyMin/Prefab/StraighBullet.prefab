@@ -152,6 +152,7 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
+  trailrenderer: {fileID: 1273304112709533678}
 --- !u!50 &8505171140335204146
 Rigidbody2D:
   serializedVersion: 4
@@ -236,6 +237,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+--- !u!96 &1273304112709533678 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7651943403503365718, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+  m_PrefabInstance: {fileID: 8906579251846599096}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8482369986325495258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021727967609613410, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
