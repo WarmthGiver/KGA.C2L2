@@ -1,3 +1,7 @@
+/*
+ * 작성자: 이시온
+*/
+
 using UnityEngine;
 
 using ZL.Unity.Collections;
@@ -20,7 +24,7 @@ namespace ArmadaInvencible
 
         private SerializableDictionary<string, GameObjectPool<T>> pools;
 
-        public void Awake()
+        private void Awake()
         {
             Instance = (TPoolManager)this;
         }

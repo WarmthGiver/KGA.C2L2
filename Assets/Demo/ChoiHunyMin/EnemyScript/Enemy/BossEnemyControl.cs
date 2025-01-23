@@ -4,6 +4,8 @@
  * 
 */
 
+using ArmadaInvencible;
+
 using CC;
 
 using UnityEngine;
@@ -30,7 +32,7 @@ namespace CHM
         [SerializeField]
 
         //반지름  
-        private float R ;
+        private float R;
 
         //쿨타임
         private float coolTime;
@@ -43,12 +45,12 @@ namespace CHM
             gameObject.SetActive(false);
 
             //몇초후 함수 실행
-            Invoke("gameobjectSetActive", 150);
+            Invoke("SetActiveTrue", 150);
 
             R = 15f;
         }
 
-        private void gameobjectSetActive()
+        private void SetActiveTrue()
         {
             gameObject.SetActive(true);
         }
@@ -84,6 +86,13 @@ namespace CHM
             {
                 coolTime = 0;
             }
+        }
+
+        protected override void Dead()
+        {
+            base.Dead();
+
+            SceneDirector.Instance.EndScene(true);
         }
     }
 }

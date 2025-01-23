@@ -1,8 +1,12 @@
+/*
+ * 작성자: 이시온
+*/
+
 using UnityEngine;
 
 using ZL.Unity.UI;
 
-namespace ZL.Unity.ArmadaInvencible
+namespace ArmadaInvencible
 {
     [AddComponentMenu("")]
 

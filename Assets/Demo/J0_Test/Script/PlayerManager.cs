@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour, IDamageable
 
     private int playerHP;
 
+    private bool isPlayerAlive = true;
+
     private void Start()
     {
         playerHP = 70;
@@ -17,13 +19,15 @@ public class PlayerManager : MonoBehaviour, IDamageable
     {
         playerHP -= damage;
 
-        if (playerHP <= 0)
+        if (isPlayerAlive == true && playerHP <= 0)
         {
-            Debug.Log("GameOver");
+            isPlayerAlive = false;
+
+            SceneDirector.Instance.EndScene(false);
+
+            var fx = FXPoolManager.Instance.Generate("Explosion 2");
+
+            fx.transform.position = transform.position;
         }
-    }
-    private void Update()
-    {
-        Debug.Log(playerHP);
     }
 }

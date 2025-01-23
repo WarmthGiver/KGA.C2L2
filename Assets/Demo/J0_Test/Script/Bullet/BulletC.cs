@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+// BulletExplosion 상속받음
 public sealed class BulletC : BulletExplosion
 {
-    // BulletExplosion 상속받음
+    
 }

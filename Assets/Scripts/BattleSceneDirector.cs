@@ -1,10 +1,18 @@
+/*
+ * 작성자: 이시온
+*/
+
 using DG.Tweening;
+
+using System.Collections;
 
 using UnityEngine;
 
+using ZL.Unity;
+
 using ZL.Unity.Tweeners;
 
-namespace ZL.Unity.ArmadaInvencible
+namespace ArmadaInvencible
 {
     [AddComponentMenu("")]
 
@@ -33,7 +41,7 @@ namespace ZL.Unity.ArmadaInvencible
             }
         }
 
-        public void EndScene(bool isPlayerAlive)
+        public override void EndScene(bool isPlayerAlive)
         {
             var screen = isPlayerAlive ? missionCompleteScreen : youDiedScreen;
 

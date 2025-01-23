@@ -1,3 +1,7 @@
+/*
+ * 작성자: 이시온
+*/
+
 using UnityEngine;
 
 using ZL.Unity;
@@ -6,7 +10,7 @@ using ZL.Unity.Audio;
 
 using ZL.Unity.UI;
 
-namespace ArmadaInvencible.ZL
+namespace ArmadaInvencible
 {
     [AddComponentMenu("")]
 

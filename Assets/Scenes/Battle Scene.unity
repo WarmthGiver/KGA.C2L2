@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &67850907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +157,7 @@ MonoBehaviour:
   enemyHp: 0
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
+  deadFX: 
   prefabList:
     elements:
     - key: SpiralEnemy1
@@ -851,7 +852,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.11
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1283,6 +1284,10 @@ MonoBehaviour:
       value:
         original: {fileID: 4574388761280509469, guid: 4d42667268eed63478578597de333197, type: 3}
         parent: {fileID: 887690387}
+    - key: Explosion 2
+      value:
+        original: {fileID: 2113253506624063915, guid: a8b5df34e0f96a447968f61cc4d9e099, type: 3}
+        parent: {fileID: 887690387}
 --- !u!4 &887690387
 Transform:
   m_ObjectHideFlags: 0
@@ -1428,7 +1433,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -1613,7 +1618,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -2009,6 +2014,7 @@ MonoBehaviour:
   enemyHp: 150
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
+  deadFX: Explosion 2
   prefabSpeed: 1
   Rspeed: 3
   bossSpeed: 0.3
@@ -2606,7 +2612,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -2797,7 +2803,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.15
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -2985,7 +2991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1616035680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3324,7 +3330,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.11
+  m_Time: 0.5
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3

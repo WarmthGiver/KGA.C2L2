@@ -167,6 +167,7 @@ MonoBehaviour:
   enemyHp: 3
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
+  deadFX: Explosion 1
   speed: 1
 --- !u!1001 &689327979437162268
 PrefabInstance:
@@ -280,7 +281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2281462498112935177, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
       propertyPath: m_Name
-      value: Tail (1)
+      value: Tail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

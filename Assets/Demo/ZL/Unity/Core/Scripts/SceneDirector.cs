@@ -1,3 +1,7 @@
+/*
+ * 작성자: 이시온
+*/
+
 using DG.Tweening;
 
 using System.Collections;
@@ -6,11 +10,13 @@ using UnityEngine;
 
 using UnityEngine.SceneManagement;
 
+using ZL.Unity;
+
 using ZL.Unity.Tweeners;
 
 using ZL.Unity.UI;
 
-namespace ZL.Unity
+namespace ArmadaInvencible
 {
     [DisallowMultipleComponent]
 
@@ -53,6 +59,8 @@ namespace ZL.Unity
 
             yield return WaitFor.Seconds(fadeDuration);
         }
+
+        public virtual void EndScene(bool isPlayerAlive) { }
 
         public void LoadScene(string name)
         {

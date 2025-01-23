@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletActive : Bullet
 {
     [SerializeField]
+
     private TrailRenderer[] trailRenderers = new TrailRenderer[3];
 
     protected override void OnDisable()
@@ -14,6 +13,7 @@ public class BulletActive : Bullet
             trailRenderers[i].Clear();
         }
     }
+
     protected override void BulletMovement()
     {
         bulletRigid.AddForce(transform.up.normalized * speed * Time.timeScale, ForceMode2D.Force);

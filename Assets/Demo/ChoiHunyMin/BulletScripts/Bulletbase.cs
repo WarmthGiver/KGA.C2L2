@@ -4,7 +4,7 @@
 */
 
 using ArmadaInvencible;
-using System;
+
 using UnityEngine;
 
 namespace CHM
@@ -22,11 +22,6 @@ namespace CHM
         [SerializeField]
 
         private int resetHp;
-
-        [SerializeField]
-
-        protected TrailRenderer trailrenderer;
-
 
         //프리팹 상속자
         //private GameObject Animator;
@@ -67,16 +62,10 @@ namespace CHM
                 var player = collision.GetComponent<IDamageable>();
 
                 player.GetDamage(bulletDMG);
-                gameObject.SetActive(false);
-                //Dead();
+
+                Dead();
             }
         }
-
-        private void OnDisable()
-        {
-            trailrenderer.Clear();
-        }
-
 
         public void GetDamage(int damage)
         {
@@ -107,6 +96,5 @@ namespace CHM
 
             gameObject.SetActive(false);
         }
-
     }
 }

@@ -1,3 +1,7 @@
+/*
+ * 작성자: 이시온
+*/
+
 using UnityEngine;
 
 namespace ArmadaInvencible
@@ -6,7 +10,7 @@ namespace ArmadaInvencible
 
     [DisallowMultipleComponent]
 
-    public sealed class FXPoolManager : PoolManager<FXPoolManager, Animator>
+    public sealed class BulletPoolManager : PoolManager<BulletPoolManager, Bullet>
     {
 
     }

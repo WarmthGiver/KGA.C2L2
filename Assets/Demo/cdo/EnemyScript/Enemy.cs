@@ -26,6 +26,10 @@ namespace CC
         //일단 중심점
         protected Vector3 target = Vector3.zero;
 
+        [SerializeField]
+
+        protected string deadFX;
+
         protected virtual void OnEnable()
         {
             //초기화 기능 넣어야댐 
@@ -62,9 +66,9 @@ namespace CC
         }
 
         //파괴시 폭발 효과
-        private void Dead()
+        protected virtual void Dead()
         {
-            var fx = FXPoolManager.Instance.Generate("Explosion 1");
+            var fx = FXPoolManager.Instance.Generate(deadFX);
                 
             fx.transform.position = transform.position;
 
