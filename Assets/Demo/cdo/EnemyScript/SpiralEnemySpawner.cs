@@ -75,7 +75,7 @@ namespace CHO
 
             transform.rotation = dod;
 
-            InvokeRepeating("SpiralSpawnDelay1", 1, 10);
+            InvokeRepeating("SpiralSpawnDelay1", 1, 30);
 
             testTime = Time.time;   
         }

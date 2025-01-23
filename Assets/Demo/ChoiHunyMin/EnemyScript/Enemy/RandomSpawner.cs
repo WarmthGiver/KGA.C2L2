@@ -27,9 +27,9 @@ namespace CHM
             }
             set
             {
-                if (value < 0.4f)
+                if (value < 1f)
                 {
-                    coolTime = 0.4f;
+                    coolTime = 1f;
                 }
                 else
                 {

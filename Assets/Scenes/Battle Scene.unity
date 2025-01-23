@@ -173,7 +173,7 @@ MonoBehaviour:
         parent: {fileID: 0}
   testTime: 0
   EnemyPosition: 3
-  spiralSpawnDelay: 2
+  spiralSpawnDelay: 3
 --- !u!212 &67850908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ab457b25dc2bf459e38209cd353416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: 100
+  playerHP: 40
 --- !u!114 &213802177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,8 +1342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 3
-  bulletCount: 6
-  cooldownTime: 4
+  bulletCount: 2
+  cooldownTime: 10
   bulletSpawnPoint: {fileID: 922309812}
   target: {fileID: 1101611593}
   attackRate: 0.2
@@ -1810,7 +1810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d07550baa1ad9e449fd53c65deeba32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotateSpeed: 0
+  _rotateSpeed: 1
 --- !u!50 &1101611595
 Rigidbody2D:
   serializedVersion: 4
@@ -1947,8 +1947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 2
-  bulletCount: 6
-  cooldownTime: 8
+  bulletCount: 5
+  cooldownTime: 10
   bulletSpawnPoint: {fileID: 1126477173}
   target: {fileID: 1101611593}
   attackRate: 0.1
@@ -1978,7 +1978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1180551668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,8 +2004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1a59420d6f5654da1fd0c7c67ffbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetEnemyhp: 100
-  enemyHp: 100
+  resetEnemyhp: 75
+  enemyHp: 75
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
   prefabSpeed: 1
@@ -3143,7 +3143,7 @@ MonoBehaviour:
         parent: {fileID: 0}
   circleR: 10
   coolTimeup: 1
-  time: 8
+  time: 30
   coolTimeCk: 0
   coolTime: 5
 --- !u!4 &1616035681
@@ -3263,8 +3263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 0
-  bulletCount: 6
-  cooldownTime: 4
+  bulletCount: 5
+  cooldownTime: 10
   bulletSpawnPoint: {fileID: 1748522157}
   target: {fileID: 1101611593}
   attackRate: 2
@@ -3319,8 +3319,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletType: 1
-  bulletCount: 4
-  cooldownTime: 8
+  bulletCount: 2
+  cooldownTime: 10
   bulletSpawnPoint: {fileID: 1797191347}
   target: {fileID: 1101611593}
   attackRate: 1
