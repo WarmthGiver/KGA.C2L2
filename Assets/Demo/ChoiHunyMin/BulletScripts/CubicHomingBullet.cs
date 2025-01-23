@@ -17,9 +17,9 @@ namespace CHM
 
         private float distance;
 
-        public override void Setup(GameObject target, int maxCount = 1, int index= 0)
+        public override void Setup(string v, GameObject target, int maxCount = 1, int index= 0)
         {
-            base.Setup(target);
+            base.Setup("CubicHomingBullet", target);
 
             this.target = target;
 
@@ -39,9 +39,9 @@ namespace CHM
             angle += Utils.GetAngleFromPosition(start, end);
 
             //시작지점에서 목표지점 사이의 앵글, 앵글 * -1 각도로 30% 70% 떨어진 위치
-            point1 = Utils.GetNewPoint(start, angle,distance * 0.1f);
+            point1 = Utils.GetCirclePoint(start, angle,distance * 0.1f);
 
-            point2 = Utils.GetNewPoint(end, angle * -1, distance * 0.9f);
+            point2 = Utils.GetCirclePoint(end, angle * -1, distance * 0.9f);
 
             //타겟 바라보게 함
         }

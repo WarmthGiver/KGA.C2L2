@@ -19,6 +19,7 @@ namespace ZL.Unity.ObjectPooling
         [SerializeField, ReadOnlyInPlayMode]
 
         private Transform parent;
+        
 
         public Transform Parent => parent;
 

@@ -14,16 +14,15 @@ namespace CHM
         private int count;
 
         //Setup 메서드 재정의
-        public override void Setup(GameObject target, int maxCount = 10, int index = 0)
+        public override void Setup(string v, GameObject target, int maxCount = 10, int index = 0)
         {
-            base.Setup(target, maxCount);
+            base.Setup("HomingBullet",target);
 
             //타겟정보를 받아옴 
             this.target = target;
 
             count = maxCount;
         }
-
         public override void Process()
         {
             movementRigidbody2D.MoveTo((target.transform.position - transform.position).normalized);

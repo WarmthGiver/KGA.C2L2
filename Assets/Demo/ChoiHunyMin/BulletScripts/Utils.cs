@@ -48,7 +48,7 @@ namespace CHM
         /// <param name="angle">각도</param>
         /// <param name="r">반지름</param>
         /// <returns></returns>
-        public static Vector2 GetNewPoint(Vector3 start, float angle, float r)
+        public static Vector2 GetCirclePoint(Vector3 start, float angle, float r)
         {
             //디그리 각도 값을 라디안으로 변경
             angle = DegreeToRadian(angle);
