@@ -19,7 +19,12 @@ namespace CHM
         [SerializeField] float time;
         [SerializeField] float coolTimeCk;//흐르는시간
         [SerializeField] float coolTime;//쿨타임
-       public float CoolTime
+
+        //보스 등장 여부
+        private bool isBossSpawn = false;
+        private int counteBossSpawn = 0;
+
+        public float CoolTime
         {
             get
             {
@@ -27,9 +32,9 @@ namespace CHM
             }
             set
             {
-                if (value < 0.2f)
+                if (value < 0.5f)
                 {
-                    coolTime = 0.2f;
+                    coolTime = 0.5f;
                 }
                 else
                 {
@@ -54,18 +59,27 @@ namespace CHM
             {
 
                 circleRandom = Random.Range(0, 360);
-                squadEnemy();
+
+                if (isBossSpawn == false)
+                {
+                    squadEnemy();
+                }
 
                 coolTimeup = 0;
             }
             coolTimeCk += Time.deltaTime;
             if (coolTimeCk > time)
             {
-
-                CoolTime -= 0.2f;
-
+                CoolTime -= 1f;
+                counteBossSpawn++;
                 coolTimeCk = 0;
             }
+            //보스 등장 여부
+            if (counteBossSpawn == 5)
+            {
+                isBossSpawn = true;
+            }
+
         }
         float GetAngle(Vector2 start, Vector2 end)
         {

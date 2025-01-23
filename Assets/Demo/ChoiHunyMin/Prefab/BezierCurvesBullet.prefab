@@ -165,6 +165,7 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
+  trailrenderer: {fileID: 2015690774974703006}
   target: {fileID: 8881186335420961912, guid: 9cd1dede63c85904db60d199fa9988d5, type: 3}
 --- !u!1001 &8198809647232060360
 PrefabInstance:
@@ -227,6 +228,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+--- !u!96 &2015690774974703006 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7651943403503365718, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+  m_PrefabInstance: {fileID: 8198809647232060360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9216033634428118954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021727967609613410, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}

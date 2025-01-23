@@ -166,6 +166,7 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
+  trailrenderer: {fileID: 1627728446815963103}
 --- !u!114 &4763125941321208043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21b25213e0242e4188fcaf7f05e97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.5
+  moveSpeed: 1.2
 --- !u!1001 &8982415842288707977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +237,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+--- !u!96 &1627728446815963103 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7651943403503365718, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+  m_PrefabInstance: {fileID: 8982415842288707977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8253439720408106475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021727967609613410, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}

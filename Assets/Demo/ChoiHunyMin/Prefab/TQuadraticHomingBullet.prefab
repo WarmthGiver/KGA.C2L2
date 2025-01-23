@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21b25213e0242e4188fcaf7f05e97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.2
+  moveSpeed: 1
 --- !u!114 &7789293450180497692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
+  trailrenderer: {fileID: 7746019853601182339}
   indexx: 0
 --- !u!1001 &94098402286222549
 PrefabInstance:
@@ -240,5 +241,10 @@ PrefabInstance:
 --- !u!4 &1108912262212505783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021727967609613410, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
+  m_PrefabInstance: {fileID: 94098402286222549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!96 &7746019853601182339 stripped
+TrailRenderer:
+  m_CorrespondingSourceObject: {fileID: 7651943403503365718, guid: 87f36e95f39d6f244a5aeeea7a197216, type: 3}
   m_PrefabInstance: {fileID: 94098402286222549}
   m_PrefabAsset: {fileID: 0}
