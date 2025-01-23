@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 3
-  coolTime: 0.7
+  coolTime: 0.2
   bulletSpeed: 0.03
   muzzle: {fileID: 0}
   bulletPool:

@@ -28,6 +28,8 @@ namespace CHO
 
         private float coolTime3 = 0;
 
+        private float coolTime4 = 0;
+
         private float timeDley = 3f;
 
         [SerializeField] private float testTime;
@@ -44,6 +46,10 @@ namespace CHO
         //생성 주기 //적을 수록 많이 나옴
         private float spiralSpawnDelay;
 
+        //보스 등장 여부
+        protected bool isBossSpawn = false;
+        protected int counteBossSpawn = 0;
+
         //생성주기 프로퍼티 //적을 수록 많이 나옴
         public float SpiralSpawnDelay
         {
@@ -54,9 +60,9 @@ namespace CHO
 
             set
             {
-                if (value < 0.5f)
+                if (value < 0.3f)
                 {
-                    spiralSpawnDelay = 0.5f;
+                    spiralSpawnDelay = 0.3f;
                 }
 
                 else
@@ -75,14 +81,14 @@ namespace CHO
 
             transform.rotation = dod;
 
-            InvokeRepeating("SpiralSpawnDelay1", 1, 30);
+            //InvokeRepeating("SpiralSpawnDelay1", 1, 30);
 
             testTime = Time.time;   
         }
 
         private void SpiralSpawnDelay1()
         {
-            SpiralSpawnDelay -= 0.3f;
+            SpiralSpawnDelay -= 0.8f;
         }
 
         private void Shoot1()
@@ -195,24 +201,31 @@ namespace CHO
         private void Update()
         {
             testTime += Time.deltaTime;
+
+            if(isBossSpawn == false)
+            {
+                //자동 소환
+                Shoot1();
+
+                Shoot2();
+
+                Shoot3();
+            }
             
 
-            //자동 소환
-            Shoot1();
+            coolTime4 += Time.deltaTime;
 
-            Shoot2();
+            if (coolTime4 > 30)
+            {
+                SpiralSpawnDelay -= 0.3f;
+                counteBossSpawn++;
+                coolTime4 = 0;
+            }
 
-            Shoot3();
-
-            //coolTime4 += Time.deltaTime;
-            //
-            //if (coolTime4 > 30)
-            //{
-            //    SpiralSpawnDelay -= 0.2f;
-            //
-            //    coolTime4 = 0;
-            //}
-
+            if(counteBossSpawn == 5)
+            {
+                isBossSpawn = true;
+            }
             //Debug.Log("spiralSpawnDelay"+ spiralSpawnDelay);
 
             //위치

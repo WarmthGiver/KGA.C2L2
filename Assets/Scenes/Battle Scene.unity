@@ -173,7 +173,7 @@ MonoBehaviour:
         parent: {fileID: 0}
   testTime: 0
   EnemyPosition: 3
-  spiralSpawnDelay: 3
+  spiralSpawnDelay: 2
 --- !u!212 &67850908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletType: 3
   bulletCount: 2
-  cooldownTime: 10
+  cooldownTime: 5
   bulletSpawnPoint: {fileID: 922309812}
   target: {fileID: 1101611593}
   attackRate: 0.2
@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletType: 2
   bulletCount: 5
-  cooldownTime: 10
+  cooldownTime: 5
   bulletSpawnPoint: {fileID: 1126477173}
   target: {fileID: 1101611593}
   attackRate: 0.1
@@ -2004,8 +2004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1a59420d6f5654da1fd0c7c67ffbc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetEnemyhp: 75
-  enemyHp: 75
+  resetEnemyhp: 150
+  enemyHp: 150
   enemyDamage: 1
   target: {x: 0, y: 0, z: 0}
   prefabSpeed: 1
@@ -3145,7 +3145,7 @@ MonoBehaviour:
   coolTimeup: 1
   time: 30
   coolTimeCk: 0
-  coolTime: 5
+  coolTime: 3
 --- !u!4 &1616035681
 Transform:
   m_ObjectHideFlags: 0
@@ -3264,7 +3264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletType: 0
   bulletCount: 5
-  cooldownTime: 10
+  cooldownTime: 5
   bulletSpawnPoint: {fileID: 1748522157}
   target: {fileID: 1101611593}
   attackRate: 2
@@ -3320,7 +3320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletType: 1
   bulletCount: 2
-  cooldownTime: 10
+  cooldownTime: 5
   bulletSpawnPoint: {fileID: 1797191347}
   target: {fileID: 1101611593}
   attackRate: 1
