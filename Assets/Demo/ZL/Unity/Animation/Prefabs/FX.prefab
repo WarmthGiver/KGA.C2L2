@@ -120,11 +120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  eventOnTime:
+  onTimeEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5845492141705031196}
-        m_TargetAssemblyTypeName: ZL.Unity.Invoker, Assembly-CSharp
+      - m_Target: {fileID: 672544557228574705}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

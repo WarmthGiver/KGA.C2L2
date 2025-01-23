@@ -1,6 +1,8 @@
-using System.Collections;
+using DG.Tweening;
 
 using UnityEngine;
+
+using ZL.Unity.Tweeners;
 
 namespace ZL.Unity.ArmadaInvencible
 {
@@ -8,11 +10,38 @@ namespace ZL.Unity.ArmadaInvencible
 
     public sealed class BattleSceneDirector : SceneDirector
     {
-        protected override IEnumerator Start()
+        [Space]
+
+        [SerializeField]
+
+        private TransformScaleTweener missionCompleteScreen;
+
+        [SerializeField]
+
+        private TransformScaleTweener youDiedScreen;
+
+        private void Update()
         {
-            yield return base.Start();
+            if (Input.GetKeyUp(KeyCode.Z))
+            {
+                EndScene(true);
+            }
 
+            if (Input.GetKeyUp(KeyCode.X))
+            {
+                EndScene(false);
+            }
+        }
 
+        public void EndScene(bool isPlayerAlive)
+        {
+            var screen = isPlayerAlive ? missionCompleteScreen : youDiedScreen;
+
+            screen.SetActive(true);
+
+            screen.Tweener.Tween(new Vector3(2f, 2f, 1f), 2f).
+                
+                OnComplete(() => LoadScene("Title Scene"));
         }
     }
 }
