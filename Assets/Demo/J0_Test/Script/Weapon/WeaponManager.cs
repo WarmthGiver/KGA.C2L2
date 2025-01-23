@@ -24,7 +24,7 @@ public class WeaponManager : MonoBehaviour
 
     private void Start()
     {
-        equipTime = 3f;
+        equipTime = 10f;
 
         StartCoroutine(EquipWeapon(weapons));
     }

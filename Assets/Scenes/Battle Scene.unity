@@ -250,19 +250,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 971426177393474335, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1037737272646107317, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -422,19 +422,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9172745304897733838, guid: 98fe0c0d1a5f51d40a04b641d44c6a4c, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1340,17 +1340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 1
-  bulletDMG: 1
-  resetHp: 1
-  movementRigidbody2D: {fileID: 0}
   bulletType: 3
-  bulletCount: 1
-  cooldownTime: 1
+  bulletCount: 6
+  cooldownTime: 4
   bulletSpawnPoint: {fileID: 922309812}
   target: {fileID: 1101611593}
-  attackRate: 1
-  bullet:
+  attackRate: 0.2
+  bulletPool:
     elements:
     - key: 3
       value:
@@ -1949,19 +1945,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 1
-  bulletDMG: 1
-  resetHp: 1
-  movementRigidbody2D: {fileID: 0}
   bulletType: 2
-  bulletCount: 1
-  cooldownTime: 1
+  bulletCount: 6
+  cooldownTime: 8
   bulletSpawnPoint: {fileID: 1126477173}
   target: {fileID: 1101611593}
-  attackRate: 1
-  bullet:
+  attackRate: 0.1
+  bulletPool:
     elements:
-    - key: 2
+    - key: 0
       value:
         original: {fileID: 7789293450180497692, guid: 2b1fefc7f87519248a08400a80a7ae05, type: 3}
         parent: {fileID: 0}
@@ -2470,10 +2462,10 @@ Transform:
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1748522157}
   - {fileID: 1797191347}
   - {fileID: 1126477173}
   - {fileID: 922309812}
-  - {fileID: 1748522157}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1185482826
@@ -3241,7 +3233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1748522157
 Transform:
   m_ObjectHideFlags: 0
@@ -3269,18 +3261,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 0
-  bulletDMG: 0
-  resetHp: 0
-  movementRigidbody2D: {fileID: 0}
   bulletType: 0
-  bulletCount: 0
-  cooldownTime: 0
-  bulletSpawnPoint: {fileID: 0}
+  bulletCount: 6
+  cooldownTime: 4
+  bulletSpawnPoint: {fileID: 1748522157}
   target: {fileID: 1101611593}
-  attackRate: 0
-  bullet:
-    elements: []
+  attackRate: 2
+  bulletPool:
+    elements:
+    - key: 0
+      value:
+        original: {fileID: 6094927715678572803, guid: 1c442127b161b7642a106a10e76c28cd, type: 3}
+        parent: {fileID: 0}
 --- !u!1 &1797191346
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,17 +3317,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletHp: 1
-  bulletDMG: 1
-  resetHp: 1
-  movementRigidbody2D: {fileID: 0}
   bulletType: 1
-  bulletCount: 1
-  cooldownTime: 1
+  bulletCount: 4
+  cooldownTime: 8
   bulletSpawnPoint: {fileID: 1797191347}
   target: {fileID: 1101611593}
   attackRate: 1
-  bullet:
+  bulletPool:
     elements:
     - key: 1
       value:
