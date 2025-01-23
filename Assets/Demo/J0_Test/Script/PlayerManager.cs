@@ -17,10 +17,17 @@ public class PlayerManager : MonoBehaviour, IDamageable
 
     public void GetDamage(int damage)
     {
+        if (isPlayerAlive == false)
+        {
+            return;
+        }
+
         playerHP -= damage;
 
-        if (isPlayerAlive == true && playerHP <= 0)
+        if (playerHP <= 0)
         {
+            playerHP = 0;
+
             isPlayerAlive = false;
 
             SceneDirector.Instance.EndScene(false);

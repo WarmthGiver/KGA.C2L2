@@ -28,6 +28,8 @@ namespace ArmadaInvencible
 
         private TransformScaleTweener youDiedScreen;
 
+        private bool isSceneEnded;
+
         private void Update()
         {
             if (Input.GetKeyUp(KeyCode.Z))
@@ -43,6 +45,13 @@ namespace ArmadaInvencible
 
         public override void EndScene(bool isPlayerAlive)
         {
+            if (isSceneEnded == true)
+            {
+                return;
+            }
+
+            isSceneEnded = true;
+
             var screen = isPlayerAlive ? missionCompleteScreen : youDiedScreen;
 
             screen.SetActive(true);
