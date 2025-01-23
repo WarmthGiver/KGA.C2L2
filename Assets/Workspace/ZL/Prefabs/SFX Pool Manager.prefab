@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &199811081366763789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8047595951736728956}
+  - component: {fileID: 7147976398361292499}
+  m_Layer: 0
+  m_Name: SFX Pool Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8047595951736728956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199811081366763789}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7147976398361292499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199811081366763789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1899224ad1e41e74db65b0007923f7fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+    elements:
+    - key: Explosion 1
+      value:
+        original: {fileID: 3685444801284615564, guid: 67676ed219847a540a7202f98cabf5d1, type: 3}
+        parent: {fileID: 0}
+    - key: Gunshot 1
+      value:
+        original: {fileID: 8488225507344837685, guid: dd221081b4526674dbb07a2c61daafbd, type: 3}
+        parent: {fileID: 0}
+    - key: Gunshot 2
+      value:
+        original: {fileID: 3161967643072943991, guid: 382298a06038dfb46880107620cb45a3, type: 3}
+        parent: {fileID: 0}
+    - key: Gunshot 3
+      value:
+        original: {fileID: 6682986405976348889, guid: b3e3792110c60694db4ebb398400c259, type: 3}
+        parent: {fileID: 0}
+    - key: Gunshot 4
+      value:
+        original: {fileID: 9084820168139767105, guid: b259529558d0c434ca9b1f55e9723dda, type: 3}
+        parent: {fileID: 0}
+    - key: Gunshot 5
+      value:
+        original: {fileID: 3156487116933224871, guid: d4ffa61c992112144bcaa85549e47494, type: 3}
+        parent: {fileID: 0}
