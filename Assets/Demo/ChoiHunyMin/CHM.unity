@@ -409,6 +409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 878439072}
   - component: {fileID: 878439073}
+  - component: {fileID: 878439074}
   m_Layer: 0
   m_Name: BezierCurvesShot
   m_TagString: Untagged
@@ -425,7 +426,7 @@ Transform:
   m_GameObject: {fileID: 878439071}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -443,14 +444,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d406d5fa4fb06d443bd92d2984c7f33f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_missilePrefab: {fileID: 72211008643765787, guid: 3378d57fc489d0f4fbec026d8e409db3, type: 3}
-  m_target: {fileID: 382659137}
-  m_speed: 0.1
-  m_distanceFromStart: 8
-  m_distanceFromEnd: 3
-  m_shotCount: 10
-  m_interval: 0
-  m_shotCountEveryInterval: 2
+  bullet: {fileID: 72211008643765787, guid: 3378d57fc489d0f4fbec026d8e409db3, type: 3}
+  target: {fileID: 382659137}
+  bulletspeed: 0.5
+  distanceFromStart: 9
+  distanceFromEnd: 6
+  shotCount: 8
+  interval: 0.15
+  shotCountEveryInterval: 8
+--- !u!114 &878439074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878439071}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71ff1be231ee5974c96902d0d0c7ca7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletType: 4
+  bulletCount: 1
+  cooldownTime: 1
+  bulletSpawnPoint: {fileID: 878439072}
+  target: {fileID: 382659137}
+  attackRate: 1
+  bulletPool:
+    elements:
+    - key: 4
+      value:
+        original: {fileID: 6607593532207867976, guid: 3378d57fc489d0f4fbec026d8e409db3, type: 3}
+        parent: {fileID: 0}
 --- !u!1 &920626782
 GameObject:
   m_ObjectHideFlags: 0

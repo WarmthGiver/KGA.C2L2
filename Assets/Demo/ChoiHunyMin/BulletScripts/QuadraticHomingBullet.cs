@@ -56,7 +56,7 @@ namespace CHM
             angle += Utils.GetAngleFromPosition(start, end);
 
             //시작 지점에서 목표지점 사이의 angle 각도로 30% 떨어진위치
-            point = Utils.GetNewPoint(start, angle, distance * 0.2f);
+            point = Utils.GetCirclePoint(start, angle, distance * 0.2f);
 
             //poubt 위치 확인을 위한 디버깅 코드 [결과 확인후 삭제]
             //포인트위치에 오브ㅏ젝트를 생성하도록 디버깅 코드 작성

@@ -23,7 +23,6 @@ namespace CHM
 
             count = maxCount;
         }
-
         public override void Process()
         {
             movementRigidbody2D.MoveTo((target.transform.position - transform.position).normalized);

@@ -9,7 +9,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using ZL.Unity.Collections;
 using ZL.Unity.ObjectPooling;
-public enum BulletType { Straight, Homing, QuadraticHoming, CubicHoming }
+public enum BulletType { Straight, Homing, QuadraticHoming, CubicHoming, BezierCurvesShot }
 //발사체 종류 직선, 유도 , 2차방정식 곡선,3차 방정식 곡선
 namespace CHM
 {

@@ -165,7 +165,7 @@ MonoBehaviour:
   bulletHp: 1
   bulletDMG: 1
   resetHp: 1
-  m_target: {fileID: 8881186335420961912, guid: 9cd1dede63c85904db60d199fa9988d5, type: 3}
+  target: {fileID: 8881186335420961912, guid: 9cd1dede63c85904db60d199fa9988d5, type: 3}
 --- !u!1001 &8198809647232060360
 PrefabInstance:
   m_ObjectHideFlags: 0
