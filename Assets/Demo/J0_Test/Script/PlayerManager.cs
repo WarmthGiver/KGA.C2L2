@@ -6,7 +6,12 @@ public class PlayerManager : MonoBehaviour, IDamageable
 {
     [SerializeField]
 
-    private int playerHP = 100;
+    private int playerHP;
+
+    private void Start()
+    {
+        playerHP = 70;
+    }
 
     public void GetDamage(int damage)
     {
