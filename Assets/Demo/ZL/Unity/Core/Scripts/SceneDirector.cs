@@ -22,17 +22,15 @@ namespace ZL.Unity
 
         [SerializeField]
 
-        private CanvasGroupFader sceneFader;
+        private CanvasGroupFader fadeScreen;
 
-        [SerializeField]
+        [SerializeField, Label("Delay")]
 
-        private float delay = 0.5f;
+        private float fadeDelay = 0.5f;
 
-        [SerializeField]
+        [SerializeField, Label("Duration")]
 
         private float fadeDuration = 2f;
-
-        [SerializeField]
 
         private int pauseCall = 0;
 
@@ -43,13 +41,13 @@ namespace ZL.Unity
 
         protected virtual IEnumerator Start()
         {
-            yield return WaitFor.Seconds(delay);
+            yield return WaitFor.Seconds(fadeDelay);
 
             AudioListenerVolumeTweener.Tweener.Tween(1f, fadeDuration).
 
                 SetEase(Ease.Linear);
 
-            sceneFader.TweenFaded(true, fadeDuration).
+            fadeScreen.TweenFaded(true, fadeDuration).
                 
                 SetEase(Ease.Linear);
 
@@ -71,7 +69,7 @@ namespace ZL.Unity
                 
                 SetUpdate(true);
 
-            sceneFader.TweenFaded(false, fadeDuration).
+            fadeScreen.TweenFaded(false, fadeDuration).
 
                 SetEase(Ease.Linear).
                 

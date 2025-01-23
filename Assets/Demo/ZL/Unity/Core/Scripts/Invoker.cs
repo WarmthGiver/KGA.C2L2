@@ -25,9 +25,9 @@ namespace ZL.Unity
 
         [SerializeField]
 
-        private UnityEvent eventOnTime;
+        private UnityEvent onTimeEvent;
 
-        public UnityEvent EventOnTime => eventOnTime;
+        public UnityEvent OnTimeEvent => onTimeEvent;
 
         private void OnEnable()
         {
@@ -43,12 +43,7 @@ namespace ZL.Unity
 
         private void OnTime()
         {
-            eventOnTime.Invoke();
-        }
-
-        public void SetActive(bool value)
-        {
-            gameObject.SetActive(value);
+            onTimeEvent.Invoke();
         }
 	}
 }

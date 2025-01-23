@@ -8,11 +8,11 @@ using UnityEngine;
 
 namespace ZL.Unity.Tweeners
 {
-    [AddComponentMenu("ZL/Tweeners/Rotation Key Frame Tweener")]
+    [AddComponentMenu("ZL/Tweeners/Transform Rotation Key Frame Tweener")]
 
     [RequireComponent(typeof(TransformRotationTweener))]
 
-    public sealed class RotationKeyFrameTweener : KeyFrameTweener<TransformRotationTweener, QuaternionTweener, Quaternion, Vector3, QuaternionOptions>
+    public sealed class TransformRotationKeyFrameTweener : KeyFrameTweener<TransformRotationTweener, QuaternionTweener, Quaternion, Vector3, QuaternionOptions>
     {
         [Space]
 
