@@ -14,10 +14,6 @@ namespace ArmadaInvencible.J0
 
         protected float speed;
 
-        [SerializeField]
-
-        protected TrailRenderer trailRenderer;
-
         protected virtual void Update()
         {
             BulletMovement();
@@ -35,11 +31,6 @@ namespace ArmadaInvencible.J0
             this.damage = damage;
 
             this.speed = speed;
-        }
-
-        protected virtual void OnDisable()
-        {
-            trailRenderer.Clear();
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D collision)

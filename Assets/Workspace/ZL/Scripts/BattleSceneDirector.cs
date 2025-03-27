@@ -28,19 +28,6 @@ namespace ArmadaInvencible.ZL
 
         private bool isSceneEnded;
 
-        private void Update()
-        {
-            if (Input.GetKeyUp(KeyCode.Z))
-            {
-                EndScene(true);
-            }
-
-            if (Input.GetKeyUp(KeyCode.X))
-            {
-                EndScene(false);
-            }
-        }
-
         public override void EndScene(bool isPlayerAlive)
         {
             if (isSceneEnded == true)
